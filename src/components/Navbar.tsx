@@ -40,7 +40,7 @@ export default function Navbar() {
             className="text-xl font-bold gradient-text"
             style={{ fontFamily: "monospace" }}
           >
-            Hassan<span className="text-indigo-400">.</span>dev
+            hassanrao<span className="text-indigo-400">.</span>com
           </a>
 
           {/* Desktop nav */}
