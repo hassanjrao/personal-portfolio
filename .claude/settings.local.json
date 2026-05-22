@@ -7,7 +7,8 @@
       "Skill(update-config:*)",
       "PowerShell(Get-ChildItem \"d:\\\\laravel\\\\personal-portfolio\" -Recurse -Depth 3 | Where-Object { !$_.PSIsContainer } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"d:\\\\laravel\\\\personal-portfolio\\\\\", \"\"\\) })",
       "Bash(npx next *)",
-      "PowerShell(Remove-Item -LiteralPath \"d:\\\\laravel\\\\personal-portfolio\\\\src\\\\app\\\\[locale]\" -Recurse -Force -Confirm:$false; Write-Output \"Exit: $?\")"
+      "PowerShell(Remove-Item -LiteralPath \"d:\\\\laravel\\\\personal-portfolio\\\\src\\\\app\\\\[locale]\" -Recurse -Force -Confirm:$false; Write-Output \"Exit: $?\")",
+      "Bash(findstr /i \"env.local\" .gitignore)"
     ]
   }
 }
