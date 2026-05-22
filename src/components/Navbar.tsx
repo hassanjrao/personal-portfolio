@@ -2,12 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { Menu, X, Download } from "lucide-react";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const prefix = pathname === "/" ? "" : "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -16,12 +20,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t("home"), href: "#home" },
-    { label: t("about"), href: "#about" },
-    { label: t("services"), href: "#services" },
-    { label: t("portfolio"), href: "#portfolio" },
-    { label: t("reviews"), href: "#reviews" },
-    { label: t("contact"), href: "#contact" },
+    { label: t("home"), href: `${prefix}#home` },
+    { label: t("about"), href: `${prefix}#about` },
+    { label: t("services"), href: `${prefix}#services` },
+    { label: t("portfolio"), href: `${prefix}#portfolio` },
+    { label: t("reviews"), href: `${prefix}#reviews` },
+    { label: t("contact"), href: `${prefix}#contact` },
   ];
 
   return (
@@ -36,7 +40,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
-            href="#home"
+            href={`${prefix}#home`}
             className="text-xl font-bold gradient-text"
             style={{ fontFamily: "monospace" }}
           >
