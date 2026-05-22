@@ -44,7 +44,7 @@ export default function About() {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-600/30 to-purple-600/30 blur-xl scale-105" />
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                   <Image
-                    src="/hassan.jpg"
+                    src="/hassan.png"
                     alt="Hassan Rao"
                     fill
                     className="object-cover object-top"
