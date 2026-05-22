@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const stats = [
   { key: "years_exp", value: "5+" },
@@ -37,14 +38,21 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Avatar placeholder */}
+            {/* Photo */}
             <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 rounded-2xl bg-gradient-to-br from-indigo-600/20 to-purple-600/20 border border-indigo-500/20 flex items-center justify-center text-8xl">
-                  👨‍💻
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-600/30 to-purple-600/30 blur-xl scale-105" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                  <Image
+                    src="/hassan.jpg"
+                    alt="Hassan Rao"
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-indigo-600/20 rounded-xl border border-indigo-500/20 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-indigo-400">5+</span>
+                <div className="absolute -bottom-4 -right-4 px-4 py-2 bg-[#111] border border-white/10 rounded-xl shadow-xl text-center">
+                  <span className="text-xl font-bold text-indigo-400">6+</span>
+                  <div className="text-xs text-gray-500">Years Exp.</div>
                 </div>
               </div>
             </div>

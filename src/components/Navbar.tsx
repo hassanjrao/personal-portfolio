@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 export default function Navbar() {
   const t = useTranslations("nav");
@@ -54,6 +54,14 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/resume.pdf"
+              download="Hassan_Rao_Resume.pdf"
+              className="flex items-center gap-1.5 text-sm px-4 py-1.5 rounded-full border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white transition-all duration-200"
+            >
+              <Download size={14} />
+              {t("resume")}
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -78,6 +86,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/resume.pdf"
+              download="Hassan_Rao_Resume.pdf"
+              className="flex items-center gap-2 text-sm text-indigo-400 hover:text-white py-1 mt-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Download size={14} />
+              {t("resume")}
+            </a>
           </div>
         )}
       </div>

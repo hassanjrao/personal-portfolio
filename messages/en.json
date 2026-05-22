@@ -5,7 +5,8 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "reviews": "Reviews",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "hero": {
     "greeting": "Hi, I'm",

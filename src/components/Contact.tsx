@@ -4,7 +4,21 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Mail, Code2, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
+import { Send, Mail } from "lucide-react";
+import { SiFiverr, SiGithub } from "react-icons/si";
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-[18px] h-[18px]">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+  </svg>
+);
+
+const socials = [
+  { Icon: SiGithub, href: "https://github.com/hassanjrao", label: "GitHub", color: "" },
+  { Icon: LinkedInIcon, href: "https://linkedin.com/in/hassanjrao", label: "LinkedIn", color: "group-hover:text-blue-400" },
+  { Icon: SiFiverr, href: "https://www.fiverr.com/hassanjavaidrao", label: "Fiverr", color: "group-hover:text-green-400" },
+  { Icon: Mail, href: "mailto:hassanjrao@gmail.com", label: "Email", color: "" },
+];
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -17,19 +31,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Simulate submission — replace with real API call
     await new Promise((r) => setTimeout(r, 1500));
     setStatus("success");
     setForm({ name: "", email: "", message: "" });
     setTimeout(() => setStatus("idle"), 4000);
   };
-
-  const socials: { Icon: LucideIcon; href: string; label: string }[] = [
-    { Icon: Code2, href: "https://github.com/hassanjrao", label: "GitHub" },
-    { Icon: Briefcase, href: "https://linkedin.com/in/hassanjrao", label: "LinkedIn" },
-    { Icon: ShoppingBag, href: "https://www.fiverr.com/hassanjavaidrao", label: "Fiverr" },
-    { Icon: Mail, href: "mailto:hassanjrao@gmail.com", label: "Email" },
-  ];
 
   return (
     <section id="contact" className="py-24 px-4 bg-white/[0.02]">
@@ -62,7 +68,7 @@ export default function Contact() {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500/50 focus:bg-white/8 transition-all"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500/50 transition-all"
                 placeholder="Hassan Rao"
               />
             </div>
@@ -114,7 +120,7 @@ export default function Contact() {
               Prefer direct contact? Reach me through any of these channels.
             </p>
             <div className="grid grid-cols-2 gap-3">
-              {socials.map(({ Icon, href, label }) => (
+              {socials.map(({ Icon, href, label, color }) => (
                 <a
                   key={label}
                   href={href}
@@ -124,7 +130,7 @@ export default function Contact() {
                 >
                   <Icon
                     size={18}
-                    className="text-gray-400 group-hover:text-indigo-400 transition-colors"
+                    className={`text-gray-400 transition-colors ${color ?? "group-hover:text-indigo-400"}`}
                   />
                   <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
                     {label}
