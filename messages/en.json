@@ -11,8 +11,8 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Hassan Rao",
-    "title": "Software Engineer & SEO Expert",
-    "subtitle": "I build high-performance web & mobile applications and help businesses rank globally.",
+    "title": "Software Engineer",
+    "subtitle": "I build high-performance web & mobile applications, scalable APIs, and cloud-native systems.",
     "cta_work": "View My Work",
     "cta_contact": "Get In Touch"
   },
