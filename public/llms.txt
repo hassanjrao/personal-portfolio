@@ -1,0 +1,70 @@
+# Hassan Rao — Software Engineer
+
+> Hassan Rao (Hassan Javaid Rao) is a Senior Full Stack Software Engineer based in Muscat, Oman with 4+ years of GCC enterprise experience. He specialises in Laravel, Next.js, React, Node.js, NestJS, Vue.js, Livewire, AWS, and MySQL. He is also a top-rated freelancer on Fiverr with 308 five-star reviews and a 4.9 rating.
+
+## Identity
+
+- Full name: Hassan Javaid Rao
+- Also known as: Hassan Rao
+- Role: Senior Software Engineer
+- Location: Muscat, Oman (originally from Multan, Pakistan)
+- Email: hassanjrao@gmail.com
+- Website: https://hassanrao.com
+- GitHub: https://github.com/hassanjrao
+- LinkedIn: https://linkedin.com/in/hassanjrao
+- Fiverr: https://www.fiverr.com/hassanjavaidrao
+
+## Professional Experience
+
+- **Senior Software Engineer** at Thiqa Tech, Muscat, Oman (Dec 2021 – Present)
+  - Built a multi-tenant logistics SaaS platform deployed across Oman, UAE, and Saudi Arabia
+  - Deployed solution for one of Oman's largest logistics companies (15 branches nationwide)
+  - Automated shipment data entry with Google Gemini AI (eliminated 6 hours of daily manual effort)
+  - Integrated with DHL, AJEX, and iMile via OAuth 2.0 machine-to-machine flows
+  - Architected event-driven systems using AWS Lambda, SQS, and S3
+  - Maintained 99.9% uptime using Sentry and AWS CloudWatch
+
+- **Freelance Full Stack Developer** on Fiverr & Upwork (2020 – 2021)
+  - Top Rated status with 250+ five-star reviews
+  - 200+ clients across logistics, e-commerce, and SaaS
+
+- **Section Leader (Teaching)** at Stanford Code in Place (2025)
+  - Competitively selected to teach Python programming internationally
+
+## Technical Skills
+
+- Backend: PHP, Laravel, Node.js, NestJS, Python
+- Frontend: React.js, Next.js, Vue.js, Livewire, JavaScript, HTML5, CSS3
+- Cloud & DevOps: AWS (Lambda, SQS, S3, CloudWatch), Docker, Redis
+- Auth & Security: OAuth 2.0, Laravel Passport, JWT
+- Databases: MySQL, PostgreSQL, MongoDB
+- Architecture: Microservices, Multi-tenant SaaS, RESTful API Design
+- AI & Automation: Google Gemini API
+
+## Education
+
+- B.S. Software Engineering, Sukkur IBA University (2017–2020)
+- Fully funded merit scholarship
+- IELTS 7.0
+
+## Achievements
+
+- Winner — Web Design Competition, Sukkur IBA University
+- Winner — Code in the Dark Competition, Sukkur IBA University
+- Section Leader, Stanford Code in Place 2025
+- Top Rated Seller, Fiverr — 4.9★ rating, 308 reviews, 439 orders
+
+## Services Offered
+
+- Full stack web application development (Laravel, Next.js, React, Vue.js)
+- REST API design and development
+- Multi-tenant SaaS platform development
+- AWS cloud architecture and deployment
+- AI-driven workflow automation (Google Gemini)
+- Mobile app backend development (Node.js, NestJS)
+- Database design and optimisation (MySQL, PostgreSQL)
+
+## Key Pages
+
+- Homepage: https://hassanrao.com
+- Software Developer in Oman: https://hassanrao.com/software-developer-oman
