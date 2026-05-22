@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Hassan Rao",
+    "title": "Software Engineer & SEO Expert",
+    "subtitle": "I build high-performance web & mobile applications and help businesses rank globally.",
+    "cta_work": "View My Work",
+    "cta_contact": "Get In Touch"
+  },
+  "about": {
+    "badge": "About Me",
+    "heading": "Turning ideas into digital reality",
+    "body": "I'm a passionate software engineer with expertise in full-stack web development, mobile apps, UI/UX design, and SEO strategy. I help businesses and individuals establish a strong digital presence across the globe.",
+    "years_exp": "Years Experience",
+    "projects": "Projects Completed",
+    "clients": "Happy Clients",
+    "countries": "Countries Ranked"
+  },
+  "services": {
+    "badge": "What I Do",
+    "heading": "Services I Offer",
+    "subheading": "From development to ranking, I cover every aspect of your digital journey.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Modern, fast, and scalable web applications built with Next.js, React, Laravel, and more."
+      },
+      {
+        "title": "Mobile Development",
+        "description": "Cross-platform iOS & Android apps using React Native and Flutter."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Clean, user-centric interfaces designed in Figma with a focus on conversion and usability."
+      },
+      {
+        "title": "SEO & Digital Marketing",
+        "description": "Multi-country SEO strategies that drive organic traffic and rank your business globally."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "My Work",
+    "heading": "Featured Projects",
+    "subheading": "A selection of projects I've built for clients and personal ventures.",
+    "view_project": "View Project",
+    "view_all": "View All Projects"
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "heading": "Let's Work Together",
+    "subheading": "Have a project in mind? I'd love to hear about it. Send me a message and let's make something great.",
+    "name_label": "Your Name",
+    "email_label": "Your Email",
+    "message_label": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again."
+  },
+  "fiverr": {
+    "badge": "Fiverr Reviews",
+    "heading": "What Clients Say",
+    "subheading": "Real reviews from clients across the USA, UK, Pakistan, and the Middle East.",
+    "view_profile": "View Fiverr Profile",
+    "avg_rating": "Average Rating",
+    "total_reviews": "Total Reviews",
+    "completion_rate": "Completion Rate",
+    "countries_served": "Countries Served",
+    "total_orders": "Total Orders",
+    "years_on_fiverr": "Years on Fiverr"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built_with": "Built with Next.js"
+  }
+}

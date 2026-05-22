@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "PowerShell(node -v)",
-      "PowerShell(npm -v)"
+      "PowerShell(npm -v)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "PowerShell(Get-ChildItem \"d:\\\\laravel\\\\personal-portfolio\" -Recurse -Depth 3 | Where-Object { !$_.PSIsContainer } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"d:\\\\laravel\\\\personal-portfolio\\\\\", \"\"\\) })"
     ]
   }
 }
