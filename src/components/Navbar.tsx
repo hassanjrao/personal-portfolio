@@ -1,21 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
-
-const localeLabels: Record<string, string> = {
-  en: "EN",
-  ur: "اردو",
-  ar: "عربي",
-};
 
 export default function Navbar() {
   const t = useTranslations("nav");
-  const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,12 +23,6 @@ export default function Navbar() {
     { label: t("reviews"), href: "#reviews" },
     { label: t("contact"), href: "#contact" },
   ];
-
-  const switchLocale = (newLocale: string) => {
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    router.push(segments.join("/"));
-  };
 
   return (
     <nav
@@ -65,37 +49,20 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors duration-200 hover:text-indigo-400"
+                className="text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Locale switcher + mobile menu */}
-          <div className="flex items-center gap-3">
-            <div className="flex gap-1">
-              {["en", "ur", "ar"].map((loc) => (
-                <button
-                  key={loc}
-                  onClick={() => switchLocale(loc)}
-                  className={`px-2 py-1 text-xs rounded transition-all ${
-                    locale === loc
-                      ? "bg-indigo-600 text-white"
-                      : "text-gray-400 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {localeLabels[loc]}
-                </button>
-              ))}
-            </div>
-            <button
-              className="md:hidden text-gray-400 hover:text-white"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-gray-400 hover:text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
 
         {/* Mobile menu */}

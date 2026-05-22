@@ -5,8 +5,6 @@ import { notFound } from "next/navigation";
 import { routing } from "../../../i18n/routing";
 import "../globals.css";
 
-type Locale = "en" | "ur" | "ar";
-
 export async function generateMetadata({
   params,
 }: {
@@ -24,16 +22,11 @@ export async function generateMetadata({
     description: t("subtitle"),
     metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
-      languages: {
-        en: `${baseUrl}/en`,
-        ur: `${baseUrl}/ur`,
-        ar: `${baseUrl}/ar`,
-      },
+      canonical: baseUrl,
     },
     openGraph: {
       type: "website",
-      url: `${baseUrl}/${locale}`,
+      url: baseUrl,
       title: `${t("name")} — ${t("title")}`,
       description: t("subtitle"),
       siteName: t("name"),
@@ -63,13 +56,12 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale as Locale)) notFound();
+  if (!routing.locales.includes(locale as "en")) notFound();
 
   const messages = await getMessages();
-  const isRtl = locale === "ar" || locale === "ur";
 
   return (
-    <html lang={locale} dir={isRtl ? "rtl" : "ltr"}>
+    <html lang="en" dir="ltr">
       <body className="bg-[#0a0a0a] text-white antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
