@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
 import TechStack from "@/components/TechStack";
 import FiverrReviews from "@/components/FiverrReviews";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -131,21 +130,7 @@ export default function OmanLandingPage() {
       />
 
       {/* ── Navbar ── */}
-      <nav className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold" style={{ fontFamily: "monospace" }}>
-            hassanrao<span className="text-indigo-400">.</span>com
-          </Link>
-          <div className="flex items-center gap-4">
-            <a
-              href="#contact"
-              className="text-sm px-4 py-1.5 rounded-full border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white transition-all duration-200"
-            >
-              Hire Me
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* ── Hero ── */}
       <section className="py-20 sm:py-28 px-4">
