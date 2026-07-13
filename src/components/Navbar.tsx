@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: t("services"), href: `${prefix}#services` },
     { label: t("portfolio"), href: `${prefix}#portfolio` },
     { label: t("reviews"), href: `${prefix}#reviews` },
+    { label: t("blog"), href: "/blog" },
     { label: t("contact"), href: `${prefix}#contact` },
   ];
 

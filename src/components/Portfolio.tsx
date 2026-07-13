@@ -6,7 +6,25 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  color: string;
+  emoji: string;
+  link?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "AI Phone Agent SaaS",
+    description:
+      "Multi-tenant AI receptionist that answers real phone calls — Twilio Media Streams bridged to Deepgram's Voice Agent, with RAG-grounded answers from each company's own documents.",
+    tags: ["Laravel", "FastAPI", "Twilio", "Deepgram", "Gemini", "pgvector"],
+    color: "from-fuchsia-600/20 to-indigo-600/20",
+    emoji: "📞",
+    link: "/blog/ai-phone-agent-saas-laravel-twilio-deepgram",
+  },
   {
     title: "E-Commerce Platform",
     description: "Full-stack Next.js e-commerce with Stripe payments, admin dashboard, and multi-language support.",
@@ -95,15 +113,25 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300">
+              {project.link ? (
+                <a
+                  href={project.link}
+                  className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300"
+                >
                   <ExternalLink size={14} />
                   {t("view_project")}
-                </button>
-                <button className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300">
-                  GitHub
-                </button>
-              </div>
+                </a>
+              ) : (
+                <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <button className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300">
+                    <ExternalLink size={14} />
+                    {t("view_project")}
+                  </button>
+                  <button className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300">
+                    GitHub
+                  </button>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
