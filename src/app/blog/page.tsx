@@ -27,7 +27,7 @@ const posts = [
   {
     slug: "ai-phone-agent-saas-laravel-twilio-deepgram",
     title:
-      "Building a Multi-Tenant AI Phone Agent SaaS with Laravel, Twilio, Deepgram & Gemini",
+      "Building a Multi-Tenant AI Phone Agent SaaS with Python FastAPI, Laravel, Twilio, Deepgram & Gemini",
     excerpt:
       "How I built an AI receptionist platform that answers real phone calls: a real-time audio bridge between Twilio and Deepgram's Voice Agent API, RAG over pgvector, and a three-layer anti-hallucination design.",
     date: "July 13, 2026",

@@ -13,6 +13,7 @@ type Project = {
   color: string;
   emoji: string;
   link?: string;
+  live?: string;
 };
 
 const projects: Project[] = [
@@ -24,6 +25,7 @@ const projects: Project[] = [
     color: "from-fuchsia-600/20 to-indigo-600/20",
     emoji: "📞",
     link: "/blog/ai-phone-agent-saas-laravel-twilio-deepgram",
+    live: "https://ai-caller.hassanrao.com/",
   },
   {
     title: "E-Commerce Platform",
@@ -113,14 +115,28 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-              {project.link ? (
-                <a
-                  href={project.link}
-                  className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300"
-                >
-                  <ExternalLink size={14} />
-                  {t("view_project")}
-                </a>
+              {project.link || project.live ? (
+                <div className="flex gap-4">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300"
+                    >
+                      <ExternalLink size={14} />
+                      Live
+                    </a>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-200"
+                    >
+                      {t("view_project")}
+                    </a>
+                  )}
+                </div>
               ) : (
                 <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button className="flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300">

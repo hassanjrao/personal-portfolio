@@ -4,14 +4,14 @@ import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, ExternalLink } from "lucide-react";
 
 const baseUrl = "https://hassanrao.com";
 const pageUrl = `${baseUrl}/blog/ai-phone-agent-saas-laravel-twilio-deepgram`;
 const publishedDate = "2026-07-13";
 
 export const metadata: Metadata = {
-  title: "Building a Multi-Tenant AI Phone Agent SaaS with Laravel, Twilio, Deepgram & Gemini",
+  title: "Building a Multi-Tenant AI Phone Agent SaaS with Python FastAPI, Laravel, Twilio, Deepgram & Gemini",
   description:
     "How I built an AI receptionist platform that answers real phone calls: Twilio Media Streams bridged to Deepgram's Voice Agent API, RAG over pgvector with Gemini embeddings, and a Laravel multi-tenant admin — with anti-hallucination guarantees.",
   metadataBase: new URL(baseUrl),
@@ -51,7 +51,7 @@ const articleSchema = {
   "@type": "BlogPosting",
   "@id": `${pageUrl}#article`,
   headline:
-    "Building a Multi-Tenant AI Phone Agent SaaS with Laravel, Twilio, Deepgram & Gemini",
+    "Building a Multi-Tenant AI Phone Agent SaaS with Python FastAPI, Laravel, Twilio, Deepgram & Gemini",
   description:
     "Architecture and lessons from building an AI receptionist platform that answers real phone calls with retrieval-grounded answers.",
   url: pageUrl,
@@ -110,7 +110,7 @@ export default function AiPhoneAgentPost() {
                 Building a Multi-Tenant AI Phone Agent SaaS
               </span>{" "}
               <span className="text-white">
-                with Laravel, Twilio, Deepgram &amp; Gemini
+                with Python FastAPI, Laravel, Twilio, Deepgram &amp; Gemini
               </span>
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
@@ -121,6 +121,14 @@ export default function AiPhoneAgentPost() {
                 <Clock size={14} /> 12 min read
               </span>
               <span>By Hassan Rao</span>
+              <a
+                href="https://ai-caller.hassanrao.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                <ExternalLink size={14} /> View it live
+              </a>
             </div>
             <div className="flex flex-wrap gap-2 mt-5">
               {["Laravel", "FastAPI", "Twilio", "Deepgram", "Gemini", "pgvector", "Inertia + Vue"].map(
@@ -144,7 +152,16 @@ export default function AiPhoneAgentPost() {
               multi-tenant SaaS where any company can point a phone number at the platform,
               upload their knowledge base as PDFs, and get an AI receptionist that answers
               calls in a natural voice — and only says things it can back up with the
-              company&apos;s own documents.
+              company&apos;s own documents. It&apos;s live in production at{" "}
+              <a
+                href="https://ai-caller.hassanrao.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4"
+              >
+                ai-caller.hassanrao.com
+              </a>
+              .
             </p>
             <p>
               This post walks through the architecture, the real-time audio pipeline, the
