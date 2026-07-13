@@ -49,9 +49,9 @@ const structuredData = {
       alternateName: "Hassan Javaid Rao",
       url: "https://hassanrao.com",
       email: "hassanjrao@gmail.com",
-      jobTitle: "Senior Software Engineer",
+      jobTitle: "Senior Software Engineer & AI Engineer",
       description:
-        "Senior Full Stack Software Engineer based in Muscat, Oman with 4+ years of GCC enterprise experience. Specialises in Laravel, Next.js, React, Node.js, NestJS, AWS, and multi-tenant SaaS platforms.",
+        "AI-focused Senior Software Engineer with 5+ years of experience, including 4+ years of GCC enterprise work. Specialises in applied LLM engineering — RAG pipelines, grounded chatbots, and real-time AI voice agents — alongside Laravel, Next.js, React, Node.js, AWS, and multi-tenant SaaS platforms.",
       image: "https://hassanrao.com/hassan.png",
       sameAs: [
         "https://github.com/hassanjrao",
@@ -83,6 +83,14 @@ const structuredData = {
         "REST API Design",
         "OAuth 2.0",
         "Google Gemini AI",
+        "RAG Pipelines",
+        "LLM Engineering",
+        "AI Voice Agents",
+        "AI Chatbots",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
       ],
     },
     {
@@ -95,6 +103,8 @@ const structuredData = {
       provider: { "@id": "https://hassanrao.com/#person" },
       areaServed: ["Oman", "UAE", "Saudi Arabia", "United Kingdom", "United States"],
       serviceType: [
+        "AI & LLM Engineering",
+        "AI Chatbot & Voice Agent Development",
         "Web Application Development",
         "REST API Development",
         "SaaS Platform Development",

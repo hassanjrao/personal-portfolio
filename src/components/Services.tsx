@@ -4,16 +4,20 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Smartphone, Palette, TrendingUp } from "lucide-react";
+import { BrainCircuit, Bot, Code2, Smartphone, Palette, TrendingUp } from "lucide-react";
 
-const icons = [Code2, Smartphone, Palette, TrendingUp];
+const icons = [BrainCircuit, Bot, Code2, Smartphone, Palette, TrendingUp];
 const gradients = [
+  "from-fuchsia-600/20 to-purple-600/20",
+  "from-emerald-600/20 to-teal-600/20",
   "from-indigo-600/20 to-blue-600/20",
   "from-purple-600/20 to-pink-600/20",
   "from-cyan-600/20 to-teal-600/20",
   "from-orange-600/20 to-amber-600/20",
 ];
 const iconColors = [
+  "text-fuchsia-400",
+  "text-emerald-400",
   "text-indigo-400",
   "text-purple-400",
   "text-cyan-400",
@@ -25,7 +29,7 @@ export default function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const items = [0, 1, 2, 3].map((i) => ({
+  const items = [0, 1, 2, 3, 4, 5].map((i) => ({
     title: t(`items.${i}.title`),
     description: t(`items.${i}.description`),
   }));
@@ -43,7 +47,7 @@ export default function Services() {
           <p className="text-gray-500 max-w-xl mx-auto">{t("subheading")}</p>
         </div>
 
-        <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, i) => {
             const Icon = icons[i];
             return (

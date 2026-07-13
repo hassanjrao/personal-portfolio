@@ -12,15 +12,15 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Hassan Rao",
-    "title": "Software Engineer",
-    "subtitle": "I build high-performance web & mobile applications, scalable APIs, and cloud-native systems.",
+    "title": "Senior Software Engineer · AI Engineer",
+    "subtitle": "I build production AI systems — RAG pipelines, grounded chatbots, and real-time voice agents — on top of high-performance web applications, scalable APIs, and cloud-native architecture.",
     "cta_work": "View My Work",
     "cta_contact": "Get In Touch"
   },
   "about": {
     "badge": "About Me",
     "heading": "Turning ideas into digital reality",
-    "body": "I'm a passionate software engineer with expertise in full-stack web development, mobile apps, UI/UX design, and SEO strategy. I help businesses and individuals establish a strong digital presence across the globe.",
+    "body": "I'm a Senior Software Engineer with 5+ years of experience building GCC enterprise systems that process thousands of shipments daily across Oman, UAE, and Saudi Arabia. I lead the AI program at one of Oman's largest logistics platforms — shipping RAG chatbots and AI copilots used daily by operations teams — and I founded AI Caller, a multi-tenant SaaS where businesses get an AI receptionist that answers real phone calls with knowledge-grounded, hallucination-resistant responses.",
     "years_exp": "Years Experience",
     "projects": "Projects Completed",
     "clients": "Happy Clients",
@@ -29,8 +29,16 @@
   "services": {
     "badge": "What I Do",
     "heading": "Services I Offer",
-    "subheading": "From development to ranking, I cover every aspect of your digital journey.",
+    "subheading": "From AI systems to development and ranking, I cover every aspect of your digital journey.",
     "items": [
+      {
+        "title": "AI & LLM Engineering",
+        "description": "RAG pipelines, embeddings & vector search (pgvector), LLM function calling, and AI workflow automation that eliminates hours of daily manual work."
+      },
+      {
+        "title": "AI Chatbots & Voice Agents",
+        "description": "Knowledge-grounded chatbots and real-time AI phone agents (Twilio, Deepgram, Gemini) that answer from your own data — no hallucinations."
+      },
       {
         "title": "Web Development",
         "description": "Modern, fast, and scalable web applications built with Next.js, React, Laravel, and more."
