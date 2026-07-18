@@ -149,11 +149,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
-        <script
-          src="https://ai-caller.hassanrao.com/widget.js"
-          data-key="pk_wcMJKlNcGA6WRHXWVsqwDnToHJQOCwqEzEPYLEHe"
-          async
-        />
+        <script src="https://ai-caller.hassanrao.com/widget.js" data-key="pk_kktLaZTPE8aMJlQRGrvALUoMz630kttUxo9Yy2eh" async></script>
       </body>
     </html>
   );
