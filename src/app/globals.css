@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --accent: #6366f1;
-  --accent-light: #818cf8;
+  /* Logistics-tech palette: deep navy base, signal cyan, amber for action. */
+  --background: #060a12;
+  --surface: #0b1220;
+  --foreground: #e8eef7;
+  --accent: #22d3ee;
+  --accent-strong: #06b6d4;
+  --accent-warm: #f59e0b;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-warm: var(--accent-warm);
 }
 
 * {
@@ -25,36 +31,72 @@ body {
 }
 
 [dir="rtl"] body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", Geneva, Verdana, sans-serif;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: var(--surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: var(--accent-strong);
   border-radius: 3px;
 }
 
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 88px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1, #a855f7, #06b6d4);
+  background: linear-gradient(120deg, #67e8f9, #38bdf8 45%, #fbbf24);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Faint route-grid used behind hero and CTA bands. */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.6) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.04;
 }
 
+.card-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 211, 238, 0.35);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 28s linear infinite;
+}
+
+/* Shipment pulse travelling along the hero route line. */
+@keyframes route-dash {
+  to { stroke-dashoffset: -320; }
+}
+.route-dash {
+  stroke-dasharray: 6 10;
+  animation: route-dash 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .route-dash {
+    animation: none;
+  }
 }

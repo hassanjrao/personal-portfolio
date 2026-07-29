@@ -1,95 +1,465 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
     "services": "Services",
-    "portfolio": "Portfolio",
     "reviews": "Reviews",
     "blog": "Blog",
-    "contact": "Contact",
-    "resume": "Resume"
+    "book": "Book a Call",
+    "menu": "Menu",
+    "close": "Close menu",
+    "language": "Language"
   },
-  "hero": {
-    "greeting": "Hi, I'm",
-    "name": "Hassan Rao",
-    "title": "Senior Software Engineer · AI Engineer",
-    "subtitle": "I build production AI systems — RAG pipelines, grounded chatbots, and real-time voice agents — on top of high-performance web applications, scalable APIs, and cloud-native architecture.",
-    "cta_work": "View My Work",
-    "cta_contact": "Get In Touch"
+  "common": {
+    "cta_primary": "Book a free AI audit",
+    "cta_secondary": "See the services",
+    "cta_whatsapp": "Chat on WhatsApp",
+    "cta_email": "Email us",
+    "cta_linkedin": "Connect on LinkedIn",
+    "cta_calendly": "Pick a time",
+    "read_more": "Read more",
+    "back_to_blog": "Back to all articles",
+    "learn_more": "Learn more"
   },
-  "about": {
-    "badge": "About Me",
-    "heading": "Turning ideas into digital reality",
-    "body": "I'm a Senior Software Engineer with 5+ years of experience building GCC enterprise systems that process thousands of shipments daily across Oman, UAE, and Saudi Arabia. I lead the AI program at one of Oman's largest logistics platforms — shipping RAG chatbots and AI copilots used daily by operations teams — and I founded AI Caller, a multi-tenant SaaS where businesses get an AI receptionist that answers real phone calls with knowledge-grounded, hallucination-resistant responses.",
-    "years_exp": "Years Experience",
-    "projects": "Projects Completed",
-    "clients": "Happy Clients",
-    "countries": "Countries Ranked"
+  "meta": {
+    "home": {
+      "title": "AI Solutions for Logistics Companies",
+      "description": "We build AI agents and automation for freight forwarders, 3PLs, courier and warehousing operations — shipment tracking agents, AI voice receptionists, document extraction and quoting copilots. Built and proven inside a GCC logistics platform moving thousands of shipments a day."
+    },
+    "services": {
+      "title": "AI Services for Freight, Courier & Warehouse Operations",
+      "description": "Six productised AI systems for logistics: AI track & trace, voice booking agents, document AI for BOLs and invoices, quoting copilots, ops knowledge copilots and delay intelligence."
+    },
+    "reviews": {
+      "title": "Client Reviews",
+      "description": "Verified client reviews from AI and software projects delivered across the GCC, UK, Europe and the United States."
+    },
+    "blog": {
+      "title": "AI & Logistics Insights",
+      "description": "Practical write-ups on applying AI to logistics operations — voice agents, RAG over operational data, document automation and what actually ships to production."
+    },
+    "book": {
+      "title": "Book a Free AI Audit Call",
+      "description": "A free 30-minute call to map where your logistics team loses hours and which of them AI can realistically take back. No slide deck, no obligation."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "AI systems for logistics operations",
+      "heading": "AI Solutions for Logistics Companies",
+      "subheading": "We build AI agents that answer your shipment calls, read your documents, and price your freight — so your operations team stops doing it by hand.",
+      "credibility": "Built and proven inside a GCC logistics platform moving thousands of shipments a day.",
+      "cta_primary": "Book a free AI audit",
+      "cta_secondary": "See what we build",
+      "flow_title": "A shipment query, handled without a human",
+      "flow": [
+        "Customer asks \"where is my shipment?\"",
+        "Agent reads your TMS, not a guess",
+        "Grounded answer, with the source",
+        "Anything unusual escalates to ops"
+      ]
+    },
+    "stats": {
+      "heading": "Where this comes from",
+      "items": [
+        { "value": "5+ yrs", "label": "Shipping production software" },
+        { "value": "4+ yrs", "label": "Inside GCC logistics operations" },
+        { "value": "1,000s", "label": "Shipments a day on systems we support" },
+        { "value": "EN / AR", "label": "Bilingual on phone, chat and documents" }
+      ]
+    },
+    "problems": {
+      "badge": "The problem",
+      "heading": "Your team is expensive. Most of what it does is repetitive.",
+      "subheading": "Every logistics operation loses the same hours in the same six places. All six are now solvable.",
+      "items": [
+        {
+          "title": "\"Where is my shipment?\"",
+          "body": "The same question, hundreds of times a day, across phone, WhatsApp and email. Trained staff reading a tracking screen out loud."
+        },
+        {
+          "title": "Documents re-typed by hand",
+          "body": "Bills of lading, commercial invoices, packing lists and customs paperwork keyed into the TMS field by field — and typos become claims."
+        },
+        {
+          "title": "Quotes that go cold",
+          "body": "An RFQ arrives, sits two days waiting for someone to check the rate card, and the customer has already booked elsewhere."
+        },
+        {
+          "title": "Knowledge locked in three people",
+          "body": "SOPs, tariff rules and customer-specific exceptions live in seniors' heads. Every new hire interrupts them for six months."
+        },
+        {
+          "title": "Exceptions found too late",
+          "body": "You learn a shipment is delayed when the customer calls you — not when the delay first became predictable."
+        },
+        {
+          "title": "After-hours calls lost",
+          "body": "Bookings ring out at 9pm and on Fridays. The revenue goes to whoever picked up the phone."
+        }
+      ]
+    },
+    "solutions": {
+      "badge": "What we build",
+      "heading": "Six AI systems, each aimed at one of those hours",
+      "subheading": "Not a platform you have to migrate to. Systems that plug into the TMS, WMS and ERP you already run.",
+      "cta": "See all services in detail"
+    },
+    "segments": {
+      "badge": "Who this is for",
+      "heading": "Built for how your operation actually runs",
+      "subheading": "The workflows differ; the wasted hours rhyme.",
+      "items": {
+        "forwarding": {
+          "title": "Freight forwarding & 3PL",
+          "body": "Multi-party shipments, customs documentation, rate cards and endless status chasing across carriers, agents and shippers.",
+          "wins": [
+            "Quote turnaround from days to minutes",
+            "Customs and BOL data extracted, not typed",
+            "One agent answering shippers and consignees"
+          ]
+        },
+        "lastmile": {
+          "title": "Last-mile, courier & delivery",
+          "body": "Enormous call volume per shipment value. Delivery status, failed attempts, reschedules and COD reconciliation.",
+          "wins": [
+            "Delivery status handled on WhatsApp, 24/7",
+            "Failed-delivery reschedules without an agent",
+            "Driver dispatch and route questions answered instantly"
+          ]
+        },
+        "warehousing": {
+          "title": "Warehousing & fulfilment",
+          "body": "Stock queries, inbound and outbound paperwork, and a WMS that only four people really know how to drive.",
+          "wins": [
+            "Inventory and order questions answered from the WMS",
+            "Inbound documents read and validated automatically",
+            "SOPs turned into a copilot your floor staff can ask"
+          ]
+        }
+      }
+    },
+    "roi": {
+      "badge": "The business case",
+      "heading": "What does the manual version cost you?",
+      "subheading": "Move the sliders to your own numbers. This is deliberately conservative — it only counts repetitive status queries, not documents, quoting or after-hours revenue.",
+      "calls_label": "Repetitive status queries per day",
+      "minutes_label": "Average minutes handled per query",
+      "cost_label": "Fully-loaded cost per agent hour",
+      "deflection_label": "Share an AI agent handles end-to-end",
+      "result_hours": "Staff hours returned per month",
+      "result_savings": "Estimated annual saving",
+      "result_note": "Estimate only, based on the figures you entered. The audit call replaces this with your real call logs.",
+      "cta": "Get this modelled on your real numbers",
+      "currency_note": "Figures shown in USD"
+    },
+    "process": {
+      "badge": "How we work",
+      "heading": "Live in weeks, not a twelve-month programme",
+      "subheading": "One workflow, in production, measured — before anyone signs up for a roadmap.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Free AI audit call",
+          "duration": "30 minutes",
+          "body": "We map where your hours actually go and which workflows are realistic AI candidates. You leave with a shortlist whether or not you hire us."
+        },
+        {
+          "step": "02",
+          "title": "Fixed-fee pilot",
+          "duration": "2–4 weeks",
+          "body": "One workflow, built against your real data and put in front of real users. Fixed price, defined success metric, no open-ended discovery."
+        },
+        {
+          "step": "03",
+          "title": "Integration & rollout",
+          "duration": "4–8 weeks",
+          "body": "Wired into your TMS, WMS or ERP and into the channels your customers already use — phone, WhatsApp, web and email."
+        },
+        {
+          "step": "04",
+          "title": "Run & improve",
+          "duration": "Ongoing",
+          "body": "Monitoring, evaluation sets, and monthly tuning as your lanes, tariffs and customers change. AI systems drift; this is what keeps them honest."
+        }
+      ]
+    },
+    "proof": {
+      "badge": "Proof",
+      "heading": "Systems in production, not prototypes",
+      "subheading": "Two builds that shaped how we approach every logistics engagement.",
+      "items": [
+        {
+          "tag": "Enterprise logistics platform · GCC",
+          "title": "An AI programme inside a live logistics operation",
+          "challenge": "Operations teams handling thousands of shipments a day, with institutional knowledge trapped in documents and in the heads of a few senior staff.",
+          "approach": "Retrieval-augmented chatbots grounded in the company's own operational data, plus internal copilots used daily by operations teams.",
+          "result": "Grounded answers from company data instead of guesswork, and repetitive internal questions answered without interrupting senior staff.",
+          "stack": ["RAG", "Vector search", "LLM function calling", "Enterprise integration"]
+        },
+        {
+          "tag": "Own product · Multi-tenant SaaS",
+          "title": "An AI receptionist that answers real phone calls",
+          "challenge": "Businesses lose bookings to unanswered phones after hours, and generic voice bots hallucinate answers they cannot support.",
+          "approach": "We built a multi-tenant SaaS bridging Twilio Media Streams to a real-time voice agent, with every answer grounded in that tenant's own documents.",
+          "result": "Live calls answered around the clock with knowledge-grounded, hallucination-resistant responses — the same architecture behind dispatch and booking agents for logistics.",
+          "stack": ["Twilio", "Deepgram", "Laravel", "FastAPI", "pgvector"],
+          "link_label": "Read the technical write-up"
+        }
+      ]
+    },
+    "security": {
+      "badge": "Data & trust",
+      "heading": "Your shipment data is commercially sensitive. We treat it that way.",
+      "subheading": "The objection we hear first from every logistics operator — answered up front.",
+      "items": [
+        {
+          "title": "Your data never trains a public model",
+          "body": "Operational data, rates and customer records stay inside your boundary and are never used to train third-party models."
+        },
+        {
+          "title": "Grounded answers, or none",
+          "body": "Agents answer from your records and cite the source. When there is no grounded answer, they say so and hand off — they don't invent one."
+        },
+        {
+          "title": "PII and commercial redaction",
+          "body": "Consignee details, pricing and contract terms are redacted or tokenised before anything crosses a boundary it shouldn't."
+        },
+        {
+          "title": "Full audit trail",
+          "body": "Every question, answer, source document and escalation is logged — so a disputed answer can always be reconstructed."
+        },
+        {
+          "title": "Deploy where your policy requires",
+          "body": "Your cloud account, a private VPC, or on-premise where regulation or a customer contract demands it."
+        },
+        {
+          "title": "Role-aware access",
+          "body": "The agent only ever sees and reveals what the person asking is already entitled to see in your systems."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Questions",
+      "heading": "The things operators ask us first",
+      "items": [
+        {
+          "q": "Do we have to replace our TMS or WMS?",
+          "a": "No — and we'd advise against it. Everything we build sits alongside the systems you already run and talks to them through APIs, webhooks or a read replica. Replacing a working TMS is a multi-year project; this is a matter of weeks."
+        },
+        {
+          "q": "How long before something is actually live?",
+          "a": "A pilot workflow is typically in front of real users within two to four weeks. Full integration and rollout across channels usually adds another four to eight, depending on how accessible your systems are."
+        },
+        {
+          "q": "Won't the AI just make things up?",
+          "a": "That is the failure mode we design against first. Answers are retrieved from your own records and cited, the agent is constrained to say \"I don't know\" rather than guess, and anything outside its confidence threshold escalates to a human. We also build evaluation sets so accuracy is measured, not assumed."
+        },
+        {
+          "q": "Can it handle Arabic as well as English?",
+          "a": "Yes. Bilingual English–Arabic handling on phone, chat and documents is standard for GCC operations, and other languages can be added as your lanes require."
+        },
+        {
+          "q": "What does an engagement cost?",
+          "a": "The audit call is free. Pilots are fixed-fee against a defined success metric, so you know the number before you commit. Full builds are scoped after the pilot, and ongoing monitoring and tuning is a monthly retainer."
+        },
+        {
+          "q": "What do you need from us to start?",
+          "a": "For the audit, a conversation is enough. For a pilot: sample data for the workflow in question, a technical contact who knows your systems, and one operations person who lives the problem daily."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Find out what AI can actually take off your team",
+      "body": "A free 30-minute call. We map where your hours go and which workflows are realistic candidates. You get the shortlist either way — no deck, no obligation.",
+      "primary": "Book the audit call",
+      "secondary": "Or message us on WhatsApp"
+    }
   },
   "services": {
-    "badge": "What I Do",
-    "heading": "Services I Offer",
-    "subheading": "From AI systems to development and ranking, I cover every aspect of your digital journey.",
-    "items": [
-      {
-        "title": "AI & LLM Engineering",
-        "description": "RAG pipelines, embeddings & vector search (pgvector), LLM function calling, and AI workflow automation that eliminates hours of daily manual work."
+    "badge": "Services",
+    "heading": "AI systems for logistics operations",
+    "subheading": "Six productised builds. Each targets a specific place your operation loses hours, and each is scoped to reach production — not a proof of concept that dies in a demo.",
+    "what_it_does": "What it does",
+    "outcome": "The outcome",
+    "timeline": "Typical timeline",
+    "cta": "Discuss this service",
+    "items": {
+      "track-trace": {
+        "title": "AI Track & Trace Agent",
+        "tagline": "Stop answering \"where is my shipment?\"",
+        "body": "A customer-facing agent on WhatsApp, web chat, email and phone that answers shipment status questions directly from your TMS — with the reference number, the last scan and the realistic ETA.",
+        "bullets": [
+          "Reads live status from your TMS rather than a cached snapshot",
+          "Handles reference lookup, ETA, proof of delivery and invoice copies",
+          "Works in English and Arabic on the channels customers already use",
+          "Escalates exceptions and angry customers to a human with full context"
+        ],
+        "outcome": "The bulk of repetitive status contacts resolved without an agent, and your team left with the calls that actually need judgement.",
+        "timeline": "Pilot in 2–3 weeks"
       },
-      {
-        "title": "AI Chatbots & Voice Agents",
-        "description": "Knowledge-grounded chatbots and real-time AI phone agents (Twilio, Deepgram, Gemini) that answer from your own data — no hallucinations."
+      "voice-agent": {
+        "title": "AI Voice Agent for Dispatch & Booking",
+        "tagline": "The phone gets answered at 9pm",
+        "body": "A real-time AI receptionist that picks up your operations line, takes booking details, answers routine questions and writes straight into your systems. This is a product we built and run ourselves.",
+        "bullets": [
+          "Answers on your existing number with sub-second response latency",
+          "Captures pickup, drop-off, dimensions and service level into your TMS",
+          "Grounded in your own tariffs, service areas and cut-off times",
+          "Warm-transfers to a human whenever the call needs one"
+        ],
+        "outcome": "After-hours and overflow bookings captured instead of lost, and the daytime queue shortened before it forms.",
+        "timeline": "Pilot in 3–4 weeks"
       },
-      {
-        "title": "Web Development",
-        "description": "Modern, fast, and scalable web applications built with Next.js, React, Laravel, and more."
+      "document-ai": {
+        "title": "Logistics Document AI",
+        "tagline": "Nobody should re-type a bill of lading",
+        "body": "Extraction and validation for the paperwork your operation drowns in — bills of lading, commercial invoices, packing lists, delivery notes and customs declarations — straight into structured records.",
+        "bullets": [
+          "Reads scans, photos and PDFs, including poor-quality mobile captures",
+          "Validates against your master data and flags mismatches for review",
+          "Writes structured records into your TMS, WMS or ERP",
+          "Confidence-scored, with a human review queue for anything uncertain"
+        ],
+        "outcome": "Document handling time cut dramatically, and keying errors caught before they turn into customs delays or claims.",
+        "timeline": "Pilot in 2–4 weeks"
       },
-      {
-        "title": "Mobile Development",
-        "description": "Cross-platform iOS & Android apps using React Native and Flutter."
+      "quoting": {
+        "title": "Quote & Rate-Card Copilot",
+        "tagline": "Price the RFQ before your competitor does",
+        "body": "An agent that reads an inbound RFQ — however it arrives — applies your rate cards, surcharges and customer-specific terms, and drafts a quote ready for a human to approve and send.",
+        "bullets": [
+          "Parses RFQs from email, spreadsheets and PDFs into structured lanes",
+          "Applies your rate cards, fuel and seasonal surcharges, and contract terms",
+          "Drafts the quote for approval — pricing authority stays with your team",
+          "Flags lanes with no rate coverage instead of guessing a number"
+        ],
+        "outcome": "Quote turnaround measured in minutes, and fewer opportunities lost to whoever replied first.",
+        "timeline": "Pilot in 3–4 weeks"
       },
-      {
-        "title": "UI/UX Design",
-        "description": "Clean, user-centric interfaces designed in Figma with a focus on conversion and usability."
+      "ops-copilot": {
+        "title": "Operations Knowledge Copilot",
+        "tagline": "Get the SOPs out of three people's heads",
+        "body": "An internal copilot grounded in your SOPs, tariff rules, customs requirements and customer-specific exceptions — so staff ask the system instead of interrupting your most experienced people.",
+        "bullets": [
+          "Retrieval over your SOPs, contracts, tariffs and internal documentation",
+          "Every answer cites the source document and section",
+          "Role-aware — staff only see what their permissions already allow",
+          "Cuts new-hire ramp-up from months to weeks"
+        ],
+        "outcome": "Consistent answers across shifts and branches, and senior staff freed from being a human help desk.",
+        "timeline": "Pilot in 2–3 weeks"
       },
-      {
-        "title": "SEO & Digital Marketing",
-        "description": "Multi-country SEO strategies that drive organic traffic and rank your business globally."
+      "exceptions": {
+        "title": "Exception & Delay Intelligence",
+        "tagline": "Know before the customer tells you",
+        "body": "Continuous monitoring across your shipment data that surfaces delays, stuck consignments, missing documents and at-risk SLAs while there is still time to act on them.",
+        "bullets": [
+          "Watches milestones and dwell times for shipments drifting off plan",
+          "Flags missing or expiring documentation before it blocks clearance",
+          "Ranks exceptions by customer impact and SLA exposure",
+          "Pushes alerts and a suggested next action to the right team"
+        ],
+        "outcome": "Exceptions handled proactively, and fewer SLA breaches discovered through an angry phone call.",
+        "timeline": "Pilot in 3–4 weeks"
       }
-    ]
+    },
+    "integrations": {
+      "heading": "Works with what you already run",
+      "body": "We integrate through APIs, webhooks, EDI, flat-file drops or a read replica — whatever your systems expose. If your TMS is bespoke or twelve years old, that is normal and not a blocker.",
+      "items": [
+        "TMS & WMS platforms",
+        "ERP and accounting systems",
+        "Carrier and airline APIs",
+        "EDI and flat-file feeds",
+        "WhatsApp Business & telephony",
+        "Customs and port portals"
+      ]
+    }
   },
-  "portfolio": {
-    "badge": "My Work",
-    "heading": "Featured Projects",
-    "subheading": "A selection of projects I've built for clients and personal ventures.",
-    "view_project": "View Project",
-    "view_all": "View All Projects"
+  "reviews": {
+    "badge": "Client reviews",
+    "heading": "What clients say",
+    "subheading": "Verified reviews from delivered projects across the GCC, the UK, Europe and the United States.",
+    "empty_title": "Review screenshots are being added",
+    "empty_body": "Verified client review screenshots are being migrated to this page. In the meantime, we're happy to put you in touch with references relevant to your operation.",
+    "gallery_note": "Screenshots are unedited captures of client feedback. Names are shortened for privacy.",
+    "open_image": "View full review",
+    "close_image": "Close",
+    "why_heading": "Why operators keep working with us",
+    "why_items": [
+      {
+        "title": "We've worked inside these operations, not just read about them",
+        "body": "Four-plus years inside GCC logistics enterprise systems. We know what a dwell-time exception is and why your customs team cares about it."
+      },
+      {
+        "title": "Production systems, not demos",
+        "body": "Every engagement is scoped to reach real users with real data. A pilot that only works on a curated sample isn't a pilot."
+      },
+      {
+        "title": "Straight answers about what AI can't do",
+        "body": "Some workflows aren't AI problems. We'll tell you which of yours aren't, before you spend money finding out."
+      },
+      {
+        "title": "You keep everything we build",
+        "body": "Code, prompts, evaluation sets and documentation are yours. No lock-in to a black box only we can maintain."
+      }
+    ],
+    "cta": "Talk to us about your operation"
   },
-  "contact": {
-    "badge": "Get In Touch",
-    "heading": "Let's Work Together",
-    "subheading": "Have a project in mind? I'd love to hear about it. Send me a message and let's make something great.",
-    "name_label": "Your Name",
-    "email_label": "Your Email",
-    "message_label": "Your Message",
-    "send": "Send Message",
-    "sending": "Sending...",
-    "success": "Message sent successfully!",
-    "error": "Something went wrong. Please try again."
+  "blog": {
+    "badge": "Insights",
+    "heading": "AI & logistics, written from the build side",
+    "subheading": "Practical write-ups on what actually reaches production — architecture, failure modes and the parts vendors leave out.",
+    "read_time": "min read",
+    "read_more": "Read the case study",
+    "empty": "New articles are on the way.",
+    "cta_heading": "Want this applied to your operation?",
+    "cta_body": "Book a free 30-minute audit and we'll map your workflows against what's realistic today."
   },
-  "fiverr": {
-    "badge": "Fiverr Reviews",
-    "heading": "What Clients Say",
-    "subheading": "Real reviews from clients across the USA, UK, Pakistan, and the Middle East.",
-    "view_profile": "View Fiverr Profile",
-    "avg_rating": "Average Rating",
-    "total_reviews": "Total Reviews",
-    "completion_rate": "Completion Rate",
-    "countries_served": "Countries Served",
-    "total_orders": "Total Orders",
-    "years_on_fiverr": "Years on Fiverr"
+  "book": {
+    "badge": "Book a call",
+    "heading": "Book a free AI audit for your logistics operation",
+    "subheading": "Thirty minutes, no deck, no obligation. We map where your team loses hours and which of them AI can realistically take back — and we'll tell you plainly if the answer is none of them.",
+    "expect_heading": "What you get from the call",
+    "expect_items": [
+      "A shortlist of your workflows ranked by AI feasibility and payback",
+      "An honest read on which ones aren't worth automating yet",
+      "A rough timeline and cost band, so you can budget",
+      "Answers on data handling, integration and where things get deployed"
+    ],
+    "expect_note": "You leave with the shortlist whether or not we work together.",
+    "calendly_heading": "Pick a time that suits you",
+    "calendly_body": "The calendar below is live. If nothing fits, message us on WhatsApp and we'll find a slot.",
+    "calendly_fallback": "Open the scheduling page",
+    "form_heading": "Or send the details first",
+    "form_body": "Tell us about your operation and we'll come to the call already knowing the context.",
+    "form_name": "Your name",
+    "form_email": "Work email",
+    "form_company": "Company",
+    "form_role": "Your role",
+    "form_segment": "What kind of operation?",
+    "form_segment_options": [
+      "Freight forwarding / 3PL",
+      "Last-mile, courier or delivery",
+      "Warehousing & fulfilment",
+      "Shipping line, port or terminal",
+      "Other"
+    ],
+    "form_message": "What's eating your team's time?",
+    "form_message_placeholder": "e.g. Our customer service team spends most of the day answering shipment status calls, and our quotes take two days to go out.",
+    "form_send": "Send and book a call",
+    "form_sending": "Sending…",
+    "form_success": "Thanks — that's landed. We'll reply within one working day.",
+    "form_error": "That didn't send. Please email us directly instead.",
+    "channels_heading": "Prefer another channel?",
+    "channels_body": "Any of these reach us directly.",
+    "response_note": "We reply to everything within one working day."
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "built_with": "Built with Next.js"
+    "tagline": "AI agents and automation for freight forwarders, 3PLs, courier networks and warehousing operations — built to reach production.",
+    "nav_heading": "Pages",
+    "contact_heading": "Get in touch",
+    "services_heading": "Services",
+    "rights": "All rights reserved."
   }
 }

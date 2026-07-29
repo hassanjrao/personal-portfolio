@@ -1,34 +1,28 @@
 import { ImageResponse } from "next/og";
-import { readFileSync } from "fs";
-import { join } from "path";
+import { brand } from "@/config/site";
 
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
 export default function Icon() {
-  const imgBuffer = readFileSync(join(process.cwd(), "public/hassan.png"));
-  const base64 = `data:image/png;base64,${imgBuffer.toString("base64")}`;
-
   return new ImageResponse(
     (
       <div
         style={{
           width: 64,
           height: 64,
-          borderRadius: "50%",
-          overflow: "hidden",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0a0a0a",
+          background: "linear-gradient(135deg, #0e7490, #06b6d4 60%, #f59e0b)",
+          borderRadius: 14,
+          color: "#06121c",
+          fontSize: 38,
+          fontWeight: 700,
+          letterSpacing: -2,
         }}
       >
-        <img
-          src={base64}
-          width={64}
-          height={64}
-          style={{ objectFit: "cover", borderRadius: "50%" }}
-        />
+        {brand.mark}
       </div>
     ),
     { ...size }

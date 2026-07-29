@@ -1,70 +1,69 @@
-# Hassan Rao — Software Engineer
+# FleetMind AI — AI Solutions for Logistics Companies
 
-> Hassan Rao (Hassan Javaid Rao) is a Senior Full Stack Software Engineer based in Muscat, Oman with 4+ years of GCC enterprise experience. He specialises in Laravel, Next.js, React, Node.js, NestJS, Vue.js, Livewire, AWS, and MySQL. He is also a top-rated freelancer on Fiverr with 308 five-star reviews and a 4.9 rating.
+> FleetMind AI is a studio building production AI systems for logistics companies — freight forwarders, 3PLs, courier and last-mile networks, and warehousing operations. The team's experience comes from four-plus years inside GCC logistics enterprise systems, on platforms handling thousands of shipments a day. Engagements start with a free 30-minute AI audit call. Site available in English and Arabic.
 
-## Identity
+## Contact
 
-- Full name: Hassan Javaid Rao
-- Also known as: Hassan Rao
-- Role: Senior Software Engineer
-- Location: Muscat, Oman (originally from Multan, Pakistan)
-- Email: hassanjrao@gmail.com
 - Website: https://hassanrao.com
-- GitHub: https://github.com/hassanjrao
-- LinkedIn: https://linkedin.com/in/hassanjrao
-- Fiverr: https://www.fiverr.com/hassanjavaidrao
+- Email: hassanjrao@gmail.com
+- WhatsApp: +968 9976 3464 · +92 303 5209409
+- Languages: English, Arabic
 
-## Professional Experience
+## Positioning
 
-- **Senior Software Engineer** at Thiqa Tech, Muscat, Oman (Dec 2021 – Present)
-  - Built a multi-tenant logistics SaaS platform deployed across Oman, UAE, and Saudi Arabia
-  - Deployed solution for one of Oman's largest logistics companies (15 branches nationwide)
-  - Automated shipment data entry with Google Gemini AI (eliminated 6 hours of daily manual effort)
-  - Integrated with DHL, AJEX, and iMile via OAuth 2.0 machine-to-machine flows
-  - Architected event-driven systems using AWS Lambda, SQS, and S3
-  - Maintained 99.9% uptime using Sentry and AWS CloudWatch
+We build AI agents and automation that remove repetitive work from logistics operations. Systems integrate with the customer's existing TMS, WMS or ERP — no platform migration required. Every agent is grounded in the customer's own records, cites its source, and escalates to a human rather than guessing.
 
-- **Freelance Full Stack Developer** on Fiverr & Upwork (2020 – 2021)
-  - Top Rated status with 250+ five-star reviews
-  - 200+ clients across logistics, e-commerce, and SaaS
+## Services
 
-- **Section Leader (Teaching)** at Stanford Code in Place (2025)
-  - Competitively selected to teach Python programming internationally
+1. **AI Track & Trace Agent** — customer-facing agent on WhatsApp, web chat, email and phone answering shipment status directly from the TMS. Pilot in 2–3 weeks.
+2. **AI Voice Agent for Dispatch & Booking** — real-time AI receptionist that answers the operations line, captures booking details and writes them into the TMS. Pilot in 3–4 weeks.
+3. **Logistics Document AI** — extraction and validation for bills of lading, commercial invoices, packing lists, delivery notes and customs declarations. Pilot in 2–4 weeks.
+4. **Quote & Rate-Card Copilot** — parses inbound RFQs, applies rate cards and surcharges, drafts quotes for human approval. Pilot in 3–4 weeks.
+5. **Operations Knowledge Copilot** — internal RAG copilot over SOPs, tariffs, contracts and customer-specific exceptions, with cited answers. Pilot in 2–3 weeks.
+6. **Exception & Delay Intelligence** — continuous monitoring surfacing delays, stuck consignments, missing documents and at-risk SLAs. Pilot in 3–4 weeks.
 
-## Technical Skills
+## Industries Served
 
-- Backend: PHP, Laravel, Node.js, NestJS, Python
-- Frontend: React.js, Next.js, Vue.js, Livewire, JavaScript, HTML5, CSS3
-- Cloud & DevOps: AWS (Lambda, SQS, S3, CloudWatch), Docker, Redis
-- Auth & Security: OAuth 2.0, Laravel Passport, JWT
-- Databases: MySQL, PostgreSQL, MongoDB
-- Architecture: Microservices, Multi-tenant SaaS, RESTful API Design
-- AI & Automation: Google Gemini API
+- Freight forwarding and third-party logistics (3PL)
+- Last-mile, courier and delivery networks
+- Warehousing and fulfilment
+- Shipping lines, ports and terminals
 
-## Education
+## Engagement Model
 
-- B.S. Software Engineering, Sukkur IBA University (2017–2020)
-- Fully funded merit scholarship
-- IELTS 7.0
+1. Free 30-minute AI audit call — map where operational hours go and which workflows are realistic AI candidates.
+2. Fixed-fee pilot, 2–4 weeks — one workflow in production against real data, with an agreed success metric.
+3. Integration and rollout, 4–8 weeks — into the TMS/WMS/ERP and customer channels.
+4. Ongoing monitoring, evaluation and monthly tuning.
 
-## Achievements
+## Data Handling
 
-- Winner — Web Design Competition, Sukkur IBA University
-- Winner — Code in the Dark Competition, Sukkur IBA University
-- Section Leader, Stanford Code in Place 2025
-- Top Rated Seller, Fiverr — 4.9★ rating, 308 reviews, 439 orders
+- Customer data is never used to train third-party models.
+- Answers are retrieved from customer records and cited; the agent says "I don't know" and escalates rather than inventing an answer.
+- PII and commercial terms are redacted or tokenised before crossing a boundary.
+- Full audit trail of every question, answer, source and escalation.
+- Deployment in the customer's cloud account, a private VPC, or on-premise where required.
+- Role-aware access — the agent reveals only what the asker is already entitled to see.
 
-## Services Offered
+## Track Record
 
-- Full stack web application development (Laravel, Next.js, React, Vue.js)
-- REST API design and development
-- Multi-tenant SaaS platform development
-- AWS cloud architecture and deployment
-- AI-driven workflow automation (Google Gemini)
-- Mobile app backend development (Node.js, NestJS)
-- Database design and optimisation (MySQL, PostgreSQL)
+- **AI programme inside a live GCC logistics operation** — multi-tenant logistics platform handling thousands of shipments a day. RAG chatbots and internal AI copilots used daily by operations teams; shipment data-entry automation removing roughly six hours of manual effort a day; event-driven architecture on AWS Lambda, SQS and S3.
+- **AI receptionist SaaS (own product)** — multi-tenant platform bridging Twilio Media Streams to a real-time voice agent, with retrieval over PostgreSQL pgvector and a Laravel admin. Answers live phone calls grounded in each tenant's own documents.
+
+## Technical Stack
+
+- AI: RAG pipelines, vector search (pgvector), LLM function calling, evaluation sets, real-time voice agents (Twilio, Deepgram)
+- Backend: PHP, Laravel, Python, FastAPI, Node.js, NestJS
+- Frontend: React, Next.js, Vue.js, Livewire, TypeScript
+- Cloud: AWS (Lambda, SQS, S3, CloudWatch), Docker, Redis
+- Data: PostgreSQL, MySQL, MongoDB
+- Integration: REST, webhooks, EDI, flat-file feeds, OAuth 2.0
 
 ## Key Pages
 
-- Homepage: https://hassanrao.com
-- Software Developer in Oman: https://hassanrao.com/software-developer-oman
+- Home: https://hassanrao.com
+- Services: https://hassanrao.com/services
+- Reviews: https://hassanrao.com/reviews
+- Blog: https://hassanrao.com/blog
+- Book a free AI audit call: https://hassanrao.com/book-a-call
+- Arabic site: https://hassanrao.com/ar
