@@ -10,7 +10,6 @@ import { routing } from "@i18n/routing";
 import { brand, contact, siteUrl } from "@/config/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { localeAlternates, localeUrl } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -63,7 +62,6 @@ const structuredData = {
       name: brand.name,
       alternateName: "Hassan Javaid Rao",
       url: siteUrl,
-      email: contact.email,
       image: `${siteUrl}${brand.photo}`,
       jobTitle: brand.role,
       description:
@@ -144,7 +142,6 @@ export default async function LocaleLayout({
           <Navbar />
           <main id="content">{children}</main>
           <Footer />
-          <WhatsAppButton />
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

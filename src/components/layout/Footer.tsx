@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
-import { Mail, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Link } from "@i18n/navigation";
 import { brand, contact, routes, serviceIds } from "@/config/site";
-import { LinkedInIcon, WhatsAppIcon } from "../ui/icons";
+import { LinkedInIcon } from "../ui/icons";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -80,28 +80,6 @@ export default function Footer() {
               {t("contact_heading")}
             </h2>
             <ul className="mt-4 space-y-2.5">
-              <li>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-violet-700 transition-colors"
-                >
-                  <Mail size={15} />
-                  {contact.email}
-                </a>
-              </li>
-              {contact.whatsapp.map((w) => (
-                <li key={w.href}>
-                  <a
-                    href={w.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-slate-500 hover:text-green-600 transition-colors"
-                  >
-                    <WhatsAppIcon className="w-[15px] h-[15px]" />
-                    <span dir="ltr">{w.label}</span>
-                  </a>
-                </li>
-              ))}
               <li>
                 <a
                   href={contact.linkedin}

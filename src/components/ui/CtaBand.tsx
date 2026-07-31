@@ -1,8 +1,7 @@
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarClock } from "lucide-react";
 import { Link } from "@i18n/navigation";
-import { primaryWhatsApp, routes } from "@/config/site";
-import { WhatsAppIcon } from "./icons";
+import { contact, routes } from "@/config/site";
 
 export default function CtaBand() {
   const t = useTranslations("home.cta");
@@ -28,12 +27,12 @@ export default function CtaBand() {
             <ArrowRight size={17} className="rtl:rotate-180" />
           </Link>
           <a
-            href={primaryWhatsApp.href}
+            href={contact.calendly}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-violet-400 hover:bg-violet-50 transition-colors"
           >
-            <WhatsAppIcon className="w-[18px] h-[18px]" />
+            <CalendarClock size={17} />
             {t("secondary")}
           </a>
         </div>

@@ -23,11 +23,12 @@ const STOPS = [
   "book",
 ] as const;
 
-/** Labels are only auto-revealed when the gutter is wide enough to hold them. */
-const ROOM_FOR_LABELS = "(min-width: 1400px)";
-
-/** How long the route stays expanded on arrival before folding away. */
-const INTRO_MS = 5000;
+/**
+ * Labels are always shown, so the rail only renders where the gutter can hold
+ * them without overlapping the max-w-6xl content column. Narrower viewports
+ * get the progress bar and current-stop pill instead.
+ */
+const ROOM_FOR_RAIL = "(min-width: 1400px)";
 
 function useMediaQuery(query: string) {
   const subscribe = useCallback(
@@ -50,8 +51,7 @@ export default function SectionRail() {
   const t = useTranslations("home.rail");
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrolled, setScrolled] = useState(0);
-  const [intro, setIntro] = useState(true);
-  const hasRoom = useMediaQuery(ROOM_FOR_LABELS);
+  const hasRoom = useMediaQuery(ROOM_FOR_RAIL);
 
   useEffect(() => {
     const sections = STOPS.map((id) => document.getElementById(id)).filter(
@@ -75,43 +75,32 @@ export default function SectionRail() {
     const onScroll = () => {
       const max = document.body.scrollHeight - window.innerHeight;
       setScrolled(max > 0 ? Math.min(1, window.scrollY / max) : 0);
-      // Reading has started — fold the route down to dots.
-      if (window.scrollY > 120) setIntro(false);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    const timer = setTimeout(() => setIntro(false), INTRO_MS);
-
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
-      clearTimeout(timer);
     };
   }, []);
 
   const jumpTo = (id: string) => {
-    setIntro(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const activeId = STOPS[activeIndex];
   const fill = STOPS.length > 1 ? (activeIndex / (STOPS.length - 1)) * 100 : 0;
-  const expanded = intro && hasRoom;
 
-  return (
-    <>
-      {/* Desktop: vertical route rail */}
+  if (hasRoom) {
+    return (
       <nav
         aria-label={t("aria")}
-        className="group/rail hidden xl:flex fixed top-1/2 -translate-y-1/2 end-6 z-40 flex-col"
+        className="fixed top-1/2 -translate-y-1/2 end-6 z-40 flex flex-col"
       >
-        {/* Route header — only while the rail is introducing itself */}
         <span
           aria-hidden="true"
-          className={`mb-3 ms-8 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 ${
-            expanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
-          }`}
+          className="mb-3 ms-8 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400"
         >
           {t("aria")}
         </span>
@@ -128,7 +117,7 @@ export default function SectionRail() {
             style={{ height: `calc(${fill}% - 6px)` }}
           />
 
-          <ul className="relative flex flex-col gap-4">
+          <ul className="relative flex flex-col gap-3.5">
             {STOPS.map((id, i) => {
               const isActive = i === activeIndex;
               const isPassed = i < activeIndex;
@@ -139,10 +128,10 @@ export default function SectionRail() {
                     type="button"
                     onClick={() => jumpTo(id)}
                     aria-current={isActive ? "true" : undefined}
-                    className="group flex items-center gap-3 outline-none"
+                    className="group flex items-center gap-3 outline-none focus-visible:ring-2 focus-visible:ring-violet-300 rounded-md"
                   >
                     <span
-                      className={`relative grid place-items-center w-[18px] h-[18px] rounded-full border transition-all duration-200 ${
+                      className={`relative grid place-items-center w-[18px] h-[18px] shrink-0 rounded-full border transition-all duration-200 ${
                         isActive
                           ? "border-violet-600 bg-white scale-110"
                           : isPassed
@@ -162,14 +151,12 @@ export default function SectionRail() {
                     </span>
 
                     <span
-                      className={`whitespace-nowrap rounded-md px-2 py-1 text-xs transition-all duration-300 ${
+                      className={`whitespace-nowrap rounded-md px-2.5 py-1 text-xs transition-all duration-200 ${
                         isActive
-                          ? "bg-violet-600 text-white opacity-100 translate-x-0"
-                          : `bg-white text-slate-600 border border-slate-200 card-soft group-hover/rail:opacity-100 group-hover/rail:translate-x-0 group-focus-visible:opacity-100 ${
-                              expanded
-                                ? "opacity-100 translate-x-0"
-                                : "opacity-0 -translate-x-1"
-                            }`
+                          ? "bg-violet-600 text-white font-medium card-soft"
+                          : isPassed
+                            ? "text-violet-700 group-hover:bg-violet-50"
+                            : "text-slate-500 group-hover:bg-slate-100 group-hover:text-slate-900"
                       }`}
                     >
                       {t(`stops.${id}`)}
@@ -181,11 +168,15 @@ export default function SectionRail() {
           </ul>
         </div>
       </nav>
+    );
+  }
 
-      {/* Mobile / tablet: thin progress bar + current-stop pill */}
+  return (
+    <>
+      {/* Narrow viewports: thin progress bar + current-stop pill */}
       <div
         aria-hidden="true"
-        className="xl:hidden fixed top-16 inset-x-0 z-40 h-0.5 bg-slate-100"
+        className="fixed top-16 inset-x-0 z-40 h-0.5 bg-slate-100"
       >
         <div
           className="h-full bg-violet-500 transition-[width] duration-150 ease-out"
@@ -194,7 +185,7 @@ export default function SectionRail() {
       </div>
 
       <div
-        className={`xl:hidden fixed bottom-6 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 z-40 transition-all duration-300 ${
+        className={`fixed bottom-6 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 z-40 transition-all duration-300 ${
           activeIndex > 0
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-3 pointer-events-none"

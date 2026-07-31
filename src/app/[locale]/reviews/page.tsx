@@ -10,6 +10,8 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import CtaBand from "@/components/ui/CtaBand";
 import ReviewsGallery from "@/components/reviews/ReviewsGallery";
+import TestimonialGrid from "@/components/reviews/TestimonialGrid";
+import { reviewShots } from "@/config/reviews";
 
 export async function generateMetadata({
   params,
@@ -78,9 +80,21 @@ export default async function ReviewsPage({
       />
       <section className="px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <ReviewsGallery />
+          <TestimonialGrid />
+          <p className="mt-4 text-center text-xs text-slate-400">{t("quotes_note")}</p>
         </div>
       </section>
+
+      {/* Original screenshots — renders only once files are added to /public/reviews */}
+      {reviewShots.length > 0 && (
+        <section className="px-4 pb-20">
+          <div className="max-w-6xl mx-auto">
+            <SectionHeader heading={t("screenshots_heading")} />
+            <ReviewsGallery />
+          </div>
+        </section>
+      )}
+
       <WhyPanel />
       <CtaBand />
     </>

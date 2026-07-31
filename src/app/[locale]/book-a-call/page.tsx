@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Check, Mail, Calendar, ExternalLink } from "lucide-react";
+import { Check, Calendar, ExternalLink } from "lucide-react";
 
 import { contact, routes } from "@/config/site";
 import { localeAlternates, localeUrl } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import BookingForm from "@/components/book/BookingForm";
-import { LinkedInIcon, WhatsAppIcon } from "@/components/ui/icons";
+import { LinkedInIcon } from "@/components/ui/icons";
 
 export async function generateMetadata({
   params,
@@ -57,20 +57,6 @@ function Channels() {
 
   const channels = [
     {
-      label: tc("cta_email"),
-      value: contact.email,
-      href: `mailto:${contact.email}`,
-      icon: <Mail size={18} />,
-      hover: "hover:border-violet-400 hover:bg-violet-50",
-    },
-    ...contact.whatsapp.map((w) => ({
-      label: `WhatsApp · ${w.region}`,
-      value: w.label,
-      href: w.href,
-      icon: <WhatsAppIcon className="w-[18px] h-[18px]" />,
-      hover: "hover:border-green-400 hover:bg-green-50",
-    })),
-    {
       label: tc("cta_linkedin"),
       value: "LinkedIn",
       href: contact.linkedin,
@@ -95,7 +81,7 @@ function Channels() {
           <a
             key={c.href}
             href={c.href}
-            target={c.href.startsWith("mailto:") ? undefined : "_blank"}
+            target="_blank"
             rel="noopener noreferrer"
             className={`flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 transition-colors ${c.hover}`}
           >
@@ -120,9 +106,9 @@ function CalendlyEmbed() {
   // Rendered as a plain iframe so no third-party script runs on the page.
   const params = new URLSearchParams({
     hide_gdpr_banner: "1",
-    background_color: "0b1220",
-    text_color: "e8eef7",
-    primary_color: "22d3ee",
+    background_color: "ffffff",
+    text_color: "0f2438",
+    primary_color: "7c3aed",
   });
   const src = `${contact.calendly}?${params.toString()}`;
 

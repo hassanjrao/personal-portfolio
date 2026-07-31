@@ -15,7 +15,6 @@
     "cta_primary": "Book a free AI audit",
     "cta_secondary": "See the services",
     "cta_demo": "See it work",
-    "cta_whatsapp": "Chat on WhatsApp",
     "cta_email": "Email me",
     "cta_linkedin": "Connect on LinkedIn",
     "cta_calendly": "Pick a time",
@@ -38,7 +37,7 @@
     },
     "reviews": {
       "title": "Client Reviews",
-      "description": "Verified client reviews from AI and software projects delivered for clients across the United States, the UK and Europe."
+      "description": "Unedited client reviews and LinkedIn recommendations for Hassan Rao, from projects delivered across the United States, Canada, Europe and beyond."
     },
     "blog": {
       "title": "AI & Logistics Insights",
@@ -308,7 +307,7 @@
       "heading": "Find out what AI can actually take off your team",
       "body": "A free 30-minute call. We map where your hours and jobs go, and which workflows are realistic candidates. You get the shortlist either way — no deck, no obligation.",
       "primary": "Book the audit call",
-      "secondary": "Or message me on WhatsApp"
+      "secondary": "Or pick a time directly"
     },
     "rail": {
       "aria": "Page sections",
@@ -501,7 +500,7 @@
   "reviews": {
     "badge": "Client reviews",
     "heading": "What clients say",
-    "subheading": "Verified reviews from delivered projects for clients across the United States, the UK and Europe.",
+    "subheading": "Unedited feedback from clients I have delivered for, across the United States, Canada, Europe and beyond.",
     "empty_title": "Review screenshots are being added",
     "empty_body": "Verified client review screenshots are being migrated to this page. In the meantime, I'm happy to put you in touch with references relevant to your operation.",
     "gallery_note": "Screenshots are unedited captures of client feedback. Names are shortened for privacy.",
@@ -526,7 +525,12 @@
         "body": "Code, prompts, evaluation sets and documentation are yours. No lock-in to a black box only I can maintain."
       }
     ],
-    "cta": "Talk to me about your operation"
+    "cta": "Talk to me about your operation",
+    "source_linkedin": "LinkedIn recommendation",
+    "source_client": "Verified client review",
+    "repeat_client": "Repeat client",
+    "quotes_note": "Quoted verbatim, including the client's own wording and spelling.",
+    "screenshots_heading": "Original screenshots"
   },
   "blog": {
     "badge": "Insights",
@@ -551,7 +555,7 @@
     ],
     "expect_note": "You leave with the shortlist whether or not we work together.",
     "calendly_heading": "Pick a time that suits you",
-    "calendly_body": "The calendar below is live. If nothing fits, message me on WhatsApp and we'll find a slot.",
+    "calendly_body": "The calendar below is live. If nothing fits, message me on LinkedIn and we will find a slot.",
     "calendly_fallback": "Open the scheduling page",
     "form_heading": "Or send the details first",
     "form_body": "Tell me about your operation and I'll come to the call already knowing the context.",
@@ -572,9 +576,9 @@
     "form_send": "Send and book a call",
     "form_sending": "Sending…",
     "form_success": "Thanks — that's landed. I'll reply within one working day.",
-    "form_error": "That didn't send. Please email me directly instead.",
+    "form_error": "That didn't send. Please pick a time on the calendar above, or reach me on LinkedIn.",
     "channels_heading": "Prefer another channel?",
-    "channels_body": "Any of these reach me directly.",
+    "channels_body": "Both of these reach me directly.",
     "response_note": "I reply to everything within one working day."
   },
   "footer": {

@@ -13,8 +13,11 @@ export const brand = {
   photo: "/hassan.png",
 } as const;
 
+/**
+ * Public contact channels. Enquiries otherwise arrive through the booking form,
+ * which delivers to the CONTACT_TO address server-side.
+ */
 export const contact = {
-  email: "hassanjrao@gmail.com",
   linkedin: "https://linkedin.com/in/hassanjrao",
   /**
    * Set NEXT_PUBLIC_CALENDLY_URL in .env.local to your real scheduling link.
@@ -22,14 +25,7 @@ export const contact = {
    */
   calendly:
     process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/hassanjrao/30min",
-  whatsapp: [
-    { label: "+968 9976 3464", href: "https://wa.me/96899763464", region: "WhatsApp" },
-    { label: "+92 303 5209409", href: "https://wa.me/923035209409", region: "WhatsApp" },
-  ],
 } as const;
-
-/** Primary WhatsApp number used by the floating button and inline CTAs. */
-export const primaryWhatsApp = contact.whatsapp[0];
 
 export const routes = {
   home: "/",

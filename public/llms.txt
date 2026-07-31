@@ -7,8 +7,8 @@
 - Name: Hassan Rao
 - Role: AI Engineer — Moving & Logistics Automation
 - Website: https://hassanrao.com
-- Email: hassanjrao@gmail.com
 - LinkedIn: https://linkedin.com/in/hassanjrao
+- Booking: https://hassanrao.com/book-a-call
 - Works with US clients remotely, across every timezone
 
 ## Positioning
@@ -17,7 +17,7 @@ Hassan builds AI agents and automation that remove repetitive work — and recov
 
 ## Services
 
-1. **Instant Lead Response Agent** — replies to bought or shared leads within seconds on SMS, WhatsApp and email, qualifies the job and books the survey. The biggest single lever on close rate for movers buying shared leads. Pilot in 2 weeks.
+1. **Instant Lead Response Agent** — replies to bought or shared leads within seconds on SMS, chat and email, qualifies the job and books the survey. The biggest single lever on close rate for movers buying shared leads. Pilot in 2 weeks.
 2. **AI Track & Trace Agent** — customer-facing agent answering shipment status from the TMS across chat, SMS, email and phone. Pilot in 2–3 weeks.
 3. **AI Voice Agent for Bookings & Dispatch** — real-time AI receptionist answering the operations line and writing bookings into the system. Pilot in 3–4 weeks.
 4. **Estimate & Quote Copilot** — reads inventory lists, room photos, emails and RFQs, applies the rate card and surcharges, drafts the estimate for human approval. Pilot in 3–4 weeks.
