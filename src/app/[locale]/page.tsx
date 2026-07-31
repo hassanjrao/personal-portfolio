@@ -4,7 +4,9 @@ import Hero from "@/components/home/Hero";
 import StatsBar from "@/components/home/StatsBar";
 import Problems from "@/components/home/Problems";
 import Solutions from "@/components/home/Solutions";
+import DemoTeaser from "@/components/home/DemoTeaser";
 import Segments from "@/components/home/Segments";
+import About from "@/components/home/About";
 import Proof from "@/components/home/Proof";
 import RoiCalculator from "@/components/home/RoiCalculator";
 import Process from "@/components/home/Process";
@@ -43,7 +45,9 @@ export default async function HomePage({
       <StatsBar />
       <Problems />
       <Solutions />
+      <DemoTeaser />
       <Segments />
+      <About />
       <Proof />
       <RoiCalculator />
       <Process />

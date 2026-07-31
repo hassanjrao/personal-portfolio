@@ -1,39 +1,50 @@
-# FleetMind AI — AI Solutions for Logistics Companies
+# Hassan Rao — AI Solutions for Moving & Logistics Companies
 
-> FleetMind AI is a studio building production AI systems for logistics companies — freight forwarders, 3PLs, courier and last-mile networks, and warehousing operations. The team's experience comes from four-plus years inside GCC logistics enterprise systems, on platforms handling thousands of shipments a day. Engagements start with a free 30-minute AI audit call. Site available in English and Arabic.
+> Hassan Rao (Hassan Javaid Rao) is an AI engineer based in Muscat, Oman who builds production AI systems for companies that move things — moving and relocation firms, last-mile courier networks, freight forwarders and 3PLs, and warehousing operations. He leads the AI programme at a GCC logistics platform handling thousands of shipments a day across Oman, the UAE and Saudi Arabia, and is the founder of an AI phone-receptionist SaaS. Engagements start with a free 30-minute AI audit call. Site available in English and Arabic.
 
-## Contact
+## Identity
 
+- Full name: Hassan Javaid Rao
+- Also known as: Hassan Rao
+- Role: AI Engineer — Moving & Logistics Automation
+- Location: Muscat, Oman
 - Website: https://hassanrao.com
 - Email: hassanjrao@gmail.com
-- WhatsApp: +968 9976 3464 · +92 303 5209409
-- Languages: English, Arabic
+- LinkedIn: https://linkedin.com/in/hassanjrao
+- WhatsApp (Oman): +968 9976 3464
+- WhatsApp (Pakistan): +92 303 5209409
+- Languages: English, Arabic (delivery), Urdu
 
 ## Positioning
 
-We build AI agents and automation that remove repetitive work from logistics operations. Systems integrate with the customer's existing TMS, WMS or ERP — no platform migration required. Every agent is grounded in the customer's own records, cites its source, and escalates to a human rather than guessing.
+Hassan builds AI agents and automation that remove repetitive work — and recover lost jobs — for moving and logistics operations. Systems integrate with the customer's existing CRM, TMS or ERP; no platform migration is required. Every agent is grounded in the customer's own records, cites its source, and escalates to a human rather than guessing.
 
 ## Services
 
-1. **AI Track & Trace Agent** — customer-facing agent on WhatsApp, web chat, email and phone answering shipment status directly from the TMS. Pilot in 2–3 weeks.
-2. **AI Voice Agent for Dispatch & Booking** — real-time AI receptionist that answers the operations line, captures booking details and writes them into the TMS. Pilot in 3–4 weeks.
-3. **Logistics Document AI** — extraction and validation for bills of lading, commercial invoices, packing lists, delivery notes and customs declarations. Pilot in 2–4 weeks.
-4. **Quote & Rate-Card Copilot** — parses inbound RFQs, applies rate cards and surcharges, drafts quotes for human approval. Pilot in 3–4 weeks.
-5. **Operations Knowledge Copilot** — internal RAG copilot over SOPs, tariffs, contracts and customer-specific exceptions, with cited answers. Pilot in 2–3 weeks.
-6. **Exception & Delay Intelligence** — continuous monitoring surfacing delays, stuck consignments, missing documents and at-risk SLAs. Pilot in 3–4 weeks.
+1. **Instant Lead Response Agent** — replies to bought or shared leads within seconds on WhatsApp, SMS and email, qualifies the job and books the survey. The biggest single lever on close rate for movers. Pilot in 2 weeks.
+2. **AI Track & Trace Agent** — customer-facing agent answering shipment status from the TMS across WhatsApp, chat, email and phone. Pilot in 2–3 weeks.
+3. **AI Voice Agent for Bookings & Dispatch** — real-time AI receptionist answering the operations line and writing bookings into the system. Pilot in 3–4 weeks.
+4. **Estimate & Quote Copilot** — reads inventory lists, photos, emails and RFQs, applies the rate card and surcharges, drafts the estimate for human approval. Pilot in 3–4 weeks.
+5. **Logistics Document AI** — extraction and validation for inventory sheets, bills of lading, invoices, delivery notes and customs declarations. Pilot in 2–4 weeks.
+6. **Operations Knowledge Copilot** — internal RAG copilot over SOPs, rate rules and customer exceptions, with cited answers. Pilot in 2–3 weeks.
+7. **Exception & Delay Intelligence** — continuous monitoring surfacing delays, stuck jobs, missing documents and at-risk commitments. Pilot in 3–4 weeks.
 
 ## Industries Served
 
-- Freight forwarding and third-party logistics (3PL)
+- Moving, removals and relocation companies
 - Last-mile, courier and delivery networks
+- Freight forwarding and third-party logistics (3PL)
 - Warehousing and fulfilment
-- Shipping lines, ports and terminals
+
+## Interactive Demos
+
+The site hosts step-by-step walkthroughs at https://hassanrao.com/demo showing the agents handling real workflows: a moving enquiry qualified, priced and booked at 11:40pm; a "where is my shipment" query resolved from live TMS data; and an after-hours phone booking captured and written to the CRM. It also includes a lead-response race simulator showing why the first company to reply usually wins the job.
 
 ## Engagement Model
 
-1. Free 30-minute AI audit call — map where operational hours go and which workflows are realistic AI candidates.
+1. Free 30-minute AI audit call — map where hours and jobs are lost and which workflows are realistic AI candidates.
 2. Fixed-fee pilot, 2–4 weeks — one workflow in production against real data, with an agreed success metric.
-3. Integration and rollout, 4–8 weeks — into the TMS/WMS/ERP and customer channels.
+3. Integration and rollout, 4–8 weeks — into the CRM/TMS/ERP and customer channels.
 4. Ongoing monitoring, evaluation and monthly tuning.
 
 ## Data Handling
@@ -44,11 +55,19 @@ We build AI agents and automation that remove repetitive work from logistics ope
 - Full audit trail of every question, answer, source and escalation.
 - Deployment in the customer's cloud account, a private VPC, or on-premise where required.
 - Role-aware access — the agent reveals only what the asker is already entitled to see.
+- Pricing authority stays with the client's team; the agent drafts, a human approves.
 
-## Track Record
+## Background
 
-- **AI programme inside a live GCC logistics operation** — multi-tenant logistics platform handling thousands of shipments a day. RAG chatbots and internal AI copilots used daily by operations teams; shipment data-entry automation removing roughly six hours of manual effort a day; event-driven architecture on AWS Lambda, SQS and S3.
-- **AI receptionist SaaS (own product)** — multi-tenant platform bridging Twilio Media Streams to a real-time voice agent, with retrieval over PostgreSQL pgvector and a Laravel admin. Answers live phone calls grounded in each tenant's own documents.
+- **AI programme lead**, GCC logistics platform, Muscat, Oman (Dec 2021 – present)
+  - Multi-tenant logistics SaaS deployed across Oman, UAE and Saudi Arabia
+  - RAG chatbots and internal AI copilots used daily by operations teams
+  - Shipment data-entry automation removing roughly 6 hours of daily manual effort
+  - Carrier integrations via OAuth 2.0 machine-to-machine flows
+  - Event-driven architecture on AWS Lambda, SQS and S3
+- **AI phone receptionist SaaS** (own product) — Twilio Media Streams bridged to Deepgram's Voice Agent API, retrieval over PostgreSQL pgvector, Laravel admin
+- **Section Leader (Teaching)**, Stanford Code in Place (2025)
+- B.S. Software Engineering, Sukkur IBA University (2017–2020), fully funded merit scholarship
 
 ## Technical Stack
 
@@ -63,6 +82,7 @@ We build AI agents and automation that remove repetitive work from logistics ope
 
 - Home: https://hassanrao.com
 - Services: https://hassanrao.com/services
+- Interactive demos: https://hassanrao.com/demo
 - Reviews: https://hassanrao.com/reviews
 - Blog: https://hassanrao.com/blog
 - Book a free AI audit call: https://hassanrao.com/book-a-call

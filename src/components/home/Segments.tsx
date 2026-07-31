@@ -1,10 +1,11 @@
 import { useTranslations } from "next-intl";
-import { Ship, Truck, Warehouse, Check, type LucideIcon } from "lucide-react";
+import { Boxes, Ship, Truck, Warehouse, Check, type LucideIcon } from "lucide-react";
 import { segmentIds, type SegmentId } from "@/config/site";
 import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 
 const icons: Record<SegmentId, LucideIcon> = {
+  moving: Boxes,
   forwarding: Ship,
   lastmile: Truck,
   warehousing: Warehouse,
@@ -23,7 +24,7 @@ export default function Segments() {
           subheading={t("subheading")}
         />
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {segmentIds.map((id, i) => {
             const Icon = icons[id];
             const wins = ti.raw(`${id}.wins`) as string[];

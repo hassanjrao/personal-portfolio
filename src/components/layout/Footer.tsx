@@ -13,6 +13,7 @@ export default function Footer() {
   const pages = [
     { label: tNav("home"), href: routes.home },
     { label: tNav("services"), href: routes.services },
+    { label: tNav("demo"), href: routes.demo },
     { label: tNav("reviews"), href: routes.reviews },
     { label: tNav("blog"), href: routes.blog },
     { label: tNav("book"), href: routes.book },
@@ -130,6 +131,7 @@ export default function Footer() {
           <p>
             © {year} {brand.name}. {t("rights")}
           </p>
+          <p>{t("based")}</p>
         </div>
       </div>
     </footer>

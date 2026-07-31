@@ -1,0 +1,242 @@
+"use client";
+
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Play,
+  Pause,
+  RotateCcw,
+  ChevronRight,
+  Cpu,
+  CheckCircle2,
+} from "lucide-react";
+import { demoIds, type DemoId } from "@/config/site";
+import { getDemoScripts, type DemoTurn } from "@/config/demoScripts";
+
+function ToolChip({ text }: { text: string }) {
+  return (
+    <div className="flex justify-center my-1">
+      <span className="inline-flex items-center gap-2 max-w-full px-3 py-1.5 rounded-lg bg-slate-800/60 border border-white/10 text-[11px] text-slate-400">
+        <Cpu size={12} className="shrink-0 text-cyan-400" />
+        <span className="truncate">{text}</span>
+      </span>
+    </div>
+  );
+}
+
+function Bubble({ turn }: { turn: DemoTurn }) {
+  const isAgent = turn.from === "agent";
+
+  return (
+    <div className={`flex ${isAgent ? "justify-start" : "justify-end"}`}>
+      <div
+        className={`max-w-[82%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
+          isAgent
+            ? "bg-slate-800 text-slate-100 rounded-es-md"
+            : "bg-cyan-500 text-slate-950 rounded-ee-md"
+        }`}
+      >
+        <p>{turn.text}</p>
+        {turn.at && (
+          <span
+            className={`block mt-1 text-[10px] ${
+              isAgent ? "text-slate-500" : "text-slate-800/70"
+            }`}
+          >
+            {turn.at}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function AgentDemo() {
+  const t = useTranslations("demo");
+  const locale = useLocale();
+  const scripts = useMemo(() => getDemoScripts(locale), [locale]);
+
+  const [active, setActive] = useState<DemoId>(demoIds[0]);
+  const [shown, setShown] = useState(1);
+  const [playing, setPlaying] = useState(false);
+  const [typing, setTyping] = useState(false);
+
+  const script = scripts[active];
+  const done = shown >= script.length;
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const reset = useCallback((id: DemoId) => {
+    setActive(id);
+    setShown(1);
+    setPlaying(false);
+    setTyping(false);
+  }, []);
+
+  // Drive playback: wait for the next turn, show a typing indicator, reveal it.
+  useEffect(() => {
+    if (!playing || done) return;
+
+    const next = script[shown];
+    const wait = next.wait ?? 1200;
+    const isChat = next.from !== "system";
+
+    const typingTimer = isChat
+      ? setTimeout(() => setTyping(true), Math.max(0, wait - 700))
+      : undefined;
+
+    const revealTimer = setTimeout(() => {
+      setTyping(false);
+      setShown((n) => n + 1);
+    }, wait);
+
+    return () => {
+      if (typingTimer) clearTimeout(typingTimer);
+      clearTimeout(revealTimer);
+    };
+  }, [playing, shown, done, script]);
+
+  // Keep the newest turn in view without scrolling the whole page.
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [shown, typing]);
+
+  const visible = script.slice(0, shown);
+  const nextIsAgent = !done && script[shown]?.from === "agent";
+
+  return (
+    <div>
+      {/* Scenario tabs */}
+      <div className="flex flex-wrap gap-2 mb-6" role="tablist">
+        {demoIds.map((id) => (
+          <button
+            key={id}
+            role="tab"
+            aria-selected={id === active}
+            onClick={() => reset(id)}
+            className={`px-4 py-2 rounded-lg text-sm transition-colors ${
+              id === active
+                ? "bg-cyan-500 text-slate-950 font-semibold"
+                : "bg-white/5 border border-white/10 text-slate-400 hover:text-white"
+            }`}
+          >
+            {t(`scenarios.${id}.label`)}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid lg:grid-cols-[minmax(0,1fr)_340px] gap-6 items-start">
+        {/* Transcript */}
+        <div className="rounded-2xl bg-[#0b1220] border border-white/10 overflow-hidden">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-white/8 bg-white/[0.03]">
+            <span className="flex items-center gap-2 text-xs text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              {t(`scenarios.${active}.channel`)}
+            </span>
+            <span className="text-[11px] text-slate-600 tabular-nums">
+              {Math.min(shown, script.length)} / {script.length}
+            </span>
+          </div>
+
+          <div
+            ref={scrollRef}
+            className="h-[440px] overflow-y-auto px-4 py-4 space-y-2.5 scroll-smooth"
+          >
+            <AnimatePresence initial={false}>
+              {visible.map((turn, i) => (
+                <motion.div
+                  key={`${active}-${i}`}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  {turn.from === "system" ? (
+                    <ToolChip text={turn.text} />
+                  ) : (
+                    <Bubble turn={turn} />
+                  )}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+
+            {typing && (
+              <div className={`flex ${nextIsAgent ? "justify-start" : "justify-end"}`}>
+                <span className="px-3.5 py-2.5 rounded-2xl bg-slate-800 text-slate-500 text-xs">
+                  {t("typing")}
+                </span>
+              </div>
+            )}
+
+            {done && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-4 p-4 rounded-xl bg-cyan-500/10 border border-cyan-400/25"
+              >
+                <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-cyan-300">
+                  <CheckCircle2 size={13} />
+                  {t("outcome_label")}
+                </span>
+                <p className="mt-2 text-sm text-slate-200 leading-relaxed">
+                  {t(`scenarios.${active}.outcome`)}
+                </p>
+              </motion.div>
+            )}
+          </div>
+
+          {/* Controls */}
+          <div className="flex items-center gap-2 px-4 py-3 border-t border-white/8 bg-white/[0.03]">
+            <button
+              onClick={() => (done ? reset(active) : setPlaying((p) => !p))}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-semibold transition-colors"
+            >
+              {done ? (
+                <>
+                  <RotateCcw size={14} />
+                  {t("replay")}
+                </>
+              ) : playing ? (
+                <>
+                  <Pause size={14} />
+                  {t("pause")}
+                </>
+              ) : (
+                <>
+                  <Play size={14} />
+                  {t("play")}
+                </>
+              )}
+            </button>
+
+            <button
+              onClick={() => {
+                setPlaying(false);
+                setTyping(false);
+                setShown((n) => Math.min(n + 1, script.length));
+              }}
+              disabled={done}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-white/15 text-slate-300 text-sm hover:border-cyan-400/50 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            >
+              {t("next")}
+              <ChevronRight size={14} className="rtl:rotate-180" />
+            </button>
+          </div>
+        </div>
+
+        {/* Scenario explainer */}
+        <aside className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 lg:sticky lg:top-24">
+          <h3 className="text-lg font-semibold text-white leading-snug">
+            {t(`scenarios.${active}.title`)}
+          </h3>
+          <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+            {t(`scenarios.${active}.blurb`)}
+          </p>
+          <p className="mt-5 pt-5 border-t border-white/8 text-xs text-slate-500 leading-relaxed">
+            {t("note")}
+          </p>
+        </aside>
+      </div>
+    </div>
+  );
+}

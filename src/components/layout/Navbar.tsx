@@ -25,6 +25,7 @@ export default function Navbar() {
   const links = [
     { label: t("home"), href: routes.home },
     { label: t("services"), href: routes.services },
+    { label: t("demo"), href: routes.demo },
     { label: t("reviews"), href: routes.reviews },
     { label: t("blog"), href: routes.blog },
   ];
@@ -52,7 +53,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <Link
                 key={link.href}

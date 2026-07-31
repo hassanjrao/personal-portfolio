@@ -1,4 +1,5 @@
 import {
+  Zap,
   PackageSearch,
   PhoneCall,
   ScanText,
@@ -10,6 +11,7 @@ import {
 import type { ServiceId } from "@/config/site";
 
 export const serviceIcons: Record<ServiceId, LucideIcon> = {
+  "lead-response": Zap,
   "track-trace": PackageSearch,
   "voice-agent": PhoneCall,
   "document-ai": ScanText,

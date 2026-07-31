@@ -1,14 +1,21 @@
 export const siteUrl = "https://hassanrao.com";
 
 /**
- * Studio name used everywhere the site refers to itself. Change it here only —
- * nav, footer, metadata, schema.org and the favicon all read from this.
+ * Personal brand identity. Referenced by nav, footer, metadata, schema.org
+ * and the favicon — change it here only.
  */
 export const brand = {
-  name: "FleetMind AI",
+  name: "Hassan Rao",
   /** Two-letter mark rendered into the favicon. */
-  mark: "FM",
-  tagline: "AI for Logistics",
+  mark: "HR",
+  tagline: "AI for Moving & Logistics",
+  role: "AI Engineer — Moving & Logistics Automation",
+  photo: "/hassan.png",
+  location: {
+    city: "Muscat",
+    country: "Oman",
+    countryCode: "OM",
+  },
 } as const;
 
 export const contact = {
@@ -32,6 +39,7 @@ export const primaryWhatsApp = contact.whatsapp[0];
 export const routes = {
   home: "/",
   services: "/services",
+  demo: "/demo",
   reviews: "/reviews",
   blog: "/blog",
   book: "/book-a-call",
@@ -42,16 +50,31 @@ export const routes = {
  * under the `services.items.*` namespace.
  */
 export const serviceIds = [
+  "lead-response",
   "track-trace",
   "voice-agent",
-  "document-ai",
   "quoting",
+  "document-ai",
   "ops-copilot",
   "exceptions",
 ] as const;
 
 export type ServiceId = (typeof serviceIds)[number];
 
-export const segmentIds = ["forwarding", "lastmile", "warehousing"] as const;
+/** Ordered by prominence on the site. */
+export const segmentIds = [
+  "moving",
+  "lastmile",
+  "forwarding",
+  "warehousing",
+] as const;
 
 export type SegmentId = (typeof segmentIds)[number];
+
+/**
+ * Scripted demo scenarios shown on /demo. Ids map to translation keys under
+ * `demo.scenarios.*`; the scripts themselves live in `src/config/demoScripts.ts`.
+ */
+export const demoIds = ["moving-quote", "tracking", "after-hours"] as const;
+
+export type DemoId = (typeof demoIds)[number];
