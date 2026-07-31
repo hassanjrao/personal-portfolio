@@ -33,7 +33,7 @@ function Slider({
         <label htmlFor={id} className="text-sm text-slate-600">
           {label}
         </label>
-        <span className="text-sm font-semibold text-teal-700 tabular-nums" dir="ltr">
+        <span className="text-sm font-semibold text-violet-700 tabular-nums" dir="ltr">
           {value}
           {suffix}
         </span>
@@ -46,7 +46,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-2.5 w-full accent-teal-600 cursor-pointer"
+        className="mt-2.5 w-full accent-violet-600 cursor-pointer"
       />
     </div>
   );
@@ -129,8 +129,8 @@ export default function RoiCalculator() {
           </div>
 
           {/* Output */}
-          <div className="p-7 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200 flex flex-col">
-            <span className="inline-flex w-11 h-11 rounded-xl bg-teal-50 items-center justify-center text-teal-700">
+          <div className="p-7 rounded-2xl bg-gradient-to-b from-violet-50 to-white border border-violet-200 flex flex-col">
+            <span className="inline-flex w-11 h-11 rounded-xl bg-violet-50 items-center justify-center text-violet-700">
               <TrendingUp size={20} />
             </span>
 
@@ -160,7 +160,7 @@ export default function RoiCalculator() {
 
             <Link
               href={routes.book}
-              className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 hover:gap-3 transition-all"
+              className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-violet-700 hover:gap-3 transition-all"
             >
               {t("cta")}
               <ArrowRight size={16} className="rtl:rotate-180" />

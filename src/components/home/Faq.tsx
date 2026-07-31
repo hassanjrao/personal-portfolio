@@ -32,7 +32,7 @@ export default function Faq() {
                     <span className="font-medium text-slate-900">{item.q}</span>
                     <ChevronDown
                       size={18}
-                      className={`shrink-0 text-teal-700 transition-transform ${
+                      className={`shrink-0 text-violet-700 transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />

@@ -16,7 +16,7 @@ export default function Hero() {
     <section id="top" className="relative flex items-center overflow-hidden pt-28 pb-20 lg:min-h-[92vh] lg:pt-32">
       <div className="absolute inset-0 grid-bg" aria-hidden="true" />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_40%,rgba(13,148,136,0.10)_0%,transparent_65%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_40%,rgba(124,58,237,0.10)_0%,transparent_65%)]"
         aria-hidden="true"
       />
       <div
@@ -29,7 +29,7 @@ export default function Hero() {
           {/* Copy */}
           <div>
             <motion.span
-              className="inline-block px-4 py-1.5 mb-6 text-xs font-medium uppercase tracking-wider text-teal-700 border border-teal-200 rounded-full bg-teal-50"
+              className="inline-block px-4 py-1.5 mb-6 text-xs font-medium uppercase tracking-wider text-violet-700 border border-violet-200 rounded-full bg-violet-50"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.p
-              className="mt-4 text-sm text-slate-500 leading-relaxed max-w-xl border-s-2 border-teal-300 ps-4"
+              className="mt-4 text-sm text-slate-500 leading-relaxed max-w-xl border-s-2 border-violet-300 ps-4"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.24 }}
@@ -72,14 +72,14 @@ export default function Hero() {
             >
               <Link
                 href={routes.book}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold transition-colors"
               >
                 {t("cta_primary")}
                 <ArrowRight size={17} className="rtl:rotate-180" />
               </Link>
               <Link
                 href={routes.services}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-teal-400 hover:bg-teal-50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-violet-400 hover:bg-violet-50 transition-colors"
               >
                 {t("cta_secondary")}
               </Link>
@@ -112,7 +112,7 @@ export default function Hero() {
                     y1="0"
                     x2="0"
                     y2="100%"
-                    stroke="rgba(13,148,136,0.55)"
+                    stroke="rgba(124,58,237,0.55)"
                     strokeWidth="2"
                     className="route-dash"
                   />
@@ -128,7 +128,7 @@ export default function Hero() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 0.5 + i * 0.14 }}
                     >
-                      <span className="relative z-10 shrink-0 w-10 h-10 rounded-xl bg-white border border-teal-200 flex items-center justify-center text-teal-700">
+                      <span className="relative z-10 shrink-0 w-10 h-10 rounded-xl bg-white border border-violet-200 flex items-center justify-center text-violet-700">
                         <Icon size={17} />
                       </span>
                       <span className="text-sm text-slate-600 leading-snug">{step}</span>
@@ -139,7 +139,7 @@ export default function Hero() {
             </div>
 
             <div
-              className="absolute -inset-6 -z-10 bg-[radial-gradient(circle_at_center,rgba(13,148,136,0.12)_0%,transparent_70%)] blur-2xl"
+              className="absolute -inset-6 -z-10 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.12)_0%,transparent_70%)] blur-2xl"
               aria-hidden="true"
             />
           </motion.div>

@@ -55,7 +55,7 @@ export default function LocaleSwitcher() {
           aria-current={l === locale ? "true" : undefined}
           className={`px-2 py-1 text-xs rounded-md transition-colors ${
             l === locale
-              ? "bg-teal-50 text-teal-700"
+              ? "bg-violet-50 text-violet-700"
               : "text-slate-600 hover:text-slate-900"
           }`}
         >

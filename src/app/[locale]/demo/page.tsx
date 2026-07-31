@@ -63,7 +63,7 @@ export default async function DemoPage({
           <p className="mt-4 text-slate-600 leading-relaxed">{t("cta_body")}</p>
           <Link
             href={routes.book}
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold transition-colors"
           >
             {t("cta_heading")}
             <ArrowRight size={17} className="rtl:rotate-180" />

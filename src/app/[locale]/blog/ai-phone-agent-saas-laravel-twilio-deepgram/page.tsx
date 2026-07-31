@@ -83,7 +83,7 @@ function H3({ children }: { children: React.ReactNode }) {
 
 function Code({ children }: { children: React.ReactNode }) {
   return (
-    <code className="px-1.5 py-0.5 rounded bg-slate-100 text-teal-700 text-[13px] whitespace-nowrap">
+    <code className="px-1.5 py-0.5 rounded bg-slate-100 text-violet-700 text-[13px] whitespace-nowrap">
       {children}
     </code>
   );
@@ -108,14 +108,14 @@ export default async function AiPhoneAgentPost({
         <div className="max-w-3xl mx-auto">
           <Link
             href={routes.blog}
-            className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-700 transition-colors mb-8"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-violet-700 transition-colors mb-8"
           >
             <ArrowLeft size={14} className="rtl:rotate-180" />
             All articles
           </Link>
 
           <header className="mb-12">
-            <span className="inline-block px-4 py-1.5 text-sm text-teal-700 border border-teal-200 rounded-full bg-teal-50 mb-5">
+            <span className="inline-block px-4 py-1.5 text-sm text-violet-700 border border-violet-200 rounded-full bg-violet-50 mb-5">
               Case Study
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5">
@@ -162,7 +162,7 @@ export default async function AiPhoneAgentPost({
               retrieval-augmented generation (RAG) layer, and the anti-hallucination design
               that makes the whole thing safe to put in front of real customers.
             </p>
-            <p className="p-4 rounded-xl bg-teal-50 border border-teal-200">
+            <p className="p-4 rounded-xl bg-violet-50 border border-violet-200">
               <strong className="text-slate-900">Why this matters for logistics:</strong>{" "}
               a dispatch line is the hardest version of this problem. Callers want a booking
               taken or a shipment located, the answer has to come from live operational data
@@ -189,7 +189,7 @@ export default async function AiPhoneAgentPost({
 
             <H2>The architecture: two services, clear responsibilities</H2>
             <p>The system is split into two services that talk over an internal token-authenticated API:</p>
-            <ul className="list-disc pl-6 space-y-2 marker:text-teal-700">
+            <ul className="list-disc pl-6 space-y-2 marker:text-violet-700">
               <li>
                 <strong className="text-slate-900">Laravel (PHP) — the brain of record.</strong>{" "}
                 Multi-tenant admin built with Inertia and Vue: companies, plans, industries,
@@ -213,7 +213,7 @@ export default async function AiPhoneAgentPost({
             </p>
 
             <H2>The life of a phone call</H2>
-            <ol className="list-decimal pl-6 space-y-2 marker:text-teal-700">
+            <ol className="list-decimal pl-6 space-y-2 marker:text-violet-700">
               <li>
                 Twilio receives the call and hits Laravel&apos;s voice webhook. Laravel looks
                 up the called number, verifies the <Code>X-Twilio-Signature</Code>, checks
@@ -325,7 +325,7 @@ export default async function AiPhoneAgentPost({
             </p>
 
             <H2>Lessons from real-time voice</H2>
-            <ul className="list-disc pl-6 space-y-2 marker:text-teal-700">
+            <ul className="list-disc pl-6 space-y-2 marker:text-violet-700">
               <li>
                 <strong className="text-slate-900">Silence kills connections.</strong> When a
                 caller goes on hold or mute, no audio flows and Deepgram times out the
@@ -395,7 +395,7 @@ export default async function AiPhoneAgentPost({
               experience that lets a non-technical business trust what their agent will say.
             </p>
 
-            <div className="mt-10 p-6 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
+            <div className="mt-10 p-6 rounded-2xl bg-gradient-to-b from-violet-50 to-white border border-violet-200">
               <p className="text-slate-900 font-semibold mb-2">
                 Want this answering your dispatch line?
               </p>
@@ -406,7 +406,7 @@ export default async function AiPhoneAgentPost({
               </p>
               <Link
                 href={routes.book}
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm rounded-lg bg-violet-600 text-white font-semibold hover:bg-violet-700 transition-colors"
               >
                 Book a free AI audit
                 <ArrowRight size={15} className="rtl:rotate-180" />

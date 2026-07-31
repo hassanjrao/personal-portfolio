@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="text-lg font-bold text-slate-900">
               {brand.name}
-              <span className="text-teal-600">.</span>
+              <span className="text-violet-600">.</span>
             </div>
             <div className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-slate-500">
               {brand.tagline}
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={p.href}>
                   <Link
                     href={p.href}
-                    className="text-sm text-slate-500 hover:text-teal-700 transition-colors"
+                    className="text-sm text-slate-500 hover:text-violet-700 transition-colors"
                   >
                     {p.label}
                   </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={id}>
                   <Link
                     href={`${routes.services}#${id}`}
-                    className="text-sm text-slate-500 hover:text-teal-700 transition-colors"
+                    className="text-sm text-slate-500 hover:text-violet-700 transition-colors"
                   >
                     {tServices(`${id}.title`)}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-700 transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-violet-700 transition-colors"
                 >
                   <Mail size={15} />
                   {contact.email}
@@ -118,7 +118,7 @@ export default function Footer() {
                   href={contact.calendly}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-700 transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-violet-700 transition-colors"
                 >
                   <Calendar size={15} />
                   Calendly

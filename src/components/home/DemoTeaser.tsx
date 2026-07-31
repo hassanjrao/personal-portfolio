@@ -29,7 +29,7 @@ export default function DemoTeaser() {
                   href={routes.demo}
                   className="group h-full flex flex-col p-6 rounded-2xl bg-white card-soft border border-slate-200 card-hover"
                 >
-                  <span className="inline-flex w-11 h-11 rounded-xl bg-teal-50 border border-teal-200 items-center justify-center text-teal-700">
+                  <span className="inline-flex w-11 h-11 rounded-xl bg-violet-50 border border-violet-200 items-center justify-center text-violet-700">
                     <Icon size={19} />
                   </span>
                   <span className="mt-4 text-[11px] uppercase tracking-wider text-slate-500">
@@ -41,7 +41,7 @@ export default function DemoTeaser() {
                   <p className="mt-2.5 text-sm text-slate-600 leading-relaxed flex-1">
                     {td(`${id}.blurb`)}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 group-hover:gap-2.5 transition-all">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-violet-700 group-hover:gap-2.5 transition-all">
                     {t("cta")}
                     <ArrowRight size={15} className="rtl:rotate-180" />
                   </span>

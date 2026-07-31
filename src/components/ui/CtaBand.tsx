@@ -11,7 +11,7 @@ export default function CtaBand() {
     <section id="book" className="relative px-4 py-24 overflow-hidden border-y border-slate-200 bg-slate-50">
       <div className="absolute inset-0 grid-bg" aria-hidden="true" />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(13,148,136,0.11)_0%,transparent_65%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(124,58,237,0.11)_0%,transparent_65%)]"
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
@@ -22,7 +22,7 @@ export default function CtaBand() {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             href={routes.book}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold transition-colors"
           >
             {t("primary")}
             <ArrowRight size={17} className="rtl:rotate-180" />
@@ -31,7 +31,7 @@ export default function CtaBand() {
             href={primaryWhatsApp.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-teal-400 hover:bg-teal-50 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-violet-400 hover:bg-violet-50 transition-colors"
           >
             <WhatsAppIcon className="w-[18px] h-[18px]" />
             {t("secondary")}

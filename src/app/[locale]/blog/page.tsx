@@ -76,7 +76,7 @@ export default async function BlogIndex({
                 </span>
               </div>
 
-              <h2 className="mt-3 text-xl font-semibold text-slate-900 leading-snug group-hover:text-teal-700 transition-colors">
+              <h2 className="mt-3 text-xl font-semibold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors">
                 {post.title}
               </h2>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">{post.excerpt}</p>
@@ -92,7 +92,7 @@ export default async function BlogIndex({
                 ))}
               </div>
 
-              <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 group-hover:gap-2.5 transition-all">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-violet-700 group-hover:gap-2.5 transition-all">
                 {t("read_more")}
                 <ArrowRight size={15} className="rtl:rotate-180" />
               </span>

@@ -49,7 +49,7 @@ function ServiceList() {
             >
               <div>
                 <div className="flex items-start gap-4">
-                  <span className="shrink-0 inline-flex w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 items-center justify-center text-teal-700">
+                  <span className="shrink-0 inline-flex w-12 h-12 rounded-xl bg-violet-50 border border-violet-200 items-center justify-center text-violet-700">
                     <Icon size={21} />
                   </span>
                   <div>
@@ -71,7 +71,7 @@ function ServiceList() {
                 <ul className="mt-3 grid sm:grid-cols-2 gap-2.5">
                   {bullets.map((bullet) => (
                     <li key={bullet} className="flex gap-2.5 text-sm text-slate-600">
-                      <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
+                      <Check size={15} className="mt-0.5 shrink-0 text-violet-600" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -79,9 +79,9 @@ function ServiceList() {
               </div>
 
               {/* Outcome panel */}
-              <aside className="flex flex-col gap-5 p-6 rounded-xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
+              <aside className="flex flex-col gap-5 p-6 rounded-xl bg-gradient-to-b from-violet-50 to-white border border-violet-200">
                 <div>
-                  <h3 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-teal-700">
+                  <h3 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-violet-700">
                     <Target size={13} />
                     {t("outcome")}
                   </h3>
@@ -100,7 +100,7 @@ function ServiceList() {
                 </div>
                 <Link
                   href={routes.book}
-                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:gap-2.5 transition-all"
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-violet-700 hover:gap-2.5 transition-all"
                 >
                   {t("cta")}
                   <ArrowRight size={15} className="rtl:rotate-180" />
@@ -121,7 +121,7 @@ function Integrations() {
   return (
     <section className="px-4 py-20 bg-slate-50 border-y border-slate-200">
       <div className="max-w-4xl mx-auto text-center">
-        <span className="inline-flex w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 items-center justify-center text-teal-700">
+        <span className="inline-flex w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 items-center justify-center text-violet-700">
           <Plug size={21} />
         </span>
         <h2 className="mt-5 text-2xl sm:text-3xl font-bold text-slate-900 text-balance">

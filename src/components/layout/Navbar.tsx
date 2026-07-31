@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link href={routes.home} className="flex flex-col leading-none">
             <span className="text-lg font-bold text-slate-900 tracking-tight">
               {brand.name}
-              <span className="text-teal-600">.</span>
+              <span className="text-violet-600">.</span>
             </span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
               {brand.tagline}
@@ -61,7 +61,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm transition-colors ${
                   isActive(link.href)
-                    ? "text-teal-700"
+                    ? "text-violet-700"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -71,7 +71,7 @@ export default function Navbar() {
             <LocaleSwitcher />
             <Link
               href={routes.book}
-              className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold transition-colors"
             >
               {t("book")}
               <ArrowRight size={14} className="rtl:rotate-180" />
@@ -96,7 +96,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={closeMenu}
                 className={`py-2.5 text-sm ${
-                  isActive(link.href) ? "text-teal-700" : "text-slate-600"
+                  isActive(link.href) ? "text-violet-700" : "text-slate-600"
                 }`}
               >
                 {link.label}
@@ -105,7 +105,7 @@ export default function Navbar() {
             <Link
               href={routes.book}
               onClick={closeMenu}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-teal-600 text-white text-sm font-semibold"
+              className="mt-2 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-violet-600 text-white text-sm font-semibold"
             >
               {t("book")}
               <ArrowRight size={14} className="rtl:rotate-180" />

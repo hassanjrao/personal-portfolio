@@ -41,7 +41,7 @@ export default function Proof() {
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
               <article className="h-full flex flex-col p-7 rounded-2xl bg-gradient-to-b from-white to-slate-50 border border-slate-200">
-                <span className="text-[11px] uppercase tracking-wider text-teal-700">
+                <span className="text-[11px] uppercase tracking-wider text-violet-700">
                   {item.tag}
                 </span>
                 <h3 className="mt-2 text-xl font-semibold text-slate-900 leading-snug">
@@ -75,7 +75,7 @@ export default function Proof() {
                 {item.link_label && CASE_STUDY_LINKS[i] && (
                   <Link
                     href={CASE_STUDY_LINKS[i]}
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 hover:gap-2.5 transition-all"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm text-violet-700 hover:gap-2.5 transition-all"
                   >
                     {item.link_label}
                     <ArrowRight size={15} className="rtl:rotate-180" />

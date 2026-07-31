@@ -55,7 +55,7 @@ function Lane({
     <div
       className={`p-5 rounded-2xl border ${
         isCyan
-          ? "bg-gradient-to-b from-teal-50 to-white border-teal-200"
+          ? "bg-gradient-to-b from-violet-50 to-white border-violet-200"
           : "bg-white card-soft border-slate-200"
       }`}
     >
@@ -63,7 +63,7 @@ function Lane({
         <span
           className={`inline-flex w-10 h-10 shrink-0 rounded-xl items-center justify-center ${
             isCyan
-              ? "bg-teal-50 text-teal-700"
+              ? "bg-violet-50 text-violet-700"
               : "bg-slate-50 text-slate-600 border border-slate-200"
           }`}
         >
@@ -79,7 +79,7 @@ function Lane({
       <div className="mt-5 h-2 rounded-full bg-slate-100 overflow-hidden">
         <div
           className={`h-full rounded-full transition-[width] duration-100 ease-linear ${
-            isCyan ? "bg-teal-500" : "bg-slate-400"
+            isCyan ? "bg-violet-500" : "bg-slate-400"
           }`}
           style={{ width: `${Math.min(100, progress)}%` }}
         />
@@ -157,7 +157,7 @@ export default function LeadResponseRace() {
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <button
             onClick={() => (finished ? reset() : setRunning((r) => !r))}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold transition-colors"
           >
             {finished ? <RotateCcw size={15} /> : <Play size={15} />}
             {finished ? t("reset") : t("start")}

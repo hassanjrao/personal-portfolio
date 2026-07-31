@@ -28,7 +28,7 @@ export default function Solutions() {
                   href={`${routes.services}#${id}`}
                   className="group h-full flex flex-col p-6 rounded-2xl bg-white card-soft border border-slate-200 card-hover"
                 >
-                  <span className="inline-flex w-11 h-11 rounded-xl bg-teal-50 border border-teal-200 items-center justify-center text-teal-700">
+                  <span className="inline-flex w-11 h-11 rounded-xl bg-violet-50 border border-violet-200 items-center justify-center text-violet-700">
                     <Icon size={19} />
                   </span>
                   <h3 className="mt-4 font-semibold text-slate-900">{ts(`${id}.title`)}</h3>
@@ -36,7 +36,7 @@ export default function Solutions() {
                   <p className="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
                     {ts(`${id}.body`)}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 group-hover:gap-2.5 transition-all">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-violet-700 group-hover:gap-2.5 transition-all">
                     {ts(`${id}.timeline`)}
                     <ArrowRight size={15} className="rtl:rotate-180" />
                   </span>
@@ -49,7 +49,7 @@ export default function Solutions() {
         <div className="mt-10 text-center">
           <Link
             href={routes.services}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-teal-400 hover:bg-teal-50 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:border-violet-400 hover:bg-violet-50 transition-colors"
           >
             {t("cta")}
             <ArrowRight size={16} className="rtl:rotate-180" />

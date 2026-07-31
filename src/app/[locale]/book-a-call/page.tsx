@@ -34,12 +34,12 @@ function ExpectPanel() {
   const items = t.raw("expect_items") as string[];
 
   return (
-    <div className="p-7 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
+    <div className="p-7 rounded-2xl bg-gradient-to-b from-violet-50 to-white border border-violet-200">
       <h2 className="font-semibold text-slate-900">{t("expect_heading")}</h2>
       <ul className="mt-5 space-y-3">
         {items.map((item) => (
           <li key={item} className="flex gap-2.5 text-sm text-slate-600 leading-relaxed">
-            <Check size={16} className="mt-0.5 shrink-0 text-teal-600" />
+            <Check size={16} className="mt-0.5 shrink-0 text-violet-600" />
             <span>{item}</span>
           </li>
         ))}
@@ -61,7 +61,7 @@ function Channels() {
       value: contact.email,
       href: `mailto:${contact.email}`,
       icon: <Mail size={18} />,
-      hover: "hover:border-teal-400 hover:bg-teal-50",
+      hover: "hover:border-violet-400 hover:bg-violet-50",
     },
     ...contact.whatsapp.map((w) => ({
       label: `WhatsApp · ${w.region}`,
@@ -82,7 +82,7 @@ function Channels() {
       value: "Calendly",
       href: contact.calendly,
       icon: <Calendar size={18} />,
-      hover: "hover:border-teal-400 hover:bg-teal-50",
+      hover: "hover:border-violet-400 hover:bg-violet-50",
     },
   ];
 
@@ -142,7 +142,7 @@ function CalendlyEmbed() {
         href={contact.calendly}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center gap-1.5 text-sm text-teal-700 hover:gap-2.5 transition-all"
+        className="mt-4 inline-flex items-center gap-1.5 text-sm text-violet-700 hover:gap-2.5 transition-all"
       >
         <ExternalLink size={14} />
         {t("calendly_fallback")}

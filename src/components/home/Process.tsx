@@ -25,7 +25,7 @@ export default function Process() {
                   {step.step}
                 </span>
                 <h3 className="mt-2 font-semibold text-slate-900">{step.title}</h3>
-                <span className="mt-1.5 inline-block px-2.5 py-0.5 text-[11px] rounded-full bg-teal-50 text-teal-700 border border-teal-200">
+                <span className="mt-1.5 inline-block px-2.5 py-0.5 text-[11px] rounded-full bg-violet-50 text-violet-700 border border-violet-200">
                   {step.duration}
                 </span>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">{step.body}</p>

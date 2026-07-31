@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Light, calm palette: white base, deep-navy ink, teal action. */
+  /* Light palette built on the brand violet from the portrait background. */
   --background: #ffffff;
   --surface: #f6f9fc;
   --surface-strong: #eef3f9;
   --foreground: #0f2438;
   --muted: #51637a;
   --line: #e3eaf2;
-  --accent: #0d9488;
-  --accent-strong: #0f766e;
-  --accent-soft: #f0fdfa;
+  --accent: #7c3aed;
+  --accent-strong: #6d28d9;
+  --accent-soft: #f5f3ff;
   --accent-warm: #b45309;
 }
 
@@ -55,7 +55,7 @@ section {
 }
 
 .gradient-text {
-  background: linear-gradient(115deg, #0f766e, #0369a1 48%, #b45309);
+  background: linear-gradient(115deg, #5b21b6, #7c3aed 48%, #c026d3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,7 +88,7 @@ section {
 }
 .card-hover:hover {
   transform: translateY(-3px);
-  border-color: #99f6e4;
+  border-color: #ddd6fe;
   box-shadow:
     0 2px 4px rgba(15, 36, 56, 0.05),
     0 14px 32px rgba(15, 36, 56, 0.09);

@@ -18,7 +18,7 @@ function ToolChip({ text }: { text: string }) {
   return (
     <div className="flex justify-center my-1">
       <span className="inline-flex items-center gap-2 max-w-full px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-[11px] text-slate-600">
-        <Cpu size={12} className="shrink-0 text-teal-600" />
+        <Cpu size={12} className="shrink-0 text-violet-600" />
         <span className="truncate">{text}</span>
       </span>
     </div>
@@ -34,14 +34,14 @@ function Bubble({ turn }: { turn: DemoTurn }) {
         className={`max-w-[82%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
           isAgent
             ? "bg-white border border-slate-200 text-slate-800 rounded-es-md card-soft"
-            : "bg-teal-600 text-white rounded-ee-md"
+            : "bg-violet-600 text-white rounded-ee-md"
         }`}
       >
         <p>{turn.text}</p>
         {turn.at && (
           <span
             className={`block mt-1 text-[10px] ${
-              isAgent ? "text-slate-400" : "text-teal-50"
+              isAgent ? "text-slate-400" : "text-violet-100"
             }`}
           >
             {turn.at}
@@ -116,7 +116,7 @@ export default function AgentDemo() {
             onClick={() => reset(id)}
             className={`px-4 py-2 rounded-lg text-sm transition-colors ${
               id === active
-                ? "bg-teal-600 text-white font-semibold"
+                ? "bg-violet-600 text-white font-semibold"
                 : "bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -171,9 +171,9 @@ export default function AgentDemo() {
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-4 rounded-xl bg-teal-600/10 border border-teal-200"
+                className="mt-4 p-4 rounded-xl bg-violet-600/10 border border-violet-200"
               >
-                <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-teal-700">
+                <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-violet-700">
                   <CheckCircle2 size={13} />
                   {t("outcome_label")}
                 </span>
@@ -188,7 +188,7 @@ export default function AgentDemo() {
           <div className="flex items-center gap-2 px-4 py-3 border-t border-slate-200 bg-white card-soft">
             <button
               onClick={() => (done ? reset(active) : setPlaying((p) => !p))}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold transition-colors"
             >
               {done ? (
                 <>
@@ -215,7 +215,7 @@ export default function AgentDemo() {
                 setShown((n) => Math.min(n + 1, script.length));
               }}
               disabled={done}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:border-teal-400 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:border-violet-400 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               {t("next")}
               <ChevronRight size={14} className="rtl:rotate-180" />

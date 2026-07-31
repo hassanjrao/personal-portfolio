@@ -43,7 +43,7 @@ function Intro() {
         <Reveal className="mx-auto lg:mx-0 lg:sticky lg:top-24">
           <div className="relative w-64 sm:w-80">
             <div
-              className="absolute -inset-4 bg-[radial-gradient(circle_at_center,rgba(13,148,136,0.14)_0%,transparent_70%)] blur-2xl"
+              className="absolute -inset-4 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.14)_0%,transparent_70%)] blur-2xl"
               aria-hidden="true"
             />
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 shadow-[0_4px_12px_rgba(15,36,56,0.06),0_24px_48px_rgba(15,36,56,0.10)]">
@@ -58,7 +58,7 @@ function Intro() {
             </div>
             <div className="absolute -bottom-4 -end-4 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xl">
               <div className="text-sm font-semibold text-slate-900">{brand.name}</div>
-              <div className="text-[11px] text-teal-700">{brand.tagline}</div>
+              <div className="text-[11px] text-violet-700">{brand.tagline}</div>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ function Intro() {
             <ul className="mt-4 space-y-2.5">
               {facts.map((fact) => (
                 <li key={fact} className="flex gap-2.5 text-sm text-slate-600">
-                  <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
+                  <Check size={15} className="mt-0.5 shrink-0 text-violet-600" />
                   <span>{fact}</span>
                 </li>
               ))}
@@ -166,7 +166,7 @@ export default async function AboutPage({
           <p className="mt-4 text-slate-600 leading-relaxed">{t("cta_body")}</p>
           <Link
             href={routes.book}
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold transition-colors"
           >
             {t("cta")}
             <ArrowRight size={17} className="rtl:rotate-180" />

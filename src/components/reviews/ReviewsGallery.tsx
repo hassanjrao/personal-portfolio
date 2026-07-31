@@ -61,7 +61,7 @@ export default function ReviewsGallery() {
                 className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
               />
               <span className="absolute inset-0 flex items-center justify-center bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Maximize2 size={22} className="text-teal-700" />
+                <Maximize2 size={22} className="text-violet-700" />
               </span>
             </button>
             <figcaption className="flex items-center justify-between gap-3 px-4 py-3 border-t border-slate-200">
@@ -72,7 +72,7 @@ export default function ReviewsGallery() {
                 )}
               </div>
               {shot.service && (
-                <span className="shrink-0 px-2.5 py-0.5 text-[11px] text-teal-700 bg-teal-50 border border-teal-200 rounded-full">
+                <span className="shrink-0 px-2.5 py-0.5 text-[11px] text-violet-700 bg-violet-50 border border-violet-200 rounded-full">
                   {shot.service}
                 </span>
               )}

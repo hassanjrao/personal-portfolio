@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 const inputClass =
-  "w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-colors";
+  "w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-colors";
 
 export default function BookingForm() {
   const t = useTranslations("book");
@@ -140,7 +140,7 @@ export default function BookingForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 disabled:bg-teal-600/40 disabled:cursor-not-allowed text-white font-semibold transition-colors"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-violet-600 hover:bg-violet-700 disabled:bg-violet-600/40 disabled:cursor-not-allowed text-white font-semibold transition-colors"
       >
         <Send size={16} />
         {status === "sending" ? t("form_sending") : t("form_send")}

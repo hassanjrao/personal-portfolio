@@ -13,11 +13,11 @@ export default function PageHero({
     <section className="relative overflow-hidden pt-32 pb-16 px-4 border-b border-slate-200">
       <div className="absolute inset-0 grid-bg" aria-hidden="true" />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_0%,rgba(13,148,136,0.10)_0%,transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_0%,rgba(124,58,237,0.10)_0%,transparent_60%)]"
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <span className="inline-block px-4 py-1.5 mb-5 text-xs font-medium uppercase tracking-wider text-teal-700 border border-teal-200 rounded-full bg-teal-50">
+        <span className="inline-block px-4 py-1.5 mb-5 text-xs font-medium uppercase tracking-wider text-violet-700 border border-violet-200 rounded-full bg-violet-50">
           {badge}
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">

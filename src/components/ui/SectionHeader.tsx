@@ -14,7 +14,7 @@ export default function SectionHeader({
   return (
     <div className={`mb-14 ${isCenter ? "text-center" : ""}`}>
       {badge && (
-        <span className="inline-block px-4 py-1.5 mb-4 text-xs font-medium uppercase tracking-wider text-teal-700 border border-teal-200 rounded-full bg-teal-50">
+        <span className="inline-block px-4 py-1.5 mb-4 text-xs font-medium uppercase tracking-wider text-violet-700 border border-violet-200 rounded-full bg-violet-50">
           {badge}
         </span>
       )}
