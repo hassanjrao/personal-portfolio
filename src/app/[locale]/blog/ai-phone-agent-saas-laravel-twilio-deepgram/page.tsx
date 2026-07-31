@@ -73,17 +73,17 @@ const articleSchema = {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-2xl sm:text-3xl font-bold text-white pt-6">{children}</h2>
+    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 pt-6">{children}</h2>
   );
 }
 
 function H3({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-xl font-semibold text-white pt-2">{children}</h3>;
+  return <h3 className="text-xl font-semibold text-slate-900 pt-2">{children}</h3>;
 }
 
 function Code({ children }: { children: React.ReactNode }) {
   return (
-    <code className="px-1.5 py-0.5 rounded bg-white/10 text-cyan-300 text-[13px] whitespace-nowrap">
+    <code className="px-1.5 py-0.5 rounded bg-slate-100 text-teal-700 text-[13px] whitespace-nowrap">
       {children}
     </code>
   );
@@ -108,21 +108,21 @@ export default async function AiPhoneAgentPost({
         <div className="max-w-3xl mx-auto">
           <Link
             href={routes.blog}
-            className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-cyan-300 transition-colors mb-8"
+            className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-700 transition-colors mb-8"
           >
             <ArrowLeft size={14} className="rtl:rotate-180" />
             All articles
           </Link>
 
           <header className="mb-12">
-            <span className="inline-block px-4 py-1.5 text-sm text-cyan-300 border border-cyan-400/25 rounded-full bg-cyan-400/10 mb-5">
+            <span className="inline-block px-4 py-1.5 text-sm text-teal-700 border border-teal-200 rounded-full bg-teal-50 mb-5">
               Case Study
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5">
               <span className="gradient-text">
                 Building an AI Phone Agent That Answers Real Calls
               </span>{" "}
-              <span className="text-white">
+              <span className="text-slate-900">
                 — Twilio, Deepgram, FastAPI &amp; RAG
               </span>
             </h1>
@@ -139,7 +139,7 @@ export default async function AiPhoneAgentPost({
                 (tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-0.5 text-xs text-slate-400 bg-white/10 rounded-full"
+                    className="px-2.5 py-0.5 text-xs text-slate-600 bg-slate-100 rounded-full"
                   >
                     {tag}
                   </span>
@@ -148,7 +148,7 @@ export default async function AiPhoneAgentPost({
             </div>
           </header>
 
-          <div className="space-y-6 text-slate-400 leading-relaxed text-[15px]">
+          <div className="space-y-6 text-slate-600 leading-relaxed text-[15px]">
             <p>
               Most businesses lose customers on the phone. Calls go unanswered after hours,
               front desks get swamped, and callers who reach voicemail rarely call back. We
@@ -162,8 +162,8 @@ export default async function AiPhoneAgentPost({
               retrieval-augmented generation (RAG) layer, and the anti-hallucination design
               that makes the whole thing safe to put in front of real customers.
             </p>
-            <p className="p-4 rounded-xl bg-cyan-400/[0.07] border border-cyan-400/20">
-              <strong className="text-white">Why this matters for logistics:</strong>{" "}
+            <p className="p-4 rounded-xl bg-teal-50 border border-teal-200">
+              <strong className="text-slate-900">Why this matters for logistics:</strong>{" "}
               a dispatch line is the hardest version of this problem. Callers want a booking
               taken or a shipment located, the answer has to come from live operational data
               rather than a script, and a confidently wrong ETA costs more than a missed
@@ -181,7 +181,7 @@ export default async function AiPhoneAgentPost({
               stored, so the business can review calls in an admin dashboard.
             </p>
             <p>
-              Crucially, it&apos;s <strong className="text-white">multi-tenant</strong>: one
+              Crucially, it&apos;s <strong className="text-slate-900">multi-tenant</strong>: one
               deployment serves many companies, each with its own phone numbers, documents,
               agent personality, voice, and even its own API keys if they want billing on
               their own accounts.
@@ -189,9 +189,9 @@ export default async function AiPhoneAgentPost({
 
             <H2>The architecture: two services, clear responsibilities</H2>
             <p>The system is split into two services that talk over an internal token-authenticated API:</p>
-            <ul className="list-disc pl-6 space-y-2 marker:text-cyan-300">
+            <ul className="list-disc pl-6 space-y-2 marker:text-teal-700">
               <li>
-                <strong className="text-white">Laravel (PHP) — the brain of record.</strong>{" "}
+                <strong className="text-slate-900">Laravel (PHP) — the brain of record.</strong>{" "}
                 Multi-tenant admin built with Inertia and Vue: companies, plans, industries,
                 phone numbers, agent configuration, document management, call logs and
                 transcripts. It also owns the Twilio webhook: when a call comes in, Laravel
@@ -199,7 +199,7 @@ export default async function AiPhoneAgentPost({
                 record, and returns TwiML.
               </li>
               <li>
-                <strong className="text-white">Python (FastAPI) — the real-time voice service.</strong>{" "}
+                <strong className="text-slate-900">Python (FastAPI) — the real-time voice service.</strong>{" "}
                 A WebSocket bridge between Twilio Media Streams and Deepgram&apos;s Voice
                 Agent API, plus the RAG pipeline: PDF ingestion, chunking, Gemini embeddings,
                 and pgvector similarity search.
@@ -213,7 +213,7 @@ export default async function AiPhoneAgentPost({
             </p>
 
             <H2>The life of a phone call</H2>
-            <ol className="list-decimal pl-6 space-y-2 marker:text-cyan-300">
+            <ol className="list-decimal pl-6 space-y-2 marker:text-teal-700">
               <li>
                 Twilio receives the call and hits Laravel&apos;s voice webhook. Laravel looks
                 up the called number, verifies the <Code>X-Twilio-Signature</Code>, checks
@@ -258,7 +258,7 @@ export default async function AiPhoneAgentPost({
               ingestion pipeline extracts the text, chunks it with a paragraph-aware sliding
               window (~1,500 characters with 200 overlap), embeds each chunk with
               Gemini&apos;s embedding model, and stores the vectors in PostgreSQL with the{" "}
-              <strong className="text-white">pgvector</strong> extension. No separate vector
+              <strong className="text-slate-900">pgvector</strong> extension. No separate vector
               database to run — cosine similarity search lives right next to the relational
               data, with every query scoped by <Code>company_id</Code> so tenants can never
               see each other&apos;s content.
@@ -301,7 +301,7 @@ export default async function AiPhoneAgentPost({
               estimate.
             </p>
             <p>
-              The admin panel includes a <strong className="text-white">test console</strong>{" "}
+              The admin panel includes a <strong className="text-slate-900">test console</strong>{" "}
               — a text chat that runs the exact same system prompt, retrieval, and grounding
               rules as the phone agent. Businesses can interrogate their agent before a
               single customer calls it.
@@ -312,7 +312,7 @@ export default async function AiPhoneAgentPost({
               Every company belongs to an industry, and each industry has a base prompt
               template with rules tuned to what its callers actually ask. The interesting
               part: when a company signs up in an industry that doesn&apos;t exist yet, the
-              platform <strong className="text-white">generates the industry template with
+              platform <strong className="text-slate-900">generates the industry template with
               an LLM</strong> — instructed to keep every safety rule from a reference
               template, adapt the scope rules, and add two or three industry-specific
               guardrails. The output is validated programmatically (the grounding function
@@ -325,27 +325,27 @@ export default async function AiPhoneAgentPost({
             </p>
 
             <H2>Lessons from real-time voice</H2>
-            <ul className="list-disc pl-6 space-y-2 marker:text-cyan-300">
+            <ul className="list-disc pl-6 space-y-2 marker:text-teal-700">
               <li>
-                <strong className="text-white">Silence kills connections.</strong> When a
+                <strong className="text-slate-900">Silence kills connections.</strong> When a
                 caller goes on hold or mute, no audio flows and Deepgram times out the
                 session. An 8-second keepalive ping keeps the agent alive through the gaps.
               </li>
               <li>
-                <strong className="text-white">Barge-in is a product feature, not a nicety.</strong>{" "}
+                <strong className="text-slate-900">Barge-in is a product feature, not a nicety.</strong>{" "}
                 Without clearing Twilio&apos;s audio buffer the moment the caller speaks, the
                 agent finishes its sentence over them and the conversation immediately feels
                 robotic.
               </li>
               <li>
-                <strong className="text-white">Fail loud, and specifically.</strong>{" "}
+                <strong className="text-slate-900">Fail loud, and specifically.</strong>{" "}
                 Free-tier LLM quota exhaustion surfacing as a generic 500 gets misdiagnosed
                 as &quot;the service is down.&quot; Mapping a 429 to an actionable message
                 (&quot;enable billing on the key or wait for reset&quot;) saved real
                 debugging time.
               </li>
               <li>
-                <strong className="text-white">Every call must end in a known state.</strong>{" "}
+                <strong className="text-slate-900">Every call must end in a known state.</strong>{" "}
                 Whatever happens — Deepgram drops, Twilio disconnects, an exception mid-call
                 — a <Code>finally</Code> block reports the call as completed, transferred, or
                 failed, so no call is ever stuck &quot;in progress&quot; in the dashboard.
@@ -368,19 +368,19 @@ export default async function AiPhoneAgentPost({
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 text-left text-slate-300">
+                  <tr className="border-b border-slate-200 text-left text-slate-600">
                     <th className="py-2 pr-4 font-semibold">Layer</th>
                     <th className="py-2 font-semibold">Technology</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
-                  <tr><td className="py-2 pr-4 text-white">Telephony</td><td className="py-2">Twilio Voice + Media Streams</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Speech &amp; agent loop</td><td className="py-2">Deepgram Voice Agent API (Nova-3 STT, Aura-2 TTS)</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Reasoning</td><td className="py-2">Gemini 2.5 Flash (per-tenant configurable)</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Embeddings &amp; search</td><td className="py-2">Gemini embeddings + PostgreSQL pgvector</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Voice bridge</td><td className="py-2">Python, FastAPI, asyncio WebSockets</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Platform &amp; admin</td><td className="py-2">Laravel, Inertia, Vue, Tailwind</td></tr>
-                  <tr><td className="py-2 pr-4 text-white">Infrastructure</td><td className="py-2">AWS EC2, nginx, Let&apos;s Encrypt</td></tr>
+                <tbody className="divide-y divide-slate-200">
+                  <tr><td className="py-2 pr-4 text-slate-900">Telephony</td><td className="py-2">Twilio Voice + Media Streams</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Speech &amp; agent loop</td><td className="py-2">Deepgram Voice Agent API (Nova-3 STT, Aura-2 TTS)</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Reasoning</td><td className="py-2">Gemini 2.5 Flash (per-tenant configurable)</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Embeddings &amp; search</td><td className="py-2">Gemini embeddings + PostgreSQL pgvector</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Voice bridge</td><td className="py-2">Python, FastAPI, asyncio WebSockets</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Platform &amp; admin</td><td className="py-2">Laravel, Inertia, Vue, Tailwind</td></tr>
+                  <tr><td className="py-2 pr-4 text-slate-900">Infrastructure</td><td className="py-2">AWS EC2, nginx, Let&apos;s Encrypt</td></tr>
                 </tbody>
               </table>
             </div>
@@ -388,15 +388,15 @@ export default async function AiPhoneAgentPost({
             <p className="pt-4">
               Building it reinforced something we keep seeing in production AI work:
               the model is the easy part.{" "}
-              <strong className="text-white">
+              <strong className="text-slate-900">
                 The product is the plumbing around it
               </strong>{" "}
               — tenant isolation, grounding guarantees, graceful failure, and an admin
               experience that lets a non-technical business trust what their agent will say.
             </p>
 
-            <div className="mt-10 p-6 rounded-2xl bg-gradient-to-b from-cyan-500/12 to-transparent border border-cyan-400/25">
-              <p className="text-white font-semibold mb-2">
+            <div className="mt-10 p-6 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
+              <p className="text-slate-900 font-semibold mb-2">
                 Want this answering your dispatch line?
               </p>
               <p className="text-sm mb-4">
@@ -406,7 +406,7 @@ export default async function AiPhoneAgentPost({
               </p>
               <Link
                 href={routes.book}
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors"
               >
                 Book a free AI audit
                 <ArrowRight size={15} className="rtl:rotate-180" />

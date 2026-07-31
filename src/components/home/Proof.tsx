@@ -29,7 +29,7 @@ export default function Proof() {
   ];
 
   return (
-    <section className="px-4 py-24">
+    <section id="proof" className="px-4 py-24">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           badge={t("badge")}
@@ -40,11 +40,11 @@ export default function Proof() {
         <div className="grid lg:grid-cols-2 gap-6">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
-              <article className="h-full flex flex-col p-7 rounded-2xl bg-gradient-to-b from-white/[0.05] to-white/[0.02] border border-white/10">
-                <span className="text-[11px] uppercase tracking-wider text-cyan-300">
+              <article className="h-full flex flex-col p-7 rounded-2xl bg-gradient-to-b from-white to-slate-50 border border-slate-200">
+                <span className="text-[11px] uppercase tracking-wider text-teal-700">
                   {item.tag}
                 </span>
-                <h3 className="mt-2 text-xl font-semibold text-white leading-snug">
+                <h3 className="mt-2 text-xl font-semibold text-slate-900 leading-snug">
                   {item.title}
                 </h3>
 
@@ -54,18 +54,18 @@ export default function Proof() {
                       <dt className="text-[11px] uppercase tracking-wider text-slate-500 pt-0.5">
                         {label}
                       </dt>
-                      <dd className="text-sm text-slate-300 leading-relaxed">
+                      <dd className="text-sm text-slate-600 leading-relaxed">
                         {item[key] as string}
                       </dd>
                     </div>
                   ))}
                 </dl>
 
-                <div className="mt-6 pt-5 border-t border-white/8 flex flex-wrap gap-2">
+                <div className="mt-6 pt-5 border-t border-slate-200 flex flex-wrap gap-2">
                   {item.stack.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 text-xs text-slate-400 bg-white/5 border border-white/10 rounded-full"
+                      className="px-2.5 py-0.5 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-full"
                     >
                       {tag}
                     </span>
@@ -75,7 +75,7 @@ export default function Proof() {
                 {item.link_label && CASE_STUDY_LINKS[i] && (
                   <Link
                     href={CASE_STUDY_LINKS[i]}
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm text-cyan-300 hover:gap-2.5 transition-all"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 hover:gap-2.5 transition-all"
                   >
                     {item.link_label}
                     <ArrowRight size={15} className="rtl:rotate-180" />

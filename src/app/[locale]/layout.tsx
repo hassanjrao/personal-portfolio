@@ -69,10 +69,6 @@ const structuredData = {
       description:
         "AI engineer building production AI systems for moving companies, courier networks and freight forwarders: instant lead-response agents, shipment-tracking agents, real-time AI voice agents for bookings and dispatch, estimate and quoting copilots, document extraction and operations knowledge assistants.",
       sameAs: [contact.linkedin],
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Sukkur IBA University",
-      },
       knowsAbout: [
         "AI for moving companies",
         "AI for logistics",
@@ -139,7 +135,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir="ltr">
-      <body className="bg-[#060a12] text-[#e8eef7] antialiased" suppressHydrationWarning>
+      <body className="bg-white text-slate-800 antialiased" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

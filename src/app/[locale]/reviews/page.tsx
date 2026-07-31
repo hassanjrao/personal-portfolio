@@ -36,18 +36,18 @@ function WhyPanel() {
   const items = t.raw("why_items") as { title: string; body: string }[];
 
   return (
-    <section className="px-4 py-24 bg-white/[0.02] border-y border-white/8">
+    <section className="px-4 py-24 bg-slate-50 border-y border-slate-200">
       <div className="max-w-5xl mx-auto">
         <SectionHeader heading={t("why_heading")} />
         <div className="grid sm:grid-cols-2 gap-5">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.07}>
-              <article className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/10 card-hover">
-                <h3 className="flex items-start gap-2.5 font-semibold text-white">
-                  <Check size={17} className="mt-1 shrink-0 text-cyan-400" />
+              <article className="h-full p-6 rounded-2xl bg-white card-soft border border-slate-200 card-hover">
+                <h3 className="flex items-start gap-2.5 font-semibold text-slate-900">
+                  <Check size={17} className="mt-1 shrink-0 text-teal-600" />
                   {item.title}
                 </h3>
-                <p className="mt-2.5 ps-7 text-sm text-slate-400 leading-relaxed">
+                <p className="mt-2.5 ps-7 text-sm text-slate-600 leading-relaxed">
                   {item.body}
                 </p>
               </article>

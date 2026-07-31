@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* Logistics-tech palette: deep navy base, signal cyan, amber for action. */
-  --background: #060a12;
-  --surface: #0b1220;
-  --foreground: #e8eef7;
-  --accent: #22d3ee;
-  --accent-strong: #06b6d4;
-  --accent-warm: #f59e0b;
+  /* Light, calm palette: white base, deep-navy ink, teal action. */
+  --background: #ffffff;
+  --surface: #f6f9fc;
+  --surface-strong: #eef3f9;
+  --foreground: #0f2438;
+  --muted: #51637a;
+  --line: #e3eaf2;
+  --accent: #0d9488;
+  --accent-strong: #0f766e;
+  --accent-soft: #f0fdfa;
+  --accent-warm: #b45309;
 }
 
 @theme inline {
@@ -28,17 +32,22 @@ body {
   color: var(--foreground);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: var(--surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-strong);
-  border-radius: 3px;
+  background: #c7d3e0;
+  border-radius: 6px;
+  border: 3px solid var(--surface);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aebdcd;
 }
 
 section {
@@ -46,28 +55,43 @@ section {
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, #67e8f9, #38bdf8 45%, #fbbf24);
+  background: linear-gradient(115deg, #0f766e, #0369a1 48%, #b45309);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Faint route-grid used behind hero and CTA bands. */
+/* Faint route grid behind hero and CTA bands. */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(34, 211, 238, 0.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.6) 1px, transparent 1px);
+    linear-gradient(rgba(15, 36, 56, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 36, 56, 0.5) 1px, transparent 1px);
   background-size: 64px 64px;
-  opacity: 0.04;
+  opacity: 0.035;
+}
+
+/* Soft elevation used on cards. */
+.card-soft {
+  box-shadow:
+    0 1px 2px rgba(15, 36, 56, 0.04),
+    0 6px 18px rgba(15, 36, 56, 0.05);
 }
 
 .card-hover {
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow:
+    0 1px 2px rgba(15, 36, 56, 0.04),
+    0 6px 18px rgba(15, 36, 56, 0.05);
 }
 .card-hover:hover {
   transform: translateY(-3px);
-  border-color: rgba(34, 211, 238, 0.35);
-  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #99f6e4;
+  box-shadow:
+    0 2px 4px rgba(15, 36, 56, 0.05),
+    0 14px 32px rgba(15, 36, 56, 0.09);
 }
 
 @keyframes marquee {

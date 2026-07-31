@@ -27,12 +27,12 @@ export default function ReviewsGallery() {
 
   if (reviewShots.length === 0) {
     return (
-      <div className="max-w-2xl mx-auto p-10 rounded-2xl bg-white/[0.03] border border-dashed border-white/15 text-center">
-        <span className="inline-flex w-12 h-12 rounded-xl bg-white/5 border border-white/10 items-center justify-center text-slate-400">
+      <div className="max-w-2xl mx-auto p-10 rounded-2xl bg-white card-soft border border-dashed border-slate-300 text-center">
+        <span className="inline-flex w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 items-center justify-center text-slate-600">
           <MessageSquareQuote size={21} />
         </span>
-        <h2 className="mt-4 text-lg font-semibold text-white">{t("empty_title")}</h2>
-        <p className="mt-2 text-sm text-slate-400 leading-relaxed">{t("empty_body")}</p>
+        <h2 className="mt-4 text-lg font-semibold text-slate-900">{t("empty_title")}</h2>
+        <p className="mt-2 text-sm text-slate-600 leading-relaxed">{t("empty_body")}</p>
       </div>
     );
   }
@@ -45,12 +45,12 @@ export default function ReviewsGallery() {
         {reviewShots.map((shot, i) => (
           <figure
             key={shot.src}
-            className="group rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden card-hover"
+            className="group rounded-2xl bg-white card-soft border border-slate-200 overflow-hidden card-hover"
           >
             <button
               type="button"
               onClick={() => setActive(i)}
-              className="relative block w-full aspect-[4/3] bg-[#0b1220]"
+              className="relative block w-full aspect-[4/3] bg-white"
               aria-label={t("open_image")}
             >
               <Image
@@ -61,18 +61,18 @@ export default function ReviewsGallery() {
                 className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
               />
               <span className="absolute inset-0 flex items-center justify-center bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Maximize2 size={22} className="text-cyan-300" />
+                <Maximize2 size={22} className="text-teal-700" />
               </span>
             </button>
-            <figcaption className="flex items-center justify-between gap-3 px-4 py-3 border-t border-white/8">
+            <figcaption className="flex items-center justify-between gap-3 px-4 py-3 border-t border-slate-200">
               <div className="min-w-0">
-                <div className="text-sm text-white truncate">{shot.client}</div>
+                <div className="text-sm text-slate-900 truncate">{shot.client}</div>
                 {shot.country && (
                   <div className="text-xs text-slate-500">{shot.country}</div>
                 )}
               </div>
               {shot.service && (
-                <span className="shrink-0 px-2.5 py-0.5 text-[11px] text-cyan-300 bg-cyan-400/10 border border-cyan-400/20 rounded-full">
+                <span className="shrink-0 px-2.5 py-0.5 text-[11px] text-teal-700 bg-teal-50 border border-teal-200 rounded-full">
                   {shot.service}
                 </span>
               )}
@@ -81,7 +81,7 @@ export default function ReviewsGallery() {
         ))}
       </div>
 
-      <p className="mt-6 text-center text-xs text-slate-600">{t("gallery_note")}</p>
+      <p className="mt-6 text-center text-xs text-slate-500">{t("gallery_note")}</p>
 
       {current && (
         <div
@@ -95,7 +95,7 @@ export default function ReviewsGallery() {
             type="button"
             onClick={() => setActive(null)}
             aria-label={t("close_image")}
-            className="absolute top-5 end-5 p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors"
+            className="absolute top-5 end-5 p-2 rounded-lg bg-slate-100 text-slate-900 hover:bg-slate-200 transition-colors"
           >
             <X size={20} />
           </button>

@@ -38,16 +38,16 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
         scrolled || menuOpen
-          ? "bg-[#060a12]/92 backdrop-blur-md border-b border-white/8"
+          ? "bg-white/85 backdrop-blur-md border-b border-slate-200 shadow-[0_1px_3px_rgba(15,36,56,0.06)]"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href={routes.home} className="flex flex-col leading-none">
-            <span className="text-lg font-bold text-white tracking-tight">
+            <span className="text-lg font-bold text-slate-900 tracking-tight">
               {brand.name}
-              <span className="text-cyan-400">.</span>
+              <span className="text-teal-600">.</span>
             </span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
               {brand.tagline}
@@ -61,8 +61,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm transition-colors ${
                   isActive(link.href)
-                    ? "text-cyan-300"
-                    : "text-slate-400 hover:text-white"
+                    ? "text-teal-700"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 {link.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
             <LocaleSwitcher />
             <Link
               href={routes.book}
-              className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
             >
               {t("book")}
               <ArrowRight size={14} className="rtl:rotate-180" />
@@ -79,7 +79,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden p-2 -me-2 text-slate-300 hover:text-white"
+            className="md:hidden p-2 -me-2 text-slate-600 hover:text-slate-900"
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
             aria-label={menuOpen ? t("close") : t("menu")}
@@ -89,14 +89,14 @@ export default function Navbar() {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden pb-5 pt-2 flex flex-col gap-1 border-t border-white/8">
+          <div className="md:hidden pb-5 pt-2 flex flex-col gap-1 border-t border-slate-200">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
                 className={`py-2.5 text-sm ${
-                  isActive(link.href) ? "text-cyan-300" : "text-slate-400"
+                  isActive(link.href) ? "text-teal-700" : "text-slate-600"
                 }`}
               >
                 {link.label}
@@ -105,7 +105,7 @@ export default function Navbar() {
             <Link
               href={routes.book}
               onClick={closeMenu}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-cyan-500 text-slate-950 text-sm font-semibold"
+              className="mt-2 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-teal-600 text-white text-sm font-semibold"
             >
               {t("book")}
               <ArrowRight size={14} className="rtl:rotate-180" />

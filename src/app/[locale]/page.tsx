@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import SectionRail from "@/components/home/SectionRail";
 import Hero from "@/components/home/Hero";
 import StatsBar from "@/components/home/StatsBar";
 import Problems from "@/components/home/Problems";
@@ -40,6 +41,7 @@ export default async function HomePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <SectionRail />
       <Hero />
       <StatsBar />
       <Problems />

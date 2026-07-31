@@ -30,10 +30,10 @@ function Slider({
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3">
-        <label htmlFor={id} className="text-sm text-slate-400">
+        <label htmlFor={id} className="text-sm text-slate-600">
           {label}
         </label>
-        <span className="text-sm font-semibold text-cyan-300 tabular-nums" dir="ltr">
+        <span className="text-sm font-semibold text-teal-700 tabular-nums" dir="ltr">
           {value}
           {suffix}
         </span>
@@ -46,7 +46,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-2.5 w-full accent-cyan-400 cursor-pointer"
+        className="mt-2.5 w-full accent-teal-600 cursor-pointer"
       />
     </div>
   );
@@ -78,7 +78,7 @@ export default function RoiCalculator() {
   const number = new Intl.NumberFormat("en-US");
 
   return (
-    <section className="px-4 py-24 bg-white/[0.02] border-y border-white/8">
+    <section id="roi" className="px-4 py-24 bg-slate-50 border-y border-slate-200">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           badge={t("badge")}
@@ -88,7 +88,7 @@ export default function RoiCalculator() {
 
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Inputs */}
-          <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 space-y-7">
+          <div className="p-7 rounded-2xl bg-white card-soft border border-slate-200 space-y-7">
             <Slider
               label={t("calls_label")}
               value={callsPerDay}
@@ -125,27 +125,27 @@ export default function RoiCalculator() {
               suffix="%"
               onChange={setDeflection}
             />
-            <p className="text-xs text-slate-600">{t("currency_note")}</p>
+            <p className="text-xs text-slate-500">{t("currency_note")}</p>
           </div>
 
           {/* Output */}
-          <div className="p-7 rounded-2xl bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-400/25 flex flex-col">
-            <span className="inline-flex w-11 h-11 rounded-xl bg-cyan-400/15 items-center justify-center text-cyan-300">
+          <div className="p-7 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200 flex flex-col">
+            <span className="inline-flex w-11 h-11 rounded-xl bg-teal-50 items-center justify-center text-teal-700">
               <TrendingUp size={20} />
             </span>
 
             <div className="mt-6">
-              <div className="text-sm text-slate-400">{t("result_hours")}</div>
+              <div className="text-sm text-slate-600">{t("result_hours")}</div>
               <div
-                className="mt-1 text-3xl font-bold text-white tabular-nums"
+                className="mt-1 text-3xl font-bold text-slate-900 tabular-nums"
                 dir="ltr"
               >
                 {number.format(hoursPerMonth)}
               </div>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <div className="text-sm text-slate-400">{t("result_savings")}</div>
+            <div className="mt-6 pt-6 border-t border-slate-200">
+              <div className="text-sm text-slate-600">{t("result_savings")}</div>
               <div
                 className="mt-1 text-4xl sm:text-5xl font-bold gradient-text tabular-nums"
                 dir="ltr"
@@ -160,7 +160,7 @@ export default function RoiCalculator() {
 
             <Link
               href={routes.book}
-              className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:gap-3 transition-all"
+              className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 hover:gap-3 transition-all"
             >
               {t("cta")}
               <ArrowRight size={16} className="rtl:rotate-180" />

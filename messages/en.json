@@ -309,6 +309,24 @@
       "body": "A free 30-minute call. We map where your hours and jobs go, and which workflows are realistic candidates. You get the shortlist either way — no deck, no obligation.",
       "primary": "Book the audit call",
       "secondary": "Or message me on WhatsApp"
+    },
+    "rail": {
+      "aria": "Page sections",
+      "label": "You are here",
+      "progress": "Scroll progress",
+      "stops": {
+        "top": "Start",
+        "problem": "The problem",
+        "services": "What I build",
+        "demo": "See it work",
+        "segments": "Who it is for",
+        "proof": "Proof",
+        "roi": "The numbers",
+        "process": "How I work",
+        "trust": "Data & trust",
+        "faq": "Questions",
+        "book": "Book a call"
+      }
     }
   },
   "demo": {
@@ -579,8 +597,6 @@
       "5+ years shipping production software",
       "4+ years building for logistics operations",
       "Founder of an AI phone-receptionist platform",
-      "Section Leader, Stanford Code in Place",
-      "B.S. Software Engineering, Sukkur IBA University",
       "Working with US clients remotely, across every timezone"
     ],
     "principles_heading": "How I work",

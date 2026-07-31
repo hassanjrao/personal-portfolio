@@ -58,8 +58,6 @@ Step-by-step walkthroughs at https://hassanrao.com/demo show the agents handling
 
 - Five years shipping production software; four years building for logistics operations — platforms handling thousands of shipments a day, carrier integrations, and automation that removed hours of daily manual data entry
 - Founder of an AI phone-receptionist platform — Twilio Media Streams bridged to Deepgram's Voice Agent API, retrieval over PostgreSQL pgvector, Laravel admin
-- Section Leader (Teaching), Stanford Code in Place
-- B.S. Software Engineering, Sukkur IBA University
 
 ## Technical Stack
 

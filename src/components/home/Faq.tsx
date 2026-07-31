@@ -13,11 +13,11 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="px-4 py-24">
+    <section id="faq" className="px-4 py-24">
       <div className="max-w-3xl mx-auto">
         <SectionHeader badge={t("badge")} heading={t("heading")} />
 
-        <div className="divide-y divide-white/8 border-y border-white/8">
+        <div className="divide-y divide-slate-200 border-y border-slate-200">
           {items.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -29,17 +29,17 @@ export default function Faq() {
                     aria-expanded={isOpen}
                     className="w-full flex items-center justify-between gap-4 py-5 text-start"
                   >
-                    <span className="font-medium text-white">{item.q}</span>
+                    <span className="font-medium text-slate-900">{item.q}</span>
                     <ChevronDown
                       size={18}
-                      className={`shrink-0 text-cyan-300 transition-transform ${
+                      className={`shrink-0 text-teal-700 transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                 </h3>
                 {isOpen && (
-                  <p className="pb-6 -mt-1 text-sm text-slate-400 leading-relaxed">
+                  <p className="pb-6 -mt-1 text-sm text-slate-600 leading-relaxed">
                     {item.a}
                   </p>
                 )}

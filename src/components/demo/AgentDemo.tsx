@@ -17,8 +17,8 @@ import { getDemoScripts, type DemoTurn } from "@/config/demoScripts";
 function ToolChip({ text }: { text: string }) {
   return (
     <div className="flex justify-center my-1">
-      <span className="inline-flex items-center gap-2 max-w-full px-3 py-1.5 rounded-lg bg-slate-800/60 border border-white/10 text-[11px] text-slate-400">
-        <Cpu size={12} className="shrink-0 text-cyan-400" />
+      <span className="inline-flex items-center gap-2 max-w-full px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-[11px] text-slate-600">
+        <Cpu size={12} className="shrink-0 text-teal-600" />
         <span className="truncate">{text}</span>
       </span>
     </div>
@@ -33,15 +33,15 @@ function Bubble({ turn }: { turn: DemoTurn }) {
       <div
         className={`max-w-[82%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
           isAgent
-            ? "bg-slate-800 text-slate-100 rounded-es-md"
-            : "bg-cyan-500 text-slate-950 rounded-ee-md"
+            ? "bg-white border border-slate-200 text-slate-800 rounded-es-md card-soft"
+            : "bg-teal-600 text-white rounded-ee-md"
         }`}
       >
         <p>{turn.text}</p>
         {turn.at && (
           <span
             className={`block mt-1 text-[10px] ${
-              isAgent ? "text-slate-500" : "text-slate-800/70"
+              isAgent ? "text-slate-400" : "text-teal-50"
             }`}
           >
             {turn.at}
@@ -116,8 +116,8 @@ export default function AgentDemo() {
             onClick={() => reset(id)}
             className={`px-4 py-2 rounded-lg text-sm transition-colors ${
               id === active
-                ? "bg-cyan-500 text-slate-950 font-semibold"
-                : "bg-white/5 border border-white/10 text-slate-400 hover:text-white"
+                ? "bg-teal-600 text-white font-semibold"
+                : "bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900"
             }`}
           >
             {t(`scenarios.${id}.label`)}
@@ -127,13 +127,13 @@ export default function AgentDemo() {
 
       <div className="grid lg:grid-cols-[minmax(0,1fr)_340px] gap-6 items-start">
         {/* Transcript */}
-        <div className="rounded-2xl bg-[#0b1220] border border-white/10 overflow-hidden">
-          <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-white/8 bg-white/[0.03]">
-            <span className="flex items-center gap-2 text-xs text-slate-400">
+        <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-slate-200 bg-white card-soft">
+            <span className="flex items-center gap-2 text-xs text-slate-600">
               <span className="w-2 h-2 rounded-full bg-green-400" />
               {t(`scenarios.${active}.channel`)}
             </span>
-            <span className="text-[11px] text-slate-600 tabular-nums">
+            <span className="text-[11px] text-slate-500 tabular-nums">
               {Math.min(shown, script.length)} / {script.length}
             </span>
           </div>
@@ -161,7 +161,7 @@ export default function AgentDemo() {
 
             {typing && (
               <div className={`flex ${nextIsAgent ? "justify-start" : "justify-end"}`}>
-                <span className="px-3.5 py-2.5 rounded-2xl bg-slate-800 text-slate-500 text-xs">
+                <span className="px-3.5 py-2.5 rounded-2xl bg-slate-100 border border-slate-200 text-slate-500 text-xs">
                   {t("typing")}
                 </span>
               </div>
@@ -171,13 +171,13 @@ export default function AgentDemo() {
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 p-4 rounded-xl bg-cyan-500/10 border border-cyan-400/25"
+                className="mt-4 p-4 rounded-xl bg-teal-600/10 border border-teal-200"
               >
-                <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-cyan-300">
+                <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-teal-700">
                   <CheckCircle2 size={13} />
                   {t("outcome_label")}
                 </span>
-                <p className="mt-2 text-sm text-slate-200 leading-relaxed">
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed">
                   {t(`scenarios.${active}.outcome`)}
                 </p>
               </motion.div>
@@ -185,10 +185,10 @@ export default function AgentDemo() {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-2 px-4 py-3 border-t border-white/8 bg-white/[0.03]">
+          <div className="flex items-center gap-2 px-4 py-3 border-t border-slate-200 bg-white card-soft">
             <button
               onClick={() => (done ? reset(active) : setPlaying((p) => !p))}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold transition-colors"
             >
               {done ? (
                 <>
@@ -215,7 +215,7 @@ export default function AgentDemo() {
                 setShown((n) => Math.min(n + 1, script.length));
               }}
               disabled={done}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-white/15 text-slate-300 text-sm hover:border-cyan-400/50 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:border-teal-400 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               {t("next")}
               <ChevronRight size={14} className="rtl:rotate-180" />
@@ -224,14 +224,14 @@ export default function AgentDemo() {
         </div>
 
         {/* Scenario explainer */}
-        <aside className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 lg:sticky lg:top-24">
-          <h3 className="text-lg font-semibold text-white leading-snug">
+        <aside className="p-6 rounded-2xl bg-white card-soft border border-slate-200 lg:sticky lg:top-24">
+          <h3 className="text-lg font-semibold text-slate-900 leading-snug">
             {t(`scenarios.${active}.title`)}
           </h3>
-          <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+          <p className="mt-3 text-sm text-slate-600 leading-relaxed">
             {t(`scenarios.${active}.blurb`)}
           </p>
-          <p className="mt-5 pt-5 border-t border-white/8 text-xs text-slate-500 leading-relaxed">
+          <p className="mt-5 pt-5 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
             {t("note")}
           </p>
         </aside>

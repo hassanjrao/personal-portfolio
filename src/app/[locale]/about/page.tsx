@@ -43,10 +43,10 @@ function Intro() {
         <Reveal className="mx-auto lg:mx-0 lg:sticky lg:top-24">
           <div className="relative w-64 sm:w-80">
             <div
-              className="absolute -inset-4 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.2)_0%,transparent_70%)] blur-2xl"
+              className="absolute -inset-4 bg-[radial-gradient(circle_at_center,rgba(13,148,136,0.14)_0%,transparent_70%)] blur-2xl"
               aria-hidden="true"
             />
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 shadow-[0_4px_12px_rgba(15,36,56,0.06),0_24px_48px_rgba(15,36,56,0.10)]">
               <Image
                 src={brand.photo}
                 alt={brand.name}
@@ -56,20 +56,20 @@ function Intro() {
                 priority
               />
             </div>
-            <div className="absolute -bottom-4 -end-4 px-4 py-2.5 rounded-xl bg-[#0b1220] border border-white/10 shadow-xl">
-              <div className="text-sm font-semibold text-white">{brand.name}</div>
-              <div className="text-[11px] text-cyan-300">{brand.tagline}</div>
+            <div className="absolute -bottom-4 -end-4 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xl">
+              <div className="text-sm font-semibold text-slate-900">{brand.name}</div>
+              <div className="text-[11px] text-teal-700">{brand.tagline}</div>
             </div>
           </div>
 
-          <div className="mt-12 p-6 rounded-2xl bg-white/[0.03] border border-white/10">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+          <div className="mt-12 p-6 rounded-2xl bg-white card-soft border border-slate-200">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {t("facts_heading")}
             </h2>
             <ul className="mt-4 space-y-2.5">
               {facts.map((fact) => (
-                <li key={fact} className="flex gap-2.5 text-sm text-slate-400">
-                  <Check size={15} className="mt-0.5 shrink-0 text-cyan-400" />
+                <li key={fact} className="flex gap-2.5 text-sm text-slate-600">
+                  <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
                   <span>{fact}</span>
                 </li>
               ))}
@@ -78,7 +78,7 @@ function Intro() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="space-y-5 text-slate-300 leading-relaxed text-[17px]">
+          <div className="space-y-5 text-slate-600 leading-relaxed text-[17px]">
             <p>{t("body_1")}</p>
             <p>{t("body_2")}</p>
             <p>{t("body_3")}</p>
@@ -95,15 +95,15 @@ function Principles() {
   const items = t.raw("principles") as { title: string; body: string }[];
 
   return (
-    <section className="px-4 py-24 bg-white/[0.02] border-y border-white/8">
+    <section className="px-4 py-24 bg-slate-50 border-y border-slate-200">
       <div className="max-w-5xl mx-auto">
         <SectionHeader heading={t("principles_heading")} />
         <div className="grid sm:grid-cols-2 gap-5">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.07}>
-              <article className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/10 card-hover">
-                <h3 className="font-semibold text-white">{item.title}</h3>
-                <p className="mt-2.5 text-sm text-slate-400 leading-relaxed">{item.body}</p>
+              <article className="h-full p-6 rounded-2xl bg-white card-soft border border-slate-200 card-hover">
+                <h3 className="font-semibold text-slate-900">{item.title}</h3>
+                <p className="mt-2.5 text-sm text-slate-600 leading-relaxed">{item.body}</p>
               </article>
             </Reveal>
           ))}
@@ -120,12 +120,12 @@ function Stack() {
   return (
     <section className="px-4 py-20">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-xl font-semibold text-white">{t("stack_heading")}</h2>
+        <h2 className="text-xl font-semibold text-slate-900">{t("stack_heading")}</h2>
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
           {items.map((item) => (
             <li
               key={item}
-              className="px-4 py-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full"
+              className="px-4 py-2 text-sm text-slate-600 bg-slate-50 border border-slate-200 rounded-full"
             >
               {item}
             </li>
@@ -160,13 +160,13 @@ export default async function AboutPage({
 
       <section className="px-4 pb-24">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-balance">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-balance">
             {t("cta_heading")}
           </h2>
-          <p className="mt-4 text-slate-400 leading-relaxed">{t("cta_body")}</p>
+          <p className="mt-4 text-slate-600 leading-relaxed">{t("cta_body")}</p>
           <Link
             href={routes.book}
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
           >
             {t("cta")}
             <ArrowRight size={17} className="rtl:rotate-180" />

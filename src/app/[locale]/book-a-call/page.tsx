@@ -34,17 +34,17 @@ function ExpectPanel() {
   const items = t.raw("expect_items") as string[];
 
   return (
-    <div className="p-7 rounded-2xl bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-400/25">
-      <h2 className="font-semibold text-white">{t("expect_heading")}</h2>
+    <div className="p-7 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
+      <h2 className="font-semibold text-slate-900">{t("expect_heading")}</h2>
       <ul className="mt-5 space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex gap-2.5 text-sm text-slate-300 leading-relaxed">
-            <Check size={16} className="mt-0.5 shrink-0 text-cyan-400" />
+          <li key={item} className="flex gap-2.5 text-sm text-slate-600 leading-relaxed">
+            <Check size={16} className="mt-0.5 shrink-0 text-teal-600" />
             <span>{item}</span>
           </li>
         ))}
       </ul>
-      <p className="mt-5 pt-5 border-t border-white/10 text-xs text-slate-500">
+      <p className="mt-5 pt-5 border-t border-slate-200 text-xs text-slate-500">
         {t("expect_note")}
       </p>
     </div>
@@ -61,34 +61,34 @@ function Channels() {
       value: contact.email,
       href: `mailto:${contact.email}`,
       icon: <Mail size={18} />,
-      hover: "hover:border-cyan-400/50 hover:bg-cyan-400/10",
+      hover: "hover:border-teal-400 hover:bg-teal-50",
     },
     ...contact.whatsapp.map((w) => ({
       label: `WhatsApp · ${w.region}`,
       value: w.label,
       href: w.href,
       icon: <WhatsAppIcon className="w-[18px] h-[18px]" />,
-      hover: "hover:border-green-500/50 hover:bg-green-500/10",
+      hover: "hover:border-green-400 hover:bg-green-50",
     })),
     {
       label: tc("cta_linkedin"),
       value: "LinkedIn",
       href: contact.linkedin,
       icon: <LinkedInIcon className="w-[18px] h-[18px]" />,
-      hover: "hover:border-blue-500/50 hover:bg-blue-500/10",
+      hover: "hover:border-blue-400 hover:bg-blue-50",
     },
     {
       label: tc("cta_calendly"),
       value: "Calendly",
       href: contact.calendly,
       icon: <Calendar size={18} />,
-      hover: "hover:border-cyan-400/50 hover:bg-cyan-400/10",
+      hover: "hover:border-teal-400 hover:bg-teal-50",
     },
   ];
 
   return (
-    <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-      <h2 className="font-semibold text-white">{t("channels_heading")}</h2>
+    <div className="p-7 rounded-2xl bg-white card-soft border border-slate-200">
+      <h2 className="font-semibold text-slate-900">{t("channels_heading")}</h2>
       <p className="mt-1.5 text-sm text-slate-500">{t("channels_body")}</p>
       <div className="mt-5 grid sm:grid-cols-2 gap-3">
         {channels.map((c) => (
@@ -97,12 +97,12 @@ function Channels() {
             href={c.href}
             target={c.href.startsWith("mailto:") ? undefined : "_blank"}
             rel="noopener noreferrer"
-            className={`flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10 transition-colors ${c.hover}`}
+            className={`flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 transition-colors ${c.hover}`}
           >
-            <span className="text-slate-400">{c.icon}</span>
+            <span className="text-slate-600">{c.icon}</span>
             <span className="min-w-0">
               <span className="block text-xs text-slate-500">{c.label}</span>
-              <span className="block text-sm text-white truncate" dir="ltr">
+              <span className="block text-sm text-slate-900 truncate" dir="ltr">
                 {c.value}
               </span>
             </span>
@@ -127,10 +127,10 @@ function CalendlyEmbed() {
   const src = `${contact.calendly}?${params.toString()}`;
 
   return (
-    <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-      <h2 className="font-semibold text-white">{t("calendly_heading")}</h2>
+    <div className="p-7 rounded-2xl bg-white card-soft border border-slate-200">
+      <h2 className="font-semibold text-slate-900">{t("calendly_heading")}</h2>
       <p className="mt-1.5 text-sm text-slate-500">{t("calendly_body")}</p>
-      <div className="mt-5 rounded-xl overflow-hidden border border-white/10 bg-[#0b1220]">
+      <div className="mt-5 rounded-xl overflow-hidden border border-slate-200 bg-white">
         <iframe
           src={src}
           title={t("calendly_heading")}
@@ -142,7 +142,7 @@ function CalendlyEmbed() {
         href={contact.calendly}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center gap-1.5 text-sm text-cyan-300 hover:gap-2.5 transition-all"
+        className="mt-4 inline-flex items-center gap-1.5 text-sm text-teal-700 hover:gap-2.5 transition-all"
       >
         <ExternalLink size={14} />
         {t("calendly_fallback")}
@@ -174,8 +174,8 @@ export default async function BookACallPage({
           <div className="space-y-8">
             <CalendlyEmbed />
 
-            <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-              <h2 className="font-semibold text-white">{t("form_heading")}</h2>
+            <div className="p-7 rounded-2xl bg-white card-soft border border-slate-200">
+              <h2 className="font-semibold text-slate-900">{t("form_heading")}</h2>
               <p className="mt-1.5 mb-6 text-sm text-slate-500">{t("form_body")}</p>
               <BookingForm />
             </div>

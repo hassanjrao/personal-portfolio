@@ -40,7 +40,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div
-      className={`inline-flex items-center gap-1 rounded-lg border border-white/10 p-0.5 ${
+      className={`inline-flex items-center gap-1 rounded-lg border border-slate-200 p-0.5 ${
         pending ? "opacity-60" : ""
       }`}
       role="group"
@@ -55,8 +55,8 @@ export default function LocaleSwitcher() {
           aria-current={l === locale ? "true" : undefined}
           className={`px-2 py-1 text-xs rounded-md transition-colors ${
             l === locale
-              ? "bg-cyan-400/15 text-cyan-300"
-              : "text-slate-400 hover:text-white"
+              ? "bg-teal-50 text-teal-700"
+              : "text-slate-600 hover:text-slate-900"
           }`}
         >
           {labels[l]}

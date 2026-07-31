@@ -55,31 +55,31 @@ function Lane({
     <div
       className={`p-5 rounded-2xl border ${
         isCyan
-          ? "bg-gradient-to-b from-cyan-500/10 to-transparent border-cyan-400/25"
-          : "bg-white/[0.03] border-white/10"
+          ? "bg-gradient-to-b from-teal-50 to-white border-teal-200"
+          : "bg-white card-soft border-slate-200"
       }`}
     >
       <div className="flex items-start gap-3">
         <span
           className={`inline-flex w-10 h-10 shrink-0 rounded-xl items-center justify-center ${
             isCyan
-              ? "bg-cyan-400/15 text-cyan-300"
-              : "bg-white/5 text-slate-400 border border-white/10"
+              ? "bg-teal-50 text-teal-700"
+              : "bg-slate-50 text-slate-600 border border-slate-200"
           }`}
         >
           {icon}
         </span>
         <div className="min-w-0">
-          <h3 className="font-semibold text-white">{label}</h3>
+          <h3 className="font-semibold text-slate-900">{label}</h3>
           <p className="text-xs text-slate-500">{note}</p>
         </div>
       </div>
 
       {/* Progress track */}
-      <div className="mt-5 h-2 rounded-full bg-white/8 overflow-hidden">
+      <div className="mt-5 h-2 rounded-full bg-slate-100 overflow-hidden">
         <div
           className={`h-full rounded-full transition-[width] duration-100 ease-linear ${
-            isCyan ? "bg-cyan-400" : "bg-slate-500"
+            isCyan ? "bg-teal-500" : "bg-slate-400"
           }`}
           style={{ width: `${Math.min(100, progress)}%` }}
         />
@@ -87,8 +87,8 @@ function Lane({
 
       <div className="mt-4 min-h-[52px]">
         {replied ? (
-          <p className="text-sm text-slate-300">
-            <span className="text-white font-medium">{replyLabel}</span>
+          <p className="text-sm text-slate-600">
+            <span className="text-slate-900 font-medium">{replyLabel}</span>
             <span className="text-slate-500"> · {formatElapsed(elapsedAtReply)}</span>
           </p>
         ) : (
@@ -96,13 +96,13 @@ function Lane({
         )}
 
         {won && (
-          <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400">
+          <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600">
             <Trophy size={15} />
             {wonLabel}
           </p>
         )}
         {lost && (
-          <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-red-400">
+          <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-red-600">
             <XCircle size={15} />
             {lostLabel}
           </p>
@@ -146,7 +146,7 @@ export default function LeadResponseRace() {
   };
 
   return (
-    <section className="px-4 py-24 bg-white/[0.02] border-y border-white/8">
+    <section className="px-4 py-24 bg-slate-50 border-y border-slate-200">
       <div className="max-w-4xl mx-auto">
         <SectionHeader
           badge={t("badge")}
@@ -157,18 +157,18 @@ export default function LeadResponseRace() {
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <button
             onClick={() => (finished ? reset() : setRunning((r) => !r))}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-semibold transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold transition-colors"
           >
             {finished ? <RotateCcw size={15} /> : <Play size={15} />}
             {finished ? t("reset") : t("start")}
           </button>
-          <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-400">
+          <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-600">
             <Clock size={14} />
-            <span className="tabular-nums text-white" dir="ltr">
+            <span className="tabular-nums text-slate-900" dir="ltr">
               {formatElapsed(elapsed)}
             </span>
           </span>
-          <span className="text-xs text-slate-600">{t("lead_received")}</span>
+          <span className="text-xs text-slate-500">{t("lead_received")}</span>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5">
@@ -204,7 +204,7 @@ export default function LeadResponseRace() {
           />
         </div>
 
-        <p className="mt-6 text-center text-xs text-slate-600">{t("footnote")}</p>
+        <p className="mt-6 text-center text-xs text-slate-500">{t("footnote")}</p>
       </div>
     </section>
   );

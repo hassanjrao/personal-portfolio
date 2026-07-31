@@ -19,7 +19,7 @@ export default function Problems() {
   const items = t.raw("items") as Problem[];
 
   return (
-    <section className="px-4 py-24">
+    <section id="problem" className="px-4 py-24">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           badge={t("badge")}
@@ -32,12 +32,12 @@ export default function Problems() {
             const Icon = icons[i] ?? PhoneIncoming;
             return (
               <Reveal key={item.title} delay={i * 0.06}>
-                <article className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/10 card-hover">
-                  <span className="inline-flex w-11 h-11 rounded-xl bg-amber-400/10 border border-amber-400/20 items-center justify-center text-amber-300">
+                <article className="h-full p-6 rounded-2xl bg-white card-soft border border-slate-200 card-hover">
+                  <span className="inline-flex w-11 h-11 rounded-xl bg-amber-50 border border-amber-200 items-center justify-center text-amber-700">
                     <Icon size={19} />
                   </span>
-                  <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">{item.body}</p>
+                  <h3 className="mt-4 font-semibold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{item.body}</p>
                 </article>
               </Reveal>
             );

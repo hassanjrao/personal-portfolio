@@ -57,13 +57,13 @@ export default async function DemoPage({
 
       <section className="px-4 py-24">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-balance">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-balance">
             {t("cta_heading")}
           </h2>
-          <p className="mt-4 text-slate-400 leading-relaxed">{t("cta_body")}</p>
+          <p className="mt-4 text-slate-600 leading-relaxed">{t("cta_body")}</p>
           <Link
             href={routes.book}
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-colors"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors"
           >
             {t("cta_heading")}
             <ArrowRight size={17} className="rtl:rotate-180" />

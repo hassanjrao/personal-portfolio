@@ -16,7 +16,7 @@ export default function Segments() {
   const ti = useTranslations("home.segments.items");
 
   return (
-    <section className="px-4 py-24">
+    <section id="segments" className="px-4 py-24">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           badge={t("badge")}
@@ -30,20 +30,20 @@ export default function Segments() {
             const wins = ti.raw(`${id}.wins`) as string[];
             return (
               <Reveal key={id} delay={i * 0.08}>
-                <article className="h-full flex flex-col p-7 rounded-2xl bg-gradient-to-b from-white/[0.05] to-white/[0.02] border border-white/10 card-hover">
-                  <span className="inline-flex w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 items-center justify-center text-cyan-300">
+                <article className="h-full flex flex-col p-7 rounded-2xl bg-gradient-to-b from-white to-slate-50 border border-slate-200 card-hover">
+                  <span className="inline-flex w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 items-center justify-center text-teal-700">
                     <Icon size={21} />
                   </span>
-                  <h3 className="mt-4 text-lg font-semibold text-white">
+                  <h3 className="mt-4 text-lg font-semibold text-slate-900">
                     {ti(`${id}.title`)}
                   </h3>
-                  <p className="mt-2.5 text-sm text-slate-400 leading-relaxed">
+                  <p className="mt-2.5 text-sm text-slate-600 leading-relaxed">
                     {ti(`${id}.body`)}
                   </p>
-                  <ul className="mt-5 pt-5 border-t border-white/8 space-y-2.5">
+                  <ul className="mt-5 pt-5 border-t border-slate-200 space-y-2.5">
                     {wins.map((win) => (
-                      <li key={win} className="flex gap-2.5 text-sm text-slate-300">
-                        <Check size={15} className="mt-0.5 shrink-0 text-cyan-400" />
+                      <li key={win} className="flex gap-2.5 text-sm text-slate-600">
+                        <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
                         <span>{win}</span>
                       </li>
                     ))}

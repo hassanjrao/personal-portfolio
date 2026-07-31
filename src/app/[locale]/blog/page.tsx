@@ -59,7 +59,7 @@ export default async function BlogIndex({
             <Link
               key={post.slug}
               href={`${routes.blog}/${post.slug}`}
-              className="group block p-7 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 card-hover"
+              className="group block p-7 sm:p-8 rounded-2xl bg-white card-soft border border-slate-200 card-hover"
             >
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500">
                 <span className="inline-flex items-center gap-1.5">
@@ -76,23 +76,23 @@ export default async function BlogIndex({
                 </span>
               </div>
 
-              <h2 className="mt-3 text-xl font-semibold text-white leading-snug group-hover:text-cyan-300 transition-colors">
+              <h2 className="mt-3 text-xl font-semibold text-slate-900 leading-snug group-hover:text-teal-700 transition-colors">
                 {post.title}
               </h2>
-              <p className="mt-3 text-sm text-slate-400 leading-relaxed">{post.excerpt}</p>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed">{post.excerpt}</p>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-0.5 text-xs text-slate-400 bg-white/5 border border-white/10 rounded-full"
+                    className="px-2.5 py-0.5 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-cyan-300 group-hover:gap-2.5 transition-all">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-teal-700 group-hover:gap-2.5 transition-all">
                 {t("read_more")}
                 <ArrowRight size={15} className="rtl:rotate-180" />
               </span>

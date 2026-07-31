@@ -45,33 +45,33 @@ function ServiceList() {
           <Reveal key={id} delay={0.04}>
             <article
               id={id}
-              className="grid lg:grid-cols-[1fr_340px] gap-8 p-7 sm:p-9 rounded-2xl bg-white/[0.03] border border-white/10"
+              className="grid lg:grid-cols-[1fr_340px] gap-8 p-7 sm:p-9 rounded-2xl bg-white card-soft border border-slate-200"
             >
               <div>
                 <div className="flex items-start gap-4">
-                  <span className="shrink-0 inline-flex w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 items-center justify-center text-cyan-300">
+                  <span className="shrink-0 inline-flex w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 items-center justify-center text-teal-700">
                     <Icon size={21} />
                   </span>
                   <div>
-                    <span className="text-xs text-slate-600 tabular-nums">
+                    <span className="text-xs text-slate-500 tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h2 className="text-xl sm:text-2xl font-semibold text-white leading-snug">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 leading-snug">
                       {ts(`${id}.title`)}
                     </h2>
-                    <p className="mt-1 text-amber-300/85">{ts(`${id}.tagline`)}</p>
+                    <p className="mt-1 text-amber-700">{ts(`${id}.tagline`)}</p>
                   </div>
                 </div>
 
-                <p className="mt-5 text-slate-300 leading-relaxed">{ts(`${id}.body`)}</p>
+                <p className="mt-5 text-slate-600 leading-relaxed">{ts(`${id}.body`)}</p>
 
                 <h3 className="mt-7 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
                   {t("what_it_does")}
                 </h3>
                 <ul className="mt-3 grid sm:grid-cols-2 gap-2.5">
                   {bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-2.5 text-sm text-slate-400">
-                      <Check size={15} className="mt-0.5 shrink-0 text-cyan-400" />
+                    <li key={bullet} className="flex gap-2.5 text-sm text-slate-600">
+                      <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -79,13 +79,13 @@ function ServiceList() {
               </div>
 
               {/* Outcome panel */}
-              <aside className="flex flex-col gap-5 p-6 rounded-xl bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-400/20">
+              <aside className="flex flex-col gap-5 p-6 rounded-xl bg-gradient-to-b from-teal-50 to-white border border-teal-200">
                 <div>
-                  <h3 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-cyan-300">
+                  <h3 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-teal-700">
                     <Target size={13} />
                     {t("outcome")}
                   </h3>
-                  <p className="mt-2.5 text-sm text-slate-300 leading-relaxed">
+                  <p className="mt-2.5 text-sm text-slate-600 leading-relaxed">
                     {ts(`${id}.outcome`)}
                   </p>
                 </div>
@@ -94,13 +94,13 @@ function ServiceList() {
                     <Clock size={13} />
                     {t("timeline")}
                   </h3>
-                  <p className="mt-1.5 text-sm text-white font-medium">
+                  <p className="mt-1.5 text-sm text-slate-900 font-medium">
                     {ts(`${id}.timeline`)}
                   </p>
                 </div>
                 <Link
                   href={routes.book}
-                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-300 hover:gap-2.5 transition-all"
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:gap-2.5 transition-all"
                 >
                   {t("cta")}
                   <ArrowRight size={15} className="rtl:rotate-180" />
@@ -119,20 +119,20 @@ function Integrations() {
   const items = t.raw("items") as string[];
 
   return (
-    <section className="px-4 py-20 bg-white/[0.02] border-y border-white/8">
+    <section className="px-4 py-20 bg-slate-50 border-y border-slate-200">
       <div className="max-w-4xl mx-auto text-center">
-        <span className="inline-flex w-12 h-12 rounded-xl bg-white/5 border border-white/10 items-center justify-center text-cyan-300">
+        <span className="inline-flex w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 items-center justify-center text-teal-700">
           <Plug size={21} />
         </span>
-        <h2 className="mt-5 text-2xl sm:text-3xl font-bold text-white text-balance">
+        <h2 className="mt-5 text-2xl sm:text-3xl font-bold text-slate-900 text-balance">
           {t("heading")}
         </h2>
-        <p className="mt-4 text-slate-400 leading-relaxed">{t("body")}</p>
+        <p className="mt-4 text-slate-600 leading-relaxed">{t("body")}</p>
         <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
           {items.map((item) => (
             <li
               key={item}
-              className="px-4 py-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full"
+              className="px-4 py-2 text-sm text-slate-600 bg-slate-50 border border-slate-200 rounded-full"
             >
               {item}
             </li>

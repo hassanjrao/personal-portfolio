@@ -21,14 +21,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/8 bg-[#050810]">
+    <footer className="border-t border-slate-200 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="text-lg font-bold text-white">
+            <div className="text-lg font-bold text-slate-900">
               {brand.name}
-              <span className="text-cyan-400">.</span>
+              <span className="text-teal-600">.</span>
             </div>
             <div className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-slate-500">
               {brand.tagline}
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Pages */}
           <nav aria-label={t("nav_heading")}>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {t("nav_heading")}
             </h2>
             <ul className="mt-4 space-y-2.5">
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={p.href}>
                   <Link
                     href={p.href}
-                    className="text-sm text-slate-500 hover:text-cyan-300 transition-colors"
+                    className="text-sm text-slate-500 hover:text-teal-700 transition-colors"
                   >
                     {p.label}
                   </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Services */}
           <nav aria-label={t("services_heading")}>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {t("services_heading")}
             </h2>
             <ul className="mt-4 space-y-2.5">
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={id}>
                   <Link
                     href={`${routes.services}#${id}`}
-                    className="text-sm text-slate-500 hover:text-cyan-300 transition-colors"
+                    className="text-sm text-slate-500 hover:text-teal-700 transition-colors"
                   >
                     {tServices(`${id}.title`)}
                   </Link>
@@ -76,14 +76,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {t("contact_heading")}
             </h2>
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-cyan-300 transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-700 transition-colors"
                 >
                   <Mail size={15} />
                   {contact.email}
@@ -95,7 +95,7 @@ export default function Footer() {
                     href={w.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-slate-500 hover:text-green-400 transition-colors"
+                    className="flex items-center gap-2 text-sm text-slate-500 hover:text-green-600 transition-colors"
                   >
                     <WhatsAppIcon className="w-[15px] h-[15px]" />
                     <span dir="ltr">{w.label}</span>
@@ -107,7 +107,7 @@ export default function Footer() {
                   href={contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-blue-600 transition-colors"
                 >
                   <LinkedInIcon className="w-[15px] h-[15px]" />
                   LinkedIn
@@ -118,7 +118,7 @@ export default function Footer() {
                   href={contact.calendly}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-cyan-300 transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-700 transition-colors"
                 >
                   <Calendar size={15} />
                   Calendly
@@ -128,7 +128,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+        <div className="mt-12 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>
             © {year} {brand.name}. {t("rights")}
           </p>

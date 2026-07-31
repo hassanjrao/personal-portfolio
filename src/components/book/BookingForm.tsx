@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 const inputClass =
-  "w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white text-sm placeholder-slate-600 focus:outline-none focus:border-cyan-400/60 transition-colors";
+  "w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-colors";
 
 export default function BookingForm() {
   const t = useTranslations("book");
@@ -52,7 +52,7 @@ export default function BookingForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="bf-name" className="block text-sm text-slate-400 mb-1.5">
+          <label htmlFor="bf-name" className="block text-sm text-slate-600 mb-1.5">
             {t("form_name")}
           </label>
           <input
@@ -65,7 +65,7 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label htmlFor="bf-email" className="block text-sm text-slate-400 mb-1.5">
+          <label htmlFor="bf-email" className="block text-sm text-slate-600 mb-1.5">
             {t("form_email")}
           </label>
           <input
@@ -79,7 +79,7 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label htmlFor="bf-company" className="block text-sm text-slate-400 mb-1.5">
+          <label htmlFor="bf-company" className="block text-sm text-slate-600 mb-1.5">
             {t("form_company")}
           </label>
           <input
@@ -91,7 +91,7 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label htmlFor="bf-role" className="block text-sm text-slate-400 mb-1.5">
+          <label htmlFor="bf-role" className="block text-sm text-slate-600 mb-1.5">
             {t("form_role")}
           </label>
           <input
@@ -105,7 +105,7 @@ export default function BookingForm() {
       </div>
 
       <div>
-        <label htmlFor="bf-segment" className="block text-sm text-slate-400 mb-1.5">
+        <label htmlFor="bf-segment" className="block text-sm text-slate-600 mb-1.5">
           {t("form_segment")}
         </label>
         <select
@@ -115,7 +115,7 @@ export default function BookingForm() {
           className={`${inputClass} cursor-pointer`}
         >
           {segments.map((option) => (
-            <option key={option} value={option} className="bg-[#0b1220]">
+            <option key={option} value={option} className="bg-white">
               {option}
             </option>
           ))}
@@ -123,7 +123,7 @@ export default function BookingForm() {
       </div>
 
       <div>
-        <label htmlFor="bf-message" className="block text-sm text-slate-400 mb-1.5">
+        <label htmlFor="bf-message" className="block text-sm text-slate-600 mb-1.5">
           {t("form_message")}
         </label>
         <textarea
@@ -140,7 +140,7 @@ export default function BookingForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 disabled:bg-cyan-500/40 disabled:cursor-not-allowed text-slate-950 font-semibold transition-colors"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-teal-600 hover:bg-teal-700 disabled:bg-teal-600/40 disabled:cursor-not-allowed text-white font-semibold transition-colors"
       >
         <Send size={16} />
         {status === "sending" ? t("form_sending") : t("form_send")}
@@ -148,9 +148,9 @@ export default function BookingForm() {
 
       <p aria-live="polite" className="min-h-5 text-sm text-center">
         {status === "success" && (
-          <span className="text-emerald-400">{t("form_success")}</span>
+          <span className="text-emerald-600">{t("form_success")}</span>
         )}
-        {status === "error" && <span className="text-red-400">{t("form_error")}</span>}
+        {status === "error" && <span className="text-red-600">{t("form_error")}</span>}
       </p>
     </form>
   );

@@ -19,10 +19,10 @@ export default function WhatsAppButton() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-4 py-2.5 bg-[#0b1220] border border-white/10 rounded-xl text-sm hover:border-green-500/40 hover:bg-green-500/10 transition-colors shadow-xl whitespace-nowrap"
+              className="flex items-center gap-3 px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm hover:border-green-400 hover:bg-green-50 transition-colors shadow-xl whitespace-nowrap"
             >
-              <span className="text-xs text-slate-400">{region}</span>
-              <span className="text-green-400 font-medium" dir="ltr">
+              <span className="text-xs text-slate-600">{region}</span>
+              <span className="text-green-600 font-medium" dir="ltr">
                 {label}
               </span>
             </a>
@@ -32,7 +32,7 @@ export default function WhatsAppButton() {
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 text-white flex items-center justify-center shadow-lg shadow-green-500/25 transition-transform hover:scale-105"
+        className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 text-slate-900 flex items-center justify-center shadow-lg shadow-green-500/25 transition-transform hover:scale-105"
         aria-label={t("cta_whatsapp")}
         aria-expanded={open}
       >
