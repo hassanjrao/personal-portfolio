@@ -39,7 +39,7 @@ export async function generateMetadata({
       title: `${t("title")} | ${brand.name}`,
       description: t("description"),
       siteName: brand.name,
-      locale: locale === "ar" ? "ar_OM" : "en_US",
+      locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
@@ -69,11 +69,6 @@ const structuredData = {
       description:
         "AI engineer building production AI systems for moving companies, courier networks and freight forwarders: instant lead-response agents, shipment-tracking agents, real-time AI voice agents for bookings and dispatch, estimate and quoting copilots, document extraction and operations knowledge assistants.",
       sameAs: [contact.linkedin],
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: brand.location.city,
-        addressCountry: brand.location.countryCode,
-      },
       alumniOf: {
         "@type": "CollegeOrUniversity",
         name: "Sukkur IBA University",
@@ -81,6 +76,7 @@ const structuredData = {
       knowsAbout: [
         "AI for moving companies",
         "AI for logistics",
+        "Moving company lead response",
         "Removals and relocation operations",
         "Lead response automation",
         "Last-mile delivery operations",
@@ -103,17 +99,8 @@ const structuredData = {
       description:
         "AI agents and automation for moving companies, courier networks, freight forwarders and warehousing operations. Instant lead-response agents, shipment tracking agents, AI voice receptionists for bookings and dispatch, estimate copilots, document AI, operations knowledge copilots and delay intelligence.",
       provider: { "@id": `${siteUrl}/#person` },
-      areaServed: [
-        "United Arab Emirates",
-        "Saudi Arabia",
-        "Qatar",
-        "Kuwait",
-        "Bahrain",
-        "Oman",
-        "United Kingdom",
-        "United States",
-      ],
-      availableLanguage: ["en", "ar"],
+      areaServed: { "@type": "Country", name: "United States" },
+      availableLanguage: ["en"],
       serviceType: [
         "Instant Lead Response Agent",
         "AI Track and Trace Agent",
@@ -131,7 +118,7 @@ const structuredData = {
       name: `${brand.name} — ${brand.tagline}`,
       description:
         "AI solutions for moving and logistics companies, built by an engineer who works inside logistics operations.",
-      inLanguage: ["en", "ar"],
+      inLanguage: "en",
       author: { "@id": `${siteUrl}/#person` },
     },
   ],
@@ -150,10 +137,8 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
 
-  const dir = locale === "ar" ? "rtl" : "ltr";
-
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir="ltr">
       <body className="bg-[#060a12] text-[#e8eef7] antialiased" suppressHydrationWarning>
         <script
           type="application/ld+json"

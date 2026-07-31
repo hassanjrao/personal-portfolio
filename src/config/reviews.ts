@@ -5,7 +5,7 @@ export type ReviewShot = {
   alt: string;
   /** Shown under the screenshot. Use a first name + initial, or a company type. */
   client: string;
-  /** Flag emoji + country, e.g. "🇦🇪 UAE". Optional. */
+  /** Flag emoji + location, e.g. "🇺🇸 Texas". Optional. */
   country?: string;
   /** Short label, e.g. "AI Voice Agent" or "Document Automation". Optional. */
   service?: string;
@@ -23,7 +23,7 @@ export type ReviewShot = {
  *     src: "/reviews/review-01.png",
  *     alt: "Five-star client review about an AI voice agent build",
  *     client: "Operations Manager, 3PL",
- *     country: "🇦🇪 UAE",
+ *     country: "🇺🇸 Texas",
  *     service: "AI Voice Agent",
  *   },
  */

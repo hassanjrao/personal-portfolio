@@ -11,11 +11,6 @@ export const brand = {
   tagline: "AI for Moving & Logistics",
   role: "AI Engineer — Moving & Logistics Automation",
   photo: "/hassan.png",
-  location: {
-    city: "Muscat",
-    country: "Oman",
-    countryCode: "OM",
-  },
 } as const;
 
 export const contact = {
@@ -28,8 +23,8 @@ export const contact = {
   calendly:
     process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/hassanjrao/30min",
   whatsapp: [
-    { label: "+968 9976 3464", href: "https://wa.me/96899763464", region: "Oman" },
-    { label: "+92 303 5209409", href: "https://wa.me/923035209409", region: "Pakistan" },
+    { label: "+968 9976 3464", href: "https://wa.me/96899763464", region: "WhatsApp" },
+    { label: "+92 303 5209409", href: "https://wa.me/923035209409", region: "WhatsApp" },
   ],
 } as const;
 
@@ -41,6 +36,7 @@ export const routes = {
   services: "/services",
   demo: "/demo",
   reviews: "/reviews",
+  about: "/about",
   blog: "/blog",
   book: "/book-a-call",
 } as const;

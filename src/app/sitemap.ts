@@ -16,6 +16,7 @@ const pages: Entry[] = [
   { path: routes.services, changeFrequency: "monthly", priority: 0.9 },
   { path: routes.demo, changeFrequency: "monthly", priority: 0.9 },
   { path: routes.book, changeFrequency: "monthly", priority: 0.9 },
+  { path: routes.about, changeFrequency: "monthly", priority: 0.8 },
   { path: routes.reviews, changeFrequency: "monthly", priority: 0.7 },
   { path: routes.blog, changeFrequency: "weekly", priority: 0.7 },
   ...posts.map(

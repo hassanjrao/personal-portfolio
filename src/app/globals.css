@@ -30,10 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-[dir="rtl"] body {
-  font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", Geneva, Verdana, sans-serif;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }

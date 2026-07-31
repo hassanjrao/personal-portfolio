@@ -168,7 +168,7 @@ export default async function ServicesPage({
         url: `${localeUrl(routes.services, locale)}#${id}`,
         provider: { "@id": `${siteUrl}/#person` },
         serviceType: ts(`${id}.title`),
-        areaServed: ["Oman", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain"],
+        areaServed: { "@type": "Country", name: "United States" },
       },
     })),
   };

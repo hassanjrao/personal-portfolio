@@ -8,7 +8,8 @@
     "book": "Book a Call",
     "menu": "Menu",
     "close": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "about": "About"
   },
   "common": {
     "cta_primary": "Book a free AI audit",
@@ -25,11 +26,11 @@
   "meta": {
     "home": {
       "title": "AI Solutions for Moving & Logistics Companies",
-      "description": "I build AI agents for moving companies, last-mile couriers and freight forwarders — instant lead response, shipment tracking agents, AI voice receptionists, estimate copilots and document automation. Built inside a GCC logistics platform moving thousands of shipments a day."
+      "description": "I build AI agents for US moving companies, last-mile couriers and freight brokers — instant lead response, shipment tracking agents, AI voice receptionists, estimate copilots and document automation. Built to reach production, not to demo."
     },
     "services": {
       "title": "AI Services for Moving, Courier & Freight Operations",
-      "description": "Seven productised AI systems: instant lead response, AI track & trace, voice booking agents, estimate and quoting copilots, document AI, ops knowledge copilots and delay intelligence."
+      "description": "Seven productised AI systems for US moving and logistics operations: instant lead response, AI track & trace, voice booking agents, estimate and quoting copilots, document AI, ops knowledge copilots and delay intelligence."
     },
     "demo": {
       "title": "See the AI Agents Working",
@@ -37,7 +38,7 @@
     },
     "reviews": {
       "title": "Client Reviews",
-      "description": "Verified client reviews from AI and software projects delivered across the GCC, UK, Europe and the United States."
+      "description": "Verified client reviews from AI and software projects delivered for clients across the United States, the UK and Europe."
     },
     "blog": {
       "title": "AI & Logistics Insights",
@@ -46,6 +47,10 @@
     "book": {
       "title": "Book a Free AI Audit Call",
       "description": "A free 30-minute call to map where your team loses hours and jobs, and which of them AI can realistically take back. No slide deck, no obligation."
+    },
+    "about": {
+      "title": "About",
+      "description": "Software engineer with five years building production systems and four years building the software that runs logistics operations. Now building AI agents for moving companies, courier networks and freight brokers."
     }
   },
   "home": {
@@ -53,7 +58,7 @@
       "eyebrow": "AI systems for companies that move things",
       "heading": "AI Solutions for Moving & Logistics Companies",
       "subheading": "I build AI agents that answer your leads in seconds, quote your jobs, track your shipments and pick up the phone at 9pm — so your team stops doing it by hand.",
-      "credibility": "Built and shipped inside a GCC logistics platform moving thousands of shipments a day across Oman, the UAE and Saudi Arabia.",
+      "credibility": "Four years building the software that runs logistics operations — platforms handling thousands of shipments a day, and the automation that keeps ops teams off the keyboard.",
       "cta_primary": "Book a free AI audit",
       "cta_secondary": "See it work",
       "flow_title": "A new lead, handled without a human",
@@ -67,25 +72,23 @@
     "stats": {
       "heading": "Where this comes from",
       "items": [
-        { "value": "5+ yrs", "label": "Shipping production software" },
-        { "value": "4+ yrs", "label": "GCC enterprise logistics" },
-        { "value": "1,000s", "label": "Shipments a day on systems I support" },
-        { "value": "EN / AR", "label": "Bilingual on phone, chat and documents" }
+        {
+          "value": "5+ yrs",
+          "label": "Shipping production software"
+        },
+        {
+          "value": "4+ yrs",
+          "label": "Building for logistics operations"
+        },
+        {
+          "value": "1,000s",
+          "label": "Shipments a day on systems I've built"
+        },
+        {
+          "value": "24/7",
+          "label": "Agents that answer while your team sleeps"
+        }
       ]
-    },
-    "about": {
-      "badge": "Who you're working with",
-      "heading": "I'm Hassan Rao. I build AI for companies that move things.",
-      "body_1": "I lead the AI programme at a GCC logistics platform that moves thousands of shipments a day across Oman, the UAE and Saudi Arabia — retrieval-grounded chatbots, internal copilots used daily by operations teams, and automation that removed roughly six hours of manual data entry a day. All of it running in production, not in a slide deck.",
-      "body_2": "I also built and run an AI phone receptionist SaaS that answers real customer calls in a natural voice and only says things it can back up with the company's own documents. That is the same architecture behind the booking and dispatch agents I build for movers and couriers.",
-      "body_3": "So when we talk about your operation, I won't need three weeks to learn what a survey is, why crew allocation falls apart in peak season, or what happens when a driver marks a delivery as failed. I've had to build around all of it.",
-      "credentials": [
-        "AI programme lead at a GCC logistics platform",
-        "Founder of an AI phone-receptionist SaaS",
-        "Section Leader, Stanford Code in Place",
-        "Based in Muscat, Oman — working across the GCC and remotely worldwide"
-      ],
-      "cta": "Book a call with me"
     },
     "problems": {
       "badge": "The problem",
@@ -220,24 +223,22 @@
     },
     "proof": {
       "badge": "Proof",
-      "heading": "Systems in production, not prototypes",
-      "subheading": "Two builds that shaped how I approach every engagement.",
+      "heading": "A system in production, not a prototype",
+      "subheading": "The build that shaped how I approach every engagement.",
       "items": [
-        {
-          "tag": "Enterprise logistics platform · Oman",
-          "title": "AI programme for a GCC logistics operator",
-          "challenge": "Operations teams handling thousands of shipments a day across Oman, the UAE and Saudi Arabia, with institutional knowledge trapped in documents and senior staff.",
-          "approach": "I lead the AI programme: retrieval-augmented chatbots grounded in the company's own operational data, plus internal copilots used daily by ops teams.",
-          "result": "Grounded answers from company data instead of guesswork, and repetitive internal questions answered without interrupting senior staff.",
-          "stack": ["RAG", "Vector search", "LLM function calling", "Enterprise integration"]
-        },
         {
           "tag": "Own product · Multi-tenant SaaS",
           "title": "An AI receptionist that answers real phone calls",
           "challenge": "Businesses lose bookings to unanswered phones after hours, and generic voice bots hallucinate answers they cannot support.",
           "approach": "I built a multi-tenant SaaS bridging Twilio Media Streams to a real-time voice agent, with every answer grounded in that tenant's own documents.",
           "result": "Live calls answered around the clock with knowledge-grounded, hallucination-resistant responses — the same architecture behind booking and dispatch agents for movers and couriers.",
-          "stack": ["Twilio", "Deepgram", "Laravel", "FastAPI", "pgvector"],
+          "stack": [
+            "Twilio",
+            "Deepgram",
+            "Laravel",
+            "FastAPI",
+            "pgvector"
+          ],
           "link_label": "Read the technical write-up"
         }
       ]
@@ -294,8 +295,8 @@
           "a": "Only if you want it to. By default the agent gathers everything needed and drafts the estimate, but pricing authority stays with your team — you approve before it goes out. Some clients later let it auto-send within guardrails, once they have seen the accuracy for themselves."
         },
         {
-          "q": "Can it handle Arabic as well as English?",
-          "a": "Yes. Bilingual English–Arabic handling on phone, chat and documents is standard for GCC operations, and other languages can be added as your customers require."
+          "q": "Can it handle Spanish as well as English?",
+          "a": "Yes. Bilingual English–Spanish handling on phone, chat and documents is standard — it matters for customers and crews alike in most US markets. Other languages can be added as your customer base requires."
         },
         {
           "q": "What does an engagement cost?",
@@ -394,7 +395,7 @@
         "bullets": [
           "Reads live status from your TMS rather than a cached snapshot",
           "Handles reference lookup, ETA, proof of delivery and invoice copies",
-          "Works in English and Arabic on the channels customers already use",
+          "Works in English and Spanish on the channels customers already use",
           "Escalates exceptions and angry customers to a human with full context"
         ],
         "outcome": "The bulk of repetitive status contacts resolved without an agent, and your team left with the calls that actually need judgement.",
@@ -482,7 +483,7 @@
   "reviews": {
     "badge": "Client reviews",
     "heading": "What clients say",
-    "subheading": "Verified reviews from delivered projects across the GCC, the UK, Europe and the United States.",
+    "subheading": "Verified reviews from delivered projects for clients across the United States, the UK and Europe.",
     "empty_title": "Review screenshots are being added",
     "empty_body": "Verified client review screenshots are being migrated to this page. In the meantime, I'm happy to put you in touch with references relevant to your operation.",
     "gallery_note": "Screenshots are unedited captures of client feedback. Names are shortened for privacy.",
@@ -491,8 +492,8 @@
     "why_heading": "Why operators keep working with me",
     "why_items": [
       {
-        "title": "I've run these operations, not just read about them",
-        "body": "Four-plus years inside GCC logistics enterprise systems. I know what a survey is, what a dwell-time exception costs, and why peak season breaks your crew planning."
+        "title": "I've built the systems these operations run on",
+        "body": "Four-plus years inside logistics platforms. I know what a survey is, what a dwell-time exception costs, and why peak season breaks your crew planning."
       },
       {
         "title": "Production systems, not demos",
@@ -563,7 +564,55 @@
     "nav_heading": "Pages",
     "contact_heading": "Get in touch",
     "services_heading": "Services",
-    "rights": "All rights reserved.",
-    "based": "Based in Muscat, Oman · Working across the GCC and remotely worldwide"
+    "rights": "All rights reserved."
+  },
+  "about": {
+    "badge": "About",
+    "heading": "I'm Hassan Rao. I build AI for companies that move things.",
+    "subheading": "Five years shipping production software. Four of them building the systems that logistics operations actually run on.",
+    "body_1": "Most of my career has been spent inside logistics software — platforms that handle thousands of shipments a day, the carrier integrations that feed them, and the automation that stops operations teams re-typing the same data every morning. Not consulting about it from the outside. Building it, then keeping it running.",
+    "body_2": "I also built and run an AI phone receptionist that answers real customer calls in a natural voice and only says things it can back up with the company's own documents. That is the same architecture behind the booking and dispatch agents I build for movers and couriers — which is why I am fairly blunt about what these systems can and cannot be trusted to do.",
+    "body_3": "So when we talk about your operation, I won't need three weeks to learn what a survey is, why crew allocation falls apart in peak season, or what happens when a driver marks a delivery as failed. I've had to build around all of it.",
+    "body_4": "I work with a small number of clients at a time — moving companies, courier networks and freight brokers. Every engagement starts with a free audit call and a fixed-fee pilot, because I would rather prove one workflow works than sell you a twelve-month roadmap.",
+    "facts_heading": "The short version",
+    "facts": [
+      "5+ years shipping production software",
+      "4+ years building for logistics operations",
+      "Founder of an AI phone-receptionist platform",
+      "Section Leader, Stanford Code in Place",
+      "B.S. Software Engineering, Sukkur IBA University",
+      "Working with US clients remotely, across every timezone"
+    ],
+    "principles_heading": "How I work",
+    "principles": [
+      {
+        "title": "Grounded, or it doesn't ship",
+        "body": "Every answer comes from your records and cites its source. If there's no grounded answer, the agent says so and hands off. I build evaluation sets so accuracy is measured rather than assumed."
+      },
+      {
+        "title": "Production, not proofs of concept",
+        "body": "A pilot that only works on a curated sample isn't a pilot. Everything is scoped to reach real customers on real data inside a few weeks."
+      },
+      {
+        "title": "You own everything",
+        "body": "Code, prompts, evaluation sets and documentation are yours. No lock-in to a black box only I can maintain."
+      },
+      {
+        "title": "Straight answers about the limits",
+        "body": "Some workflows aren't AI problems. I'll tell you which of yours aren't before you spend money finding out."
+      }
+    ],
+    "stack_heading": "What I build with",
+    "stack": [
+      "RAG pipelines & vector search",
+      "Real-time voice agents (Twilio, Deepgram)",
+      "LLM function calling & tool use",
+      "Python, FastAPI, Node.js",
+      "Laravel, Next.js, React",
+      "AWS, PostgreSQL, Redis"
+    ],
+    "cta_heading": "Want to talk about your operation?",
+    "cta_body": "A free 30-minute call. We map where your team loses hours and jobs, and which of them AI can realistically take back.",
+    "cta": "Book a call with me"
   }
 }

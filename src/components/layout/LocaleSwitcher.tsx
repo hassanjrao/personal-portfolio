@@ -7,9 +7,11 @@ import { Globe } from "lucide-react";
 import { usePathname, useRouter } from "@i18n/navigation";
 import { routing, type Locale } from "@i18n/routing";
 
-const labels: Record<Locale, string> = {
+/** Display labels for every locale we might enable. */
+const labels: Record<string, string> = {
   en: "EN",
   ar: "العربية",
+  es: "ES",
 };
 
 export default function LocaleSwitcher() {
@@ -19,6 +21,9 @@ export default function LocaleSwitcher() {
   const pathname = usePathname();
   const params = useParams();
   const [pending, startTransition] = useTransition();
+
+  // Nothing to switch between while the site is single-locale.
+  if (routing.locales.length < 2) return null;
 
   const switchTo = (next: Locale) => {
     if (next === locale) return;

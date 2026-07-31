@@ -15,6 +15,7 @@ export default function Footer() {
     { label: tNav("services"), href: routes.services },
     { label: tNav("demo"), href: routes.demo },
     { label: tNav("reviews"), href: routes.reviews },
+    { label: tNav("about"), href: routes.about },
     { label: tNav("blog"), href: routes.blog },
     { label: tNav("book"), href: routes.book },
   ];
@@ -131,7 +132,6 @@ export default function Footer() {
           <p>
             © {year} {brand.name}. {t("rights")}
           </p>
-          <p>{t("based")}</p>
         </div>
       </div>
     </footer>

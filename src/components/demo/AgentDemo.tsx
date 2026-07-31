@@ -1,7 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Play,
@@ -54,8 +54,7 @@ function Bubble({ turn }: { turn: DemoTurn }) {
 
 export default function AgentDemo() {
   const t = useTranslations("demo");
-  const locale = useLocale();
-  const scripts = useMemo(() => getDemoScripts(locale), [locale]);
+  const scripts = getDemoScripts();
 
   const [active, setActive] = useState<DemoId>(demoIds[0]);
   const [shown, setShown] = useState(1);
