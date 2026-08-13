@@ -1,18 +1,13 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
 import SectionRail from "@/components/home/SectionRail";
 import Hero from "@/components/home/Hero";
-import StatsBar from "@/components/home/StatsBar";
-import Problems from "@/components/home/Problems";
-import Solutions from "@/components/home/Solutions";
-import DemoTeaser from "@/components/home/DemoTeaser";
-import Segments from "@/components/home/Segments";
-import Proof from "@/components/home/Proof";
-import RoiCalculator from "@/components/home/RoiCalculator";
-import Process from "@/components/home/Process";
-import Security from "@/components/home/Security";
-import Faq from "@/components/home/Faq";
-import CtaBand from "@/components/ui/CtaBand";
+import About from "@/components/home/About";
+import TechStack from "@/components/home/TechStack";
+import Projects from "@/components/home/Projects";
+import Experience from "@/components/home/Experience";
+import Reviews from "@/components/home/Reviews";
+import Contact from "@/components/home/Contact";
 
 export default async function HomePage({
   params,
@@ -22,38 +17,16 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "home.faq" });
-  const faqItems = t.raw("items") as { q: string; a: string }[];
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <SectionRail />
       <Hero />
-      <StatsBar />
-      <Problems />
-      <Solutions />
-      <DemoTeaser />
-      <Segments />
-      <Proof />
-      <RoiCalculator />
-      <Process />
-      <Security />
-      <Faq />
-      <CtaBand />
+      <About />
+      <TechStack />
+      <Projects />
+      <Experience />
+      <Reviews />
+      <Contact />
     </>
   );
 }

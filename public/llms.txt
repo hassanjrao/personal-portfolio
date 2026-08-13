@@ -1,79 +1,57 @@
-# Hassan Rao — AI Solutions for Moving & Logistics Companies
+# Hassan Rao — Senior Software Engineer & AI Engineer
 
-> Hassan Rao is an AI engineer who builds production AI systems for US companies that move things — moving and relocation firms, last-mile courier networks, freight brokers and 3PLs, and warehousing operations. Five years shipping production software, four of them building the platforms logistics operations run on. Engagements start with a free 30-minute AI audit call.
+> Hassan Rao (Hassan Javaid Rao) is a Senior Software Engineer and AI Engineer with 5+ years building production systems: multi-tenant SaaS platforms, high-throughput REST APIs, AWS cloud architecture, and applied AI including RAG pipelines and real-time voice agents. Available for select freelance work and open to senior engineering roles.
 
 ## Identity
 
-- Name: Hassan Rao
-- Role: AI Engineer — Moving & Logistics Automation
+- Name: Hassan Rao (Hassan Javaid Rao)
+- Role: Senior Software Engineer & AI Engineer
 - Website: https://hassanrao.com
+- Email: hassanjrao@gmail.com
 - LinkedIn: https://linkedin.com/in/hassanjrao
-- Booking: https://hassanrao.com/book-a-call
-- Works with US clients remotely, across every timezone
+- Fiverr: https://www.fiverr.com/hassanjavaidrao
+- Works remotely with clients worldwide
 
-## Positioning
+## Tech Stack
 
-Hassan builds AI agents and automation that remove repetitive work — and recover lost jobs — for moving and logistics operations. Systems integrate with the customer's existing CRM, TMS or ERP; no platform migration is required. Every agent is grounded in the customer's own records, cites its source, and escalates to a human rather than guessing.
+- Languages: PHP, TypeScript, JavaScript, Python, SQL
+- Backend: Laravel, Node.js, NestJS, FastAPI, Livewire
+- Frontend: React, Next.js, Vue.js, Inertia, Tailwind CSS
+- AI engineering: RAG pipelines, vector search (pgvector), LLM function calling, real-time voice agents, evaluation sets
+- Cloud & infrastructure: AWS Lambda, SQS, S3, Docker, nginx, Redis
+- Data: PostgreSQL, MySQL, MongoDB, Redis
+- Practices: REST API design, OAuth 2.0, microservices, multi-tenant SaaS, automated testing
 
-## Services
+## Selected Work
 
-1. **Instant Lead Response Agent** — replies to bought or shared leads within seconds on SMS, chat and email, qualifies the job and books the survey. The biggest single lever on close rate for movers buying shared leads. Pilot in 2 weeks.
-2. **AI Track & Trace Agent** — customer-facing agent answering shipment status from the TMS across chat, SMS, email and phone. Pilot in 2–3 weeks.
-3. **AI Voice Agent for Bookings & Dispatch** — real-time AI receptionist answering the operations line and writing bookings into the system. Pilot in 3–4 weeks.
-4. **Estimate & Quote Copilot** — reads inventory lists, room photos, emails and RFQs, applies the rate card and surcharges, drafts the estimate for human approval. Pilot in 3–4 weeks.
-5. **Logistics Document AI** — extraction and validation for inventory sheets, bills of lading, invoices, delivery notes and customs declarations. Pilot in 2–4 weeks.
-6. **Operations Knowledge Copilot** — internal RAG copilot over SOPs, rate rules and customer exceptions, with cited answers. Pilot in 2–3 weeks.
-7. **Exception & Delay Intelligence** — continuous monitoring surfacing delays, stuck jobs, missing documents and at-risk commitments. Pilot in 3–4 weeks.
+1. **AI Caller — AI Phone Agent SaaS** (2025 – present, founder & engineer). Multi-tenant platform where a business points a phone number at the service and gets an AI agent that answers calls in a natural voice, grounded in that tenant's own documents. Twilio Media Streams bridged to Deepgram's Voice Agent API over asyncio WebSockets, retrieval over PostgreSQL pgvector, Laravel + Inertia/Vue admin. Sub-second response latency, three-layer anti-hallucination design. https://hassanrao.com/projects/ai-caller
+2. **Multi-Tenant Logistics SaaS Platform** (2021 – present, senior engineer). Shipment operations for 15 branches across three countries, thousands of shipments a day. Microservices, carrier integrations (DHL, AJEX, iMile) over OAuth 2.0 machine-to-machine flows, event-driven work on AWS Lambda and SQS, 99.9% uptime. https://hassanrao.com/projects/logistics-platform
+3. **AI Shipment Data Entry Automation** (2024). Generative-AI extraction that reads inbound paperwork and writes structured records into the platform, removing roughly six hours of manual keying per day. Confidence-scored with a human review queue. https://hassanrao.com/projects/ai-data-entry-automation
+4. **High-Throughput Translation Management API** (2023). Laravel/PHP 8.2 REST API with Redis tag-based cache invalidation and cursor-based export across millions of records in constant memory. OAuth 2.0, full PHPUnit coverage. https://hassanrao.com/projects/translation-api
 
-## Industries Served
+## Experience
 
-- Moving, removals and relocation companies
-- Last-mile, courier and delivery networks
-- Freight brokerage and third-party logistics (3PL)
-- Warehousing and fulfillment
+- **Senior Software Engineer**, Thiqa Tech (Dec 2021 – present) — built a multi-tenant logistics SaaS deployed across Oman, the UAE and Saudi Arabia supporting 15 branches; automated shipment data entry with generative AI, removing ~6 hours of manual effort daily; integrated DHL, AJEX and iMile over OAuth 2.0; architected event-driven services on AWS Lambda, SQS and S3; maintained 99.9% uptime.
+- **Founder & Engineer**, AI Caller (2025 – present) — designed, built and operate an AI phone receptionist SaaS end to end.
+- **Freelance Full Stack Developer**, Fiverr & Upwork (2020 – 2021) — Top Rated seller, 250+ five-star reviews, 200+ clients across the US, Canada, Europe and Asia.
 
-## Interactive Demos
+## Client Reviews
 
-Step-by-step walkthroughs at https://hassanrao.com/demo show the agents handling real workflows: a moving enquiry qualified, priced and booked at 11:40pm; a "where is my shipment" query resolved from live TMS data; and an after-hours phone booking captured and written to the CRM. A lead-response race simulator shows why the first company to reply usually wins the job.
+Verified LinkedIn recommendations and Fiverr reviews are published in full at https://hassanrao.com/#reviews, with links back to the original LinkedIn recommendations page and Fiverr profile. Reviewers include Anton Skileski (Architect, Retired), Alex Lluch (Villa Fabulosa & Villa Magnifica, Temecula Wine Country) and Ryan Henderson (Founder, Kream & Sugar).
 
-## Engagement Model
+## Writing
 
-1. Free 30-minute AI audit call — map where hours and jobs are lost and which workflows are realistic AI candidates.
-2. Fixed-fee pilot, 2–4 weeks — one workflow in production against real data, with an agreed success metric.
-3. Integration and rollout, 4–8 weeks — into the CRM/TMS/ERP and customer channels.
-4. Ongoing monitoring, evaluation and monthly tuning.
+Technical write-ups at https://hassanrao.com/blog, including a detailed architecture piece on building the AI phone agent: real-time audio bridging, RAG grounding and anti-hallucination design.
 
-## Data Handling
+## Related Sites
 
-- Customer data is never used to train third-party models.
-- Answers are retrieved from customer records and cited; the agent says "I don't know" and escalates rather than inventing an answer.
-- PII and commercial terms are redacted or tokenized before crossing a boundary.
-- Full audit trail of every question, answer, source and escalation.
-- Deployment in the customer's cloud account, a private VPC, or on-premise where required.
-- Role-aware access — the agent reveals only what the asker is already entitled to see.
-- Pricing authority stays with the client's team; the agent drafts, a human approves.
-- Bilingual English–Spanish handling on phone, chat and documents is standard.
-
-## Background
-
-- Five years shipping production software; four years building for logistics operations — platforms handling thousands of shipments a day, carrier integrations, and automation that removed hours of daily manual data entry
-- Founder of an AI phone-receptionist platform — Twilio Media Streams bridged to Deepgram's Voice Agent API, retrieval over PostgreSQL pgvector, Laravel admin
-
-## Technical Stack
-
-- AI: RAG pipelines, vector search (pgvector), LLM function calling, evaluation sets, real-time voice agents (Twilio, Deepgram)
-- Backend: PHP, Laravel, Python, FastAPI, Node.js, NestJS
-- Frontend: React, Next.js, Vue.js, TypeScript
-- Cloud: AWS (Lambda, SQS, S3, CloudWatch), Docker, Redis
-- Data: PostgreSQL, MySQL, MongoDB
-- Integration: REST, webhooks, EDI, flat-file feeds, OAuth 2.0
+- AI solutions for moving and logistics companies: https://logistics.hassanrao.com
 
 ## Key Pages
 
 - Home: https://hassanrao.com
-- Services: https://hassanrao.com/services
-- Interactive demos: https://hassanrao.com/demo
-- About: https://hassanrao.com/about
-- Reviews: https://hassanrao.com/reviews
+- Work & case studies: https://hassanrao.com/#projects
+- Experience: https://hassanrao.com/#experience
+- Reviews: https://hassanrao.com/#reviews
 - Blog: https://hassanrao.com/blog
-- Book a free AI audit call: https://hassanrao.com/book-a-call
+- Contact: https://hassanrao.com/#contact

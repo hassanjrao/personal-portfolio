@@ -7,7 +7,6 @@ import { posts } from "@/config/posts";
 import { routes } from "@/config/site";
 import { localeAlternates, localeUrl } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
-import CtaBand from "@/components/ui/CtaBand";
 
 export async function generateMetadata({
   params,
@@ -101,7 +100,6 @@ export default async function BlogIndex({
         </div>
       </section>
 
-      <CtaBand />
     </>
   );
 }

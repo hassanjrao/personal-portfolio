@@ -5,18 +5,17 @@ import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 const inputClass =
-  "w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-colors";
+  "w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100 transition-colors";
 
-export default function BookingForm() {
-  const t = useTranslations("book");
-  const segments = t.raw("form_segment_options") as string[];
+export default function ContactForm() {
+  const t = useTranslations("home.contact");
+  const subjects = t.raw("form_subject_options") as string[];
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     company: "",
-    role: "",
-    segment: segments[0],
+    segment: subjects[0],
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -39,8 +38,7 @@ export default function BookingForm() {
         name: "",
         email: "",
         company: "",
-        role: "",
-        segment: segments[0],
+        segment: subjects[0],
         message: "",
       });
     } catch {
@@ -52,11 +50,11 @@ export default function BookingForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="bf-name" className="block text-sm text-slate-600 mb-1.5">
+          <label htmlFor="cf-name" className="block text-sm text-slate-600 mb-1.5">
             {t("form_name")}
           </label>
           <input
-            id="bf-name"
+            id="cf-name"
             type="text"
             required
             value={form.name}
@@ -65,25 +63,24 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label htmlFor="bf-email" className="block text-sm text-slate-600 mb-1.5">
+          <label htmlFor="cf-email" className="block text-sm text-slate-600 mb-1.5">
             {t("form_email")}
           </label>
           <input
-            id="bf-email"
+            id="cf-email"
             type="email"
             required
             value={form.email}
             onChange={(e) => set("email")(e.target.value)}
             className={inputClass}
-            dir="ltr"
           />
         </div>
         <div>
-          <label htmlFor="bf-company" className="block text-sm text-slate-600 mb-1.5">
+          <label htmlFor="cf-company" className="block text-sm text-slate-600 mb-1.5">
             {t("form_company")}
           </label>
           <input
-            id="bf-company"
+            id="cf-company"
             type="text"
             value={form.company}
             onChange={(e) => set("company")(e.target.value)}
@@ -91,43 +88,30 @@ export default function BookingForm() {
           />
         </div>
         <div>
-          <label htmlFor="bf-role" className="block text-sm text-slate-600 mb-1.5">
-            {t("form_role")}
+          <label htmlFor="cf-subject" className="block text-sm text-slate-600 mb-1.5">
+            {t("form_subject")}
           </label>
-          <input
-            id="bf-role"
-            type="text"
-            value={form.role}
-            onChange={(e) => set("role")(e.target.value)}
-            className={inputClass}
-          />
+          <select
+            id="cf-subject"
+            value={form.segment}
+            onChange={(e) => set("segment")(e.target.value)}
+            className={`${inputClass} cursor-pointer`}
+          >
+            {subjects.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
       <div>
-        <label htmlFor="bf-segment" className="block text-sm text-slate-600 mb-1.5">
-          {t("form_segment")}
-        </label>
-        <select
-          id="bf-segment"
-          value={form.segment}
-          onChange={(e) => set("segment")(e.target.value)}
-          className={`${inputClass} cursor-pointer`}
-        >
-          {segments.map((option) => (
-            <option key={option} value={option} className="bg-white">
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div>
-        <label htmlFor="bf-message" className="block text-sm text-slate-600 mb-1.5">
+        <label htmlFor="cf-message" className="block text-sm text-slate-600 mb-1.5">
           {t("form_message")}
         </label>
         <textarea
-          id="bf-message"
+          id="cf-message"
           required
           rows={5}
           value={form.message}

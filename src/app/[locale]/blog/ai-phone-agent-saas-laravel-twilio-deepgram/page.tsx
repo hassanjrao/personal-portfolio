@@ -397,18 +397,18 @@ export default async function AiPhoneAgentPost({
 
             <div className="mt-10 p-6 rounded-2xl bg-gradient-to-b from-violet-50 to-white border border-violet-200">
               <p className="text-slate-900 font-semibold mb-2">
-                Want this answering your dispatch line?
+                Want something like this built?
               </p>
               <p className="text-sm mb-4">
-                The same architecture runs booking and track-and-trace agents for logistics
-                operations — grounded in your tariffs, service areas and shipment data.
-                Book a free 30-minute audit and we&apos;ll work out whether it fits yours.
+                I design and build production AI systems end to end — from the telephony
+                bridge through to the admin your team actually uses. Tell me what you are
+                working on and I will tell you honestly whether I am the right person for it.
               </p>
               <Link
-                href={routes.book}
+                href={`${routes.home}#contact`}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm rounded-lg bg-violet-600 text-white font-semibold hover:bg-violet-700 transition-colors"
               >
-                Book a free AI audit
+                Get in touch
                 <ArrowRight size={15} className="rtl:rotate-180" />
               </Link>
             </div>

@@ -3,26 +3,13 @@
 import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { MapPin } from "lucide-react";
+import { sections as STOPS } from "@/config/site";
 
 /**
  * Section navigation styled as a shipment tracking route: each section is a
  * "scan point", passed sections read as completed, and the connecting line
  * fills as the reader moves down the page.
  */
-const STOPS = [
-  "top",
-  "problem",
-  "services",
-  "demo",
-  "segments",
-  "proof",
-  "roi",
-  "process",
-  "trust",
-  "faq",
-  "book",
-] as const;
-
 /**
  * Labels are always shown, so the rail only renders where the gutter can hold
  * them without overlapping the max-w-6xl content column. Narrower viewports

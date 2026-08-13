@@ -1,7 +1,7 @@
-import { Star, Quote, Repeat2 } from "lucide-react";
+import { Star, Repeat2, ExternalLink } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { testimonials, type Testimonial } from "@/config/testimonials";
-import { LinkedInIcon } from "../ui/icons";
+import { FiverrIcon, LinkedInIcon } from "../ui/icons";
 import Reveal from "../ui/Reveal";
 
 function Stars() {
@@ -15,7 +15,7 @@ function Stars() {
 }
 
 function Card({ item }: { item: Testimonial }) {
-  const t = useTranslations("reviews");
+  const t = useTranslations("home.reviews");
   const format = useFormatter();
   const isLinkedIn = item.source === "linkedin";
 
@@ -32,25 +32,24 @@ function Card({ item }: { item: Testimonial }) {
   return (
     <figure className="break-inside-avoid mb-5 p-6 rounded-2xl bg-white border border-slate-200 card-hover">
       <div className="flex items-start justify-between gap-3">
-        <span
-          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium ${
+        <a
+          href={item.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium transition-colors ${
             isLinkedIn
-              ? "bg-blue-50 text-blue-700 border border-blue-200"
-              : "bg-violet-50 text-violet-700 border border-violet-200"
+              ? "bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100"
+              : "bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100"
           }`}
         >
           {isLinkedIn ? (
-            <>
-              <LinkedInIcon className="w-3 h-3" />
-              {t("source_linkedin")}
-            </>
+            <LinkedInIcon className="w-3 h-3" />
           ) : (
-            <>
-              <Quote size={11} />
-              {t("source_client")}
-            </>
+            <FiverrIcon className="w-3 h-3" />
           )}
-        </span>
+          {isLinkedIn ? t("source_linkedin") : t("source_fiverr")}
+          <ExternalLink size={10} className="opacity-60" />
+        </a>
 
         {item.rating ? <Stars /> : null}
       </div>
@@ -65,7 +64,7 @@ function Card({ item }: { item: Testimonial }) {
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-sm font-semibold text-slate-900">{item.author}</span>
           {item.repeat && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-[10px] text-emerald-700">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-violet-50 border border-violet-200 text-[10px] text-violet-700">
               <Repeat2 size={10} />
               {t("repeat_client")}
             </span>

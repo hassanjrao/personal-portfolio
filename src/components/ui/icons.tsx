@@ -7,3 +7,19 @@ export function LinkedInIcon({ className = "w-5 h-5" }: IconProps) {
     </svg>
   );
 }
+
+/**
+ * Fiverr's mark is a lowercase "fi" set in a rounded square. Drawn rather than
+ * imported so the site ships no icon-font dependency.
+ */
+export function FiverrIcon({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <rect width="24" height="24" rx="5" fill="currentColor" />
+      <path
+        d="M13.7 7.15a.95.95 0 1 1 1.9 0 .95.95 0 0 1-1.9 0Zm1.87 2.19h-1.84v7.5h1.84v-7.5Zm-3.02 0H8.63v-.2c0-.62.4-.95 1.05-.95h.72V6.5h-1.1c-1.63 0-2.6.9-2.6 2.48v.36H5.5v1.62h1.2v5.88h1.93v-5.88h2.02v5.88h1.9v-7.5Z"
+        fill="#fff"
+      />
+    </svg>
+  );
+}

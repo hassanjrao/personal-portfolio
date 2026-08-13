@@ -13,7 +13,13 @@ export type Testimonial = {
   rating?: 5;
   /** Marks a client who came back for more work. */
   repeat?: boolean;
+  /** Where the review can be read in full, on the original platform. */
+  sourceUrl: string;
 };
+
+const LINKEDIN_RECOMMENDATIONS =
+  "https://www.linkedin.com/in/hassanjrao/details/recommendations/";
+const FIVERR_PROFILE = "https://www.fiverr.com/hassanjavaidrao";
 
 /**
  * Real client feedback, transcribed verbatim from LinkedIn recommendations and
@@ -30,6 +36,7 @@ export const testimonials: Testimonial[] = [
     role: "Architect, Retired",
     date: "2024-11-07",
     source: "linkedin",
+    sourceUrl: LINKEDIN_RECOMMENDATIONS,
   },
   {
     quote: [
@@ -41,6 +48,7 @@ export const testimonials: Testimonial[] = [
     location: "🇺🇸 United States",
     date: "2024-09-28",
     source: "linkedin",
+    sourceUrl: LINKEDIN_RECOMMENDATIONS,
   },
   {
     quote: [
@@ -50,6 +58,7 @@ export const testimonials: Testimonial[] = [
     role: "Founder, Kream & Sugar",
     date: "2024-08-23",
     source: "linkedin",
+    sourceUrl: LINKEDIN_RECOMMENDATIONS,
   },
   {
     quote: [
@@ -60,6 +69,7 @@ export const testimonials: Testimonial[] = [
     date: "1 year ago",
     source: "client",
     rating: 5,
+    sourceUrl: FIVERR_PROFILE,
   },
   {
     quote: [
@@ -71,6 +81,7 @@ export const testimonials: Testimonial[] = [
     source: "client",
     rating: 5,
     repeat: true,
+    sourceUrl: FIVERR_PROFILE,
   },
   {
     quote: [
@@ -81,5 +92,6 @@ export const testimonials: Testimonial[] = [
     date: "1 year ago",
     source: "client",
     rating: 5,
+    sourceUrl: FIVERR_PROFILE,
   },
 ];
