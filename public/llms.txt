@@ -1,47 +1,69 @@
-# Hassan Rao — Senior Software Engineer & AI Engineer
+# Hassan Javaid Rao — AI Engineer · Senior Software Engineer
 
-> Hassan Rao (Hassan Javaid Rao) is a Senior Software Engineer and AI Engineer with 5+ years building production systems: multi-tenant SaaS platforms, high-throughput REST APIs, AWS cloud architecture, and applied AI including RAG pipelines and real-time voice agents. Available for select freelance work and open to senior engineering roles.
+> AI-focused Senior Software Engineer with 5+ years of professional experience, including 4+ years building GCC enterprise logistics systems processing thousands of shipments daily across Oman, UAE and Saudi Arabia. Specialised in applied LLM engineering: multi-agent pipelines, RAG systems, grounded AI assistants and real-time AI voice agents. Initiated and leads the AI programme at one of Oman's largest logistics platforms, and independently built a multi-tenant AI call-agent SaaS. Section Leader at Stanford University's Code in Place programme.
 
 ## Identity
 
-- Name: Hassan Rao (Hassan Javaid Rao)
-- Role: Senior Software Engineer & AI Engineer
+- Name: Hassan Javaid Rao (Hassan Rao)
+- Title: AI Engineer · Senior Software Engineer — LLM Applications, Multi-Agent Systems & Voice AI
 - Website: https://hassanrao.com
+- Résumé: https://hassanrao.com/resume.pdf
 - Email: hassanjrao@gmail.com
 - LinkedIn: https://linkedin.com/in/hassanjrao
 - Fiverr: https://www.fiverr.com/hassanjavaidrao
-- Works remotely with clients worldwide
-
-## Tech Stack
-
-- Languages: PHP, TypeScript, JavaScript, Python, SQL
-- Backend: Laravel, Node.js, NestJS, FastAPI, Livewire
-- Frontend: React, Next.js, Vue.js, Inertia, Tailwind CSS
-- AI engineering: RAG pipelines, vector search (pgvector), LLM function calling, real-time voice agents, evaluation sets
-- Cloud & infrastructure: AWS Lambda, SQS, S3, Docker, nginx, Redis
-- Data: PostgreSQL, MySQL, MongoDB, Redis
-- Practices: REST API design, OAuth 2.0, microservices, multi-tenant SaaS, automated testing
-
-## Selected Work
-
-1. **AI Caller — AI Phone Agent SaaS** (2025 – present, founder & engineer). Multi-tenant platform where a business points a phone number at the service and gets an AI agent that answers calls in a natural voice, grounded in that tenant's own documents. Twilio Media Streams bridged to Deepgram's Voice Agent API over asyncio WebSockets, retrieval over PostgreSQL pgvector, Laravel + Inertia/Vue admin. Sub-second response latency, three-layer anti-hallucination design. https://hassanrao.com/projects/ai-caller
-2. **Multi-Tenant Logistics SaaS Platform** (2021 – present, senior engineer). Shipment operations for 15 branches across three countries, thousands of shipments a day. Microservices, carrier integrations (DHL, AJEX, iMile) over OAuth 2.0 machine-to-machine flows, event-driven work on AWS Lambda and SQS, 99.9% uptime. https://hassanrao.com/projects/logistics-platform
-3. **AI Shipment Data Entry Automation** (2024). Generative-AI extraction that reads inbound paperwork and writes structured records into the platform, removing roughly six hours of manual keying per day. Confidence-scored with a human review queue. https://hassanrao.com/projects/ai-data-entry-automation
-4. **High-Throughput Translation Management API** (2023). Laravel/PHP 8.2 REST API with Redis tag-based cache invalidation and cursor-based export across millions of records in constant memory. OAuth 2.0, full PHPUnit coverage. https://hassanrao.com/projects/translation-api
 
 ## Experience
 
-- **Senior Software Engineer**, Thiqa Tech (Dec 2021 – present) — built a multi-tenant logistics SaaS deployed across Oman, the UAE and Saudi Arabia supporting 15 branches; automated shipment data entry with generative AI, removing ~6 hours of manual effort daily; integrated DHL, AJEX and iMile over OAuth 2.0; architected event-driven services on AWS Lambda, SQS and S3; maintained 99.9% uptime.
-- **Founder & Engineer**, AI Caller (2025 – present) — designed, built and operate an AI phone receptionist SaaS end to end.
-- **Freelance Full Stack Developer**, Fiverr & Upwork (2020 – 2021) — Top Rated seller, 250+ five-star reviews, 200+ clients across the US, Canada, Europe and Asia.
+**Thiqa Tech — Muscat, Oman (Dec 2021 – present).** Promoted from Software Engineer to Senior Software Engineer; five years of continuous ownership of the same multi-tenant logistics SaaS platform.
+
+*Senior Software Engineer (Jan 2024 – present)*
+- Proposed, architected and leads the platform's AI programme, taking LLM features from concept to production for one of Oman's largest logistics companies (15 branches)
+- Designed and shipped a five-agent document-AI pipeline (LangGraph + Gemini) reading handwritten bilingual Arabic/English shipping labels into structured orders, cutting a 12-hour daily data-entry workload to 2–3 hours of review
+- Diagnosed the failure that killed the naive single-prompt version (correct digits assigned to the wrong field) and re-architected as one agent per responsibility, making cross-field contamination structurally impossible
+- Built a shadow-mode evaluation harness: 2,700+ orders predicted alongside human operators and scored field-by-field, reaching 71.7% of orders billed identically to human entry
+- Engineered cost and latency to $0.008 and 23s per order via model routing; one targeted fix cut verification escalations from 78% to 20% of orders
+- Built RAG customer chatbots for shippers, and "Ask AI" for operations — a natural-language RAG assistant over shipment data
+- Architected and led migration from a single monolith to a modular architecture with zero downtime
+- Engineered an AWS Lambda + SQS export pipeline handling millions of records, and an internal real-time chat system (NestJS, MongoDB, Next.js)
+- Mentors junior engineers; maintains 99.9% uptime with Sentry and CloudWatch
+
+*Software Engineer (Dec 2021 – Dec 2023)*
+- Core engineer on a multi-tenant logistics SaaS built from zero, scaled to thousands of shipments per day and millions of records across Oman, UAE and Saudi Arabia
+- Designed role-based access control spanning tenants, branches and operational roles
+- Built secure REST APIs with OAuth 2.0 — Password Grant for first-party mobile apps, Client Credentials for machine-to-machine integrations with DHL, AJEX and iMile
+- Improved system performance ~20% and introduced Redis-backed queues
+
+**Freelance Full-Stack Developer — Fiverr & Upwork (2020 – 2021).** Top Rated on both platforms with 250+ five-star reviews; 200+ clients across logistics, e-commerce and SaaS.
+
+**Section Leader (Teaching) — Stanford Code in Place (2025).** Competitively selected to teach Python to international learners; led weekly sessions and gave personalised feedback.
+
+## Projects
+
+1. **Waybill Data-Entry Agents — Multi-Agent Document AI (production).** Python (FastAPI), LangGraph, Google Gemini (Flash + Pro), Pillow, PostgreSQL + pgvector, Laravel, Docker. Five single-responsibility agents on a fixed LangGraph state graph with parallel fan-out and a bounded verification/escalation loop. Visual grounding before OCR; constrained selection over free-text generation for location resolution; RAG grounding over similar past orders; LLM-as-judge verification; failure taxonomy separating provider errors from bad model output. https://hassanrao.com/projects/waybill-data-entry-agents
+2. **AI Caller — Multi-tenant AI Voice-Agent SaaS (founder, solo build).** Python (FastAPI), Laravel, Vue.js, PostgreSQL + pgvector, Deepgram Voice Agent, Twilio, Google Gemini, AWS. Twilio Media Streams bridged to Deepgram's agent API over WebSockets with barge-in handling and LLM function calling; PDF knowledge bases embedded into pgvector with HNSW cosine indexes; tenant-scoped retrieval with relevance thresholds forcing honest "I don't know" responses; LLM-automated industry onboarding; deployed on AWS EC2 with GitHub Actions CI/CD. https://ai-caller.hassanrao.com
+3. **Translation Management API.** PHP 8.2, Laravel, MySQL, Redis, Docker. Controller → Service → Repository architecture, Redis tag-based cache invalidation, cursor-based export streaming millions of records at low memory cost, PHPUnit suite covering API contracts, caching and exports. https://hassanrao.com/projects/translation-api
+
+## Technical Skills
+
+- **AI / LLM engineering:** multi-agent orchestration (LangGraph), RAG pipelines, embeddings & vector search (pgvector), vision & document AI, prompt engineering & grounding, constrained decoding, LLM function/tool calling, LLM-as-judge & offline evaluation, hallucination mitigation, voice agents (Deepgram, Twilio), Google Gemini APIs
+- **Backend:** Python (FastAPI), PHP (Laravel), Node.js (NestJS), TypeScript
+- **Frontend:** Vue.js, React.js / Next.js, Inertia.js, Tailwind CSS
+- **Cloud & DevOps:** AWS (Lambda, SQS, S3, EC2, CloudWatch), Docker, GitHub Actions CI/CD, nginx, Redis
+- **Databases:** PostgreSQL (+ pgvector), MySQL, MongoDB, Redis
+- **Architecture:** multi-tenant SaaS, modular monolith & microservices, event-driven systems, REST API design, OAuth 2.0 / JWT
+- **Quality & monitoring:** Sentry, AWS CloudWatch, PHPUnit, Git, Agile/Scrum
+
+## Education
+
+B.S. Software Engineering — Sukkur IBA University (2017 – 2020). Fully funded merit-cum-need scholarship (4 years). IELTS 7.0. Coursework: AI, Data Structures & Algorithms, OOP, Database Systems, Operating Systems, Web Engineering.
+
+## Awards
+
+Winner — Web Design Competition, Sukkur IBA. Winner — Code in the Dark, Sukkur IBA. Four-year fully funded merit scholarship.
 
 ## Client Reviews
 
-Verified LinkedIn recommendations and Fiverr reviews are published in full at https://hassanrao.com/#reviews, with links back to the original LinkedIn recommendations page and Fiverr profile. Reviewers include Anton Skileski (Architect, Retired), Alex Lluch (Villa Fabulosa & Villa Magnifica, Temecula Wine Country) and Ryan Henderson (Founder, Kream & Sugar).
-
-## Writing
-
-Technical write-ups at https://hassanrao.com/blog, including a detailed architecture piece on building the AI phone agent: real-time audio bridging, RAG grounding and anti-hallucination design.
+Verified LinkedIn recommendations and Fiverr reviews are published in full at https://hassanrao.com/#reviews with links to the original LinkedIn recommendations page and Fiverr profile.
 
 ## Related Sites
 

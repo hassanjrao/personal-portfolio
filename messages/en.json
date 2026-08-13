@@ -19,16 +19,17 @@
     "cta_email": "Email me",
     "read_more": "Read more",
     "back_to_blog": "Back to all articles",
-    "learn_more": "Learn more"
+    "learn_more": "Learn more",
+    "cta_resume": "Download résumé"
   },
   "meta": {
     "home": {
-      "title": "Senior Software Engineer & AI Engineer",
-      "description": "Senior Software Engineer and AI Engineer with 5+ years building production systems: multi-tenant SaaS platforms, high-throughput APIs, AWS cloud architecture, and AI agents grounded in real data. Laravel, Next.js, React, Python, FastAPI, AWS."
+      "title": "AI Engineer & Senior Software Engineer",
+      "description": "AI-focused Senior Software Engineer with 5+ years of experience. Applied LLM engineering — multi-agent pipelines, RAG systems, grounded AI assistants and real-time voice agents — on top of multi-tenant SaaS, scalable AWS architecture and enterprise logistics systems."
     },
     "projects": {
       "title": "Work & Case Studies",
-      "description": "Selected engineering work by Hassan Rao — an AI phone agent SaaS, a multi-tenant logistics platform across three countries, AI document automation, and a high-throughput API."
+      "description": "Selected engineering work by Hassan Rao — a five-agent document-AI pipeline in production, a multi-tenant AI voice-agent SaaS, and a high-throughput translation API."
     },
     "blog": {
       "title": "Engineering Notes",
@@ -50,39 +51,42 @@
       }
     },
     "hero": {
-      "eyebrow": "Available for select freelance work",
-      "name": "Hassan Rao",
-      "title": "Senior Software Engineer & AI Engineer",
-      "subtitle": "I build production systems that stay up — multi-tenant SaaS platforms, high-throughput APIs, cloud architecture, and AI agents that hold their nerve in front of real users.",
+      "eyebrow": "Open to senior AI & software engineering work",
+      "name": "Hassan Javaid Rao",
+      "title": "AI Engineer · Senior Software Engineer",
+      "specialism": "LLM Applications, Multi-Agent Systems & Voice AI",
+      "subtitle": "I build applied LLM systems that survive production — multi-agent pipelines, RAG assistants and real-time voice agents — on top of five years of multi-tenant SaaS and AWS architecture.",
       "cta_work": "See my work",
       "cta_contact": "Get in touch",
+      "cta_resume": "Download résumé",
       "socials_label": "Find me on"
     },
     "about": {
       "badge": "About",
-      "heading": "Five years of systems that had to keep running",
-      "body_1": "I'm a Senior Software Engineer working across the full stack, with a deliberate bias toward the parts that are hard to change later: data models, integration boundaries, and the failure modes nobody plans for.",
-      "body_2": "Most of my time goes into a multi-tenant logistics platform that moves thousands of shipments a day across three countries. Fifteen branches depend on it, which is a useful constraint — it means every decision gets judged on whether it still works at 2am when a carrier API starts returning nonsense.",
-      "body_3": "Alongside that I build and run AI Caller, an AI phone receptionist that answers real customer calls and only says things it can back up with the caller's own documents. That product taught me more about AI engineering than any tutorial could: the model is the easy part, and grounding is a product decision, not a technical one.",
-      "body_4": "Before that I spent two years freelancing for international clients, reaching Top Rated status with 250+ five-star reviews. I still take on select freelance projects where the problem is interesting.",
+      "heading": "I take LLM features from concept to production",
+      "body_1": "I'm an AI-focused Senior Software Engineer with 5+ years of professional experience, including four-plus years building GCC enterprise logistics systems that process thousands of shipments daily across Oman, the UAE and Saudi Arabia.",
+      "body_2": "I initiated and lead the AI programme at one of Oman's largest logistics platforms — shipping RAG chatbots, AI copilots, and a production multi-agent document-AI system that replaced most of a 12-hour daily manual data-entry workload. I proposed it, architected it, and took it to production.",
+      "body_3": "Independently, I built and run AI Caller, a multi-tenant AI call-agent SaaS that answers live phone calls with hallucination-resistant, knowledge-grounded responses. Solo build, from the Twilio bridge through to billing and onboarding.",
+      "body_4": "What I've learned from both: the model is the easy part. Grounding, evaluation and failure taxonomies are what separate a demo from something a business can bill against. I'm also a Section Leader at Stanford's Code in Place programme, and I mentor the engineers on my team through code review and architectural guidance.",
       "facts_heading": "At a glance",
       "facts": [
-        "5+ years shipping production software",
-        "Multi-tenant SaaS, APIs and cloud architecture",
-        "Applied AI: RAG, vector search, real-time voice agents",
-        "200+ clients served as a Top Rated freelancer",
-        "Working remotely with clients worldwide"
+        "5+ years of professional software engineering",
+        "4+ years building GCC enterprise logistics systems",
+        "Applied LLM engineering: multi-agent, RAG, voice AI",
+        "Multi-tenant SaaS and scalable AWS architecture",
+        "Section Leader, Stanford Code in Place",
+        "250+ five-star reviews as a Top Rated freelancer"
       ]
     },
     "stack": {
-      "badge": "Tech stack",
+      "badge": "Technical skills",
       "heading": "What I build with",
-      "subheading": "Tools I've shipped production systems on, grouped by what they're actually for."
+      "subheading": "The stack behind the work below, grouped the way I actually use it."
     },
     "projects": {
       "badge": "Selected work",
       "heading": "Projects & case studies",
-      "subheading": "Four builds that show the range — a product I own end to end, an enterprise platform, an AI automation, and a piece of pure backend engineering.",
+      "subheading": "Three builds worth reading in detail — a multi-agent document-AI pipeline in production, an AI voice-agent SaaS I built solo, and a piece of pure backend engineering.",
       "cta": "Read the case study",
       "live": "View live",
       "role_label": "Role",
@@ -91,9 +95,11 @@
     "experience": {
       "badge": "Experience",
       "heading": "Where I've done it",
-      "subheading": "The roles behind the work above.",
+      "subheading": "Five years of continuous ownership, plus teaching and freelance work.",
       "current": "Current",
-      "achievements_label": "Highlights"
+      "achievements_label": "Highlights",
+      "education_heading": "Education",
+      "awards_heading": "Awards"
     },
     "reviews": {
       "badge": "Reviews",
@@ -110,7 +116,7 @@
     "contact": {
       "badge": "Contact",
       "heading": "Let's talk about what you're building",
-      "subheading": "Whether it's a role, a freelance project, or a second opinion on an architecture decision — I read everything and reply within one working day.",
+      "subheading": "Whether it's a senior role, a freelance project, or a second opinion on an AI architecture decision — I read everything and reply within one working day.",
       "channels_heading": "Find me on",
       "form_heading": "Or send a message",
       "form_name": "Your name",
@@ -159,7 +165,7 @@
     "cta_body": "I'm always happy to look at an interesting problem."
   },
   "footer": {
-    "tagline": "Senior Software Engineer & AI Engineer. Multi-tenant SaaS platforms, high-throughput APIs, cloud architecture and applied AI.",
+    "tagline": "AI Engineer & Senior Software Engineer. Multi-agent LLM pipelines, RAG systems, real-time voice agents, and the multi-tenant SaaS underneath them.",
     "nav_heading": "Sections",
     "contact_heading": "Elsewhere",
     "work_heading": "Selected work",

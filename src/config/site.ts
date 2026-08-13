@@ -8,13 +8,14 @@ export const brand = {
   name: "Hassan Rao",
   /** Two-letter mark rendered into the favicon. */
   mark: "HR",
-  tagline: "Senior Software Engineer",
-  role: "Senior Software Engineer & AI Engineer",
+  tagline: "AI Engineer",
+  role: "AI Engineer · Senior Software Engineer",
   photo: "/hassan.png",
 } as const;
 
 export const contact = {
   email: "hassanjrao@gmail.com",
+  resume: "/resume.pdf",
   linkedin: "https://linkedin.com/in/hassanjrao",
   fiverr: "https://www.fiverr.com/hassanjavaidrao",
   /** Deep link to the recommendations tab, for "read them on LinkedIn". */

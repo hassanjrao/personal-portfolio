@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown, Download } from "lucide-react";
 import { brand } from "@/config/site";
 import { stats } from "@/config/profile";
 import SocialLinks from "../ui/SocialLinks";
@@ -52,6 +52,15 @@ export default function Hero() {
             </motion.p>
 
             <motion.p
+              className="mt-1.5 text-sm text-slate-500"
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+            >
+              {t("specialism")}
+            </motion.p>
+
+            <motion.p
               className="mt-5 text-slate-600 leading-relaxed max-w-xl text-[17px]"
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,6 +88,14 @@ export default function Hero() {
               >
                 {t("cta_contact")}
                 <ArrowRight size={17} />
+              </a>
+              <a
+                href="/resume.pdf"
+                download="Hassan-Javaid-Rao-Resume.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg text-slate-600 font-medium hover:text-violet-700 hover:bg-violet-50 transition-colors"
+              >
+                <Download size={17} />
+                {t("cta_resume")}
               </a>
             </motion.div>
 
